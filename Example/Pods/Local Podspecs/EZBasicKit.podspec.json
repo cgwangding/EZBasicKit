@@ -16,12 +16,24 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
   "subspecs": [
     {
       "name": "Identifiable",
       "source_files": "EZBasicKit/Classes/Identifiable/*.swift"
+    },
+    {
+      "name": "ObjectsController",
+      "source_files": "EZBasicKit/Classes/ObjectsController/*.swift"
+    },
+    {
+      "name": "Selection",
+      "source_files": "EZBasicKit/Classes/Selection/*.swift"
+    },
+    {
+      "name": "Animator",
+      "source_files": "EZBasicKit/Classes/Animator/*.swift"
     }
   ]
 }
