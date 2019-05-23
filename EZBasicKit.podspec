@@ -40,8 +40,8 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 
-#   s.subspec 'Identifiable' do |a|
-#       a.source_files = 'EZBasicKit/Classes/Identifiable/*.swift'
-#   end
+  s.subspec 'Identifiable' do |a|
+      a.source_files = 'EZBasicKit/Classes/Identifiable/*.swift'
+  end
 
 end
