@@ -1,0 +1,27 @@
+{
+  "name": "EZBasicKit",
+  "version": "0.1.0",
+  "summary": "A short description of EZBasicKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/cgwangding@163.com/EZBasicKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "cgwangding@163.com": "wangding@ezbuy.com"
+  },
+  "source": {
+    "git": "https://github.com/cgwangding@163.com/EZBasicKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "subspecs": [
+    {
+      "name": "Identifiable",
+      "source_files": "EZBasicKit/Classes/Identifiable/*.swift"
+    }
+  ]
+}

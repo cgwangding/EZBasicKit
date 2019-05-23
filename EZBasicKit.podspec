@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'EZBasicKit/Classes/**/*'
-  
+  # s.source_files = 'EZBasicKit/Classes/**/*'
+
   # s.resource_bundles = {
   #   'EZBasicKit' => ['EZBasicKit/Assets/*.png']
   # }
@@ -39,4 +39,9 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+
+#   s.subspec 'Identifiable' do |a|
+#       a.source_files = 'EZBasicKit/Classes/Identifiable/*.swift'
+#   end
+
 end

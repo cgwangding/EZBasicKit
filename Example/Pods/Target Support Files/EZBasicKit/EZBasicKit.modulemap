@@ -1,0 +1,6 @@
+framework module EZBasicKit {
+  umbrella header "EZBasicKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

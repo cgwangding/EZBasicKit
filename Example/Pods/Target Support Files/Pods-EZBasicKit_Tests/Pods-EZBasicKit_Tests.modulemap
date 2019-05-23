@@ -1,0 +1,6 @@
+framework module Pods_EZBasicKit_Tests {
+  umbrella header "Pods-EZBasicKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
