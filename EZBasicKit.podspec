@@ -59,4 +59,8 @@ TODO: Add long description of the pod here.
     s.subspec 'Animator' do |a|
         a.source_files = 'EZBasicKit/Classes/Animator/*.swift'
     end
+
+    s.subspec 'Extension' do |a|
+        a.source_files = 'EZBasicKit/Classes/Extension/*.swift'
+    end
 end

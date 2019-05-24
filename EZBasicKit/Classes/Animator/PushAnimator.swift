@@ -30,7 +30,7 @@ extension TransitionAnimators {
             to.view.frame = frame
             
             container.addSubview(from.view)
-            container.bringSubviewToFront(from.view)
+            container.bringSubview(toFront: from.view)
             
             }.transit { container, from, to in
                 

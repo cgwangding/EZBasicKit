@@ -32,7 +32,7 @@ extension Sequence where Iterator.Element: Identifiable, Iterator.Element.Identi
     }
 }
 
-extension Sequence where Iterator.Element: NSObjectProtocol, Iterator.Element: NSObject {
+extension Sequence where Iterator.Element: NSObject {
     
     public func toIDMapping<Identifier: Hashable>(forKeyPath keyPath: String, as type: Identifier.Type, nilHandler: @escaping (Iterator.Element) -> Identifier) -> [Identifier: Iterator.Element] {
     

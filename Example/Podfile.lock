@@ -1,10 +1,12 @@
 PODS:
   - EZBasicKit (0.1.0):
     - EZBasicKit/Animator (= 0.1.0)
+    - EZBasicKit/Extension (= 0.1.0)
     - EZBasicKit/Identifiable (= 0.1.0)
     - EZBasicKit/ObjectsController (= 0.1.0)
     - EZBasicKit/Selection (= 0.1.0)
   - EZBasicKit/Animator (0.1.0)
+  - EZBasicKit/Extension (0.1.0)
   - EZBasicKit/Identifiable (0.1.0)
   - EZBasicKit/ObjectsController (0.1.0)
   - EZBasicKit/Selection (0.1.0)
@@ -40,7 +42,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EZBasicKit: ceb295fb27747a5f2c887308d8603077f4e0e6ba
+  EZBasicKit: 874bd0bcd636e8ab82b69bd18c73b489541d8585
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52

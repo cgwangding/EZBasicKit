@@ -47,7 +47,7 @@ extension RangeReplaceableCollection where Index: Comparable {
     }
 }
 
-extension RangeReplaceableCollection where Iterator.Element: Hashable, Index: Hashable, Index: Comparable, Indices.Iterator.Element == Index, IndexDistance == Int {
+extension RangeReplaceableCollection where Iterator.Element: Hashable, Index: Hashable, Index: Comparable, Indices.Iterator.Element == Index {
     
     public mutating func remove<S: Sequence>(_ sequence: S) where Iterator.Element == S.Iterator.Element {
         

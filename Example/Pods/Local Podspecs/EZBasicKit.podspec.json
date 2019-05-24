@@ -34,6 +34,10 @@
     {
       "name": "Animator",
       "source_files": "EZBasicKit/Classes/Animator/*.swift"
+    },
+    {
+      "name": "Extension",
+      "source_files": "EZBasicKit/Classes/Extension/*.swift"
     }
   ]
 }
