@@ -37,3 +37,11 @@ extension UIView {
         }
     }
 }
+
+extension UIView {
+
+    public func setCornerRadius(_ value: CGFloat) {
+        self.layer.cornerRadius = value
+        self.layer.masksToBounds = true
+    }
+}
