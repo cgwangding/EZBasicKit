@@ -22,7 +22,7 @@ extension Array {
     }
 }
 
-extension Array where Element: Numeric {
+extension Array where Element: BinaryInteger {
 
     public func sum() -> Element {
         return self.reduce(0, { $0 + $1 })

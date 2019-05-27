@@ -45,3 +45,76 @@ extension UIView {
         self.layer.masksToBounds = true
     }
 }
+
+// MARK: - blur effect
+extension UIView {
+
+    public convenience init(frame: CGRect, blurEffectStyle: UIBlurEffect.Style) {
+        self.init(frame: frame)
+
+        let blurView = UIVisualEffectView(frame: self.bounds)
+        blurView.effect = UIBlurEffect(style: blurEffectStyle)
+        self.addSubview(blurView)
+    }
+}
+
+// MARK: - frame related
+extension UIView {
+
+    public var x: CGFloat {
+        get {
+            return self.frame.minX
+        }
+        set {
+            self.frame.origin.x = newValue
+        }
+    }
+
+    public var y: CGFloat {
+        get {
+            return self.frame.minY
+        }
+        set {
+            self.frame.origin.y = newValue
+        }
+    }
+
+    public var width: CGFloat {
+        get {
+            return self.frame.width
+        }
+
+        set {
+            self.frame.size.width = newValue
+        }
+    }
+
+    public var height: CGFloat {
+        get {
+            return self.frame.height
+        }
+        set {
+            self.frame.size.height = newValue
+        }
+    }
+
+    public var origin: CGPoint {
+        get {
+            return self.frame.origin
+        }
+        set {
+            self.frame.origin = newValue
+        }
+    }
+
+    public var size: CGSize {
+        get {
+            return self.frame.size
+        }
+        set {
+            self.frame.size = newValue
+        }
+    }
+
+
+}
