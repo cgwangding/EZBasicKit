@@ -20,3 +20,20 @@ extension UIView {
         }
     }
 }
+
+extension UIView {
+
+    func snapShot() -> UIImage? {
+
+        UIGraphicsBeginImageContext(self.bounds.size)
+        if let ctx = UIGraphicsGetCurrentContext() {
+            self.layer.render(in: ctx)
+            let snapShot = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            return snapShot
+        } else {
+            UIGraphicsEndImageContext()
+            return nil
+        }
+    }
+}
