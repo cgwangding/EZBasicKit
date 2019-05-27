@@ -61,6 +61,12 @@ TODO: Add long description of the pod here.
     end
 
     s.subspec 'Extension' do |a|
-        a.source_files = 'EZBasicKit/Classes/Extension/*.swift'
+        a.subspec 'UIKitExtension' do |b|
+            b.source_files = 'EZBasicKit/Classes/Extension/UIKit/*.swift'
+        end
+
+        a.subspec 'FoundationExtension' do |b|
+            b.source_files = 'EZBasicKit/Classes/Extension/Foundation/*.swift'
+        end
     end
 end

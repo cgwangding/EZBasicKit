@@ -37,7 +37,16 @@
     },
     {
       "name": "Extension",
-      "source_files": "EZBasicKit/Classes/Extension/*.swift"
+      "subspecs": [
+        {
+          "name": "UIKitExtension",
+          "source_files": "EZBasicKit/Classes/Extension/UIKit/*.swift"
+        },
+        {
+          "name": "FoundationExtension",
+          "source_files": "EZBasicKit/Classes/Extension/Foundation/*.swift"
+        }
+      ]
     }
   ]
 }
