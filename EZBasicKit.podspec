@@ -69,4 +69,8 @@ TODO: Add long description of the pod here.
             b.source_files = 'EZBasicKit/Classes/Extension/Foundation/*.swift'
         end
     end
+
+    s.subspec 'CustomUIKit' do |a|
+        a.source_files = 'EZBasicKit/Classes/CustomUIKit/*.swift'
+    end
 end
