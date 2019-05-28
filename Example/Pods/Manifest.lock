@@ -29,10 +29,10 @@ PODS:
 
 DEPENDENCIES:
   - EZBasicKit (from `../`)
-  - FBSnapshotTestCase (~> 2.1.4)
-  - Nimble (~> 7.0.2)
-  - Nimble-Snapshots (~> 6.3.0)
-  - Quick (~> 1.2.0)
+  - FBSnapshotTestCase
+  - Nimble
+  - Nimble-Snapshots
+  - Quick
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -52,6 +52,6 @@ SPEC CHECKSUMS:
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: 1ce955cdc486ad25b6da608ce28eafc4826d5c21
+PODFILE CHECKSUM: f108b8afedba2e20d8db1408768388eff1521bbf
 
 COCOAPODS: 1.7.0.beta.3
