@@ -23,7 +23,7 @@ extension UIView {
 
 extension UIView {
 
-    func snapShot() -> UIImage? {
+    public func snapShot() -> UIImage? {
 
         UIGraphicsBeginImageContext(self.bounds.size)
         if let ctx = UIGraphicsGetCurrentContext() {

@@ -73,4 +73,8 @@ TODO: Add long description of the pod here.
     s.subspec 'CustomUIKit' do |a|
         a.source_files = 'EZBasicKit/Classes/CustomUIKit/*.swift'
     end
+
+    s.subspec 'Utilities' do |a|
+        a.source_files = 'EZBasicKit/Classes/Utilities/*.swift'
+    end
 end

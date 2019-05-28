@@ -51,6 +51,10 @@
     {
       "name": "CustomUIKit",
       "source_files": "EZBasicKit/Classes/CustomUIKit/*.swift"
+    },
+    {
+      "name": "Utilities",
+      "source_files": "EZBasicKit/Classes/Utilities/*.swift"
     }
   ]
 }

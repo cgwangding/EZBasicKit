@@ -9,7 +9,7 @@ import Foundation
 
 extension UIView {
 
-    var isBadgeShown: Bool {
+    public var isBadgeShown: Bool {
         get {
             return self.badgeView?.isHidden ?? false
         }
@@ -53,7 +53,7 @@ extension UIView {
     /*
      * hidden when text is empty
      */
-    var badgeText: String {
+    public var badgeText: String {
 
         get {
             return self.textBadgeLabel?.text ?? ""
