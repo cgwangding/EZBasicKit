@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class RoundButton: UIButton {
 
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
 
         let layer = self.layer
@@ -39,7 +39,7 @@ public class RoundButton: UIButton {
         }
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
 
         self.layer.borderWidth = (self.isEnabled ? 1.0 : 0.0)

@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import ezbuyKit
 
-class CircleImageView: UIImageView {
+public class CircleImageView: UIImageView {
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
 
         let bounds = self.bounds
