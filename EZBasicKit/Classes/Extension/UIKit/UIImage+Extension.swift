@@ -7,7 +7,7 @@
 
 import Foundation
 
-// MARK: - UIImage
+// MARK: - UIImage compress
 
 extension UIImage {
 
@@ -35,6 +35,7 @@ extension UIImage {
     }
 }
 
+// MARK: - 使用颜色创建图片
 extension UIImage {
 
     public convenience init?(color: UIColor, size: CGSize) {
@@ -47,6 +48,27 @@ extension UIImage {
         UIRectFill(CGRect(origin: CGPoint.zero, size: size))
         guard let image = UIGraphicsGetImageFromCurrentImageContext(), let cgImage = image.cgImage else { return nil }
         self.init(cgImage: cgImage)
+    }
+}
+
+// MARK: - 重新生成一个对应形状的图片
+extension UIImage {
+
+    public var circleImage: UIImage? {
+
+        let shotest = min(self.size.width, self.size.height)
+
+        UIGraphicsBeginImageContext(CGSize(width: shotest, height: shotest))
+
+        let ctx = UIGraphicsGetCurrentContext()
+        ctx?.addEllipse(in: CGRect(x: 0, y: 0, width: shotest, height: shotest))
+        ctx?.clip()
+        self.draw(in: CGRect(x: (shotest - self.size.width) / 2, y: (shotest - self.size.height) / 2, width: self.size.width, height: self.size.height))
+        defer {
+            UIGraphicsEndImageContext()
+        }
+
+        return UIGraphicsGetImageFromCurrentImageContext()
     }
 }
 
