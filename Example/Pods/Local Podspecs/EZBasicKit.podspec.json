@@ -55,6 +55,15 @@
     {
       "name": "Utilities",
       "source_files": "EZBasicKit/Classes/Utilities/*.swift"
+    },
+    {
+      "name": "EZPresentation",
+      "source_files": "EZBasicKit/Classes/EZPresentation/*.swift",
+      "dependencies": {
+        "EZBasicKit/Animator": [
+
+        ]
+      }
     }
   ]
 }

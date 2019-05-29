@@ -77,4 +77,10 @@ TODO: Add long description of the pod here.
     s.subspec 'Utilities' do |a|
         a.source_files = 'EZBasicKit/Classes/Utilities/*.swift'
     end
+
+    s.subspec 'EZPresentation' do |a|
+        a.source_files = 'EZBasicKit/Classes/EZPresentation/*.swift'
+        a.dependency 'EZBasicKit/Animator'
+        
+    end
 end
