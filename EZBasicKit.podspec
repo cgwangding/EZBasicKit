@@ -44,9 +44,9 @@ TODO: Add long description of the pod here.
         a.source_files = 'EZBasicKit/Classes/Identifiable/*.swift'
     end
 
-#   s.subspec 'EZI' do |a| 
-#     a.source_files = 'EZBasicKit/Classes/EZI/*.swift'
-#   end
+    s.subspec 'EZI' do |a| 
+        a.source_files = 'EZBasicKit/Classes/EZI/*.swift'
+    end
 
     s.subspec 'ObjectsController' do |a|
         a.source_files = 'EZBasicKit/Classes/ObjectsController/*.swift'

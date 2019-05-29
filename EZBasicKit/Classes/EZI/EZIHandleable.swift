@@ -31,7 +31,7 @@ extension EZIHandlerAction {
     
     public var isHandling: Bool {
         switch self {
-        case .handling(_), .blocking:
+        case .handling, .blocking:
             return true
         case .ignoring, .deferred:
             return false
@@ -40,7 +40,7 @@ extension EZIHandlerAction {
     
     public var hasAction: Bool {
         switch self {
-        case .handling(_):
+        case .handling:
             return true
         default:
             return false

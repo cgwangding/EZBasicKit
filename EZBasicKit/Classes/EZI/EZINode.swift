@@ -59,7 +59,7 @@ extension EZINode {
         if fromFirstNode {
             return self.firstEZINode.handlerInChain(forEZI: instruction, fromFirstNode: false)
         } else {
-            if let action = self.eziHandleable?.handler(forEZI: instruction), action.isHandling  {
+            if let action = self.eziHandleable?.handler(forEZI: instruction), action.isHandling {
                 return action
             } else {
                 return self.nextEZINode?.handlerInChain(forEZI: instruction, fromFirstNode: false) ?? .ignoring
