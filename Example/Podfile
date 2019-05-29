@@ -10,5 +10,6 @@ target 'EZBasicKit_Example' do
     pod 'Nimble'
     pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'
+    pod 'EZBasicKit', :path => '../'
   end
 end
