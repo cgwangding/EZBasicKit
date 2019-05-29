@@ -78,3 +78,15 @@ extension NSObject {
         return ret
     }
 }
+
+// MARK: - class name
+extension NSObject {
+
+    public static var name: String {
+        return String(describing: self)
+    }
+
+    public var className: String {
+        return type(of: self).name
+    }
+}
