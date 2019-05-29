@@ -13,6 +13,13 @@ public protocol EZInstructionType {
     func wrapperType(forComponents components: [String]) -> EZIWrapper.Type
 }
 
+extension EZInstructionType {
+
+    func wrapperType(forComponents components: [String]) -> EZIWrapper {
+        fatalError("需要有具体的类型遵守 EZInstructionType 协议")
+    }
+}
+
 public struct EZInstruction {
 
     public let type: EZInstructionType

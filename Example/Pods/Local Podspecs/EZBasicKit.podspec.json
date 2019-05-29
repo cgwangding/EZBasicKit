@@ -24,6 +24,10 @@
       "source_files": "EZBasicKit/Classes/Identifiable/*.swift"
     },
     {
+      "name": "EZI",
+      "source_files": "EZBasicKit/Classes/EZI/*.swift"
+    },
+    {
       "name": "ObjectsController",
       "source_files": "EZBasicKit/Classes/ObjectsController/*.swift"
     },
