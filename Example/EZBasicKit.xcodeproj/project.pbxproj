@@ -17,6 +17,7 @@
 		72F816DC229E73A800B4E0A0 /* EZInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816DB229E73A800B4E0A0 /* EZInstruction.swift */; };
 		72F816E2229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816E1229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift */; };
 		7A74DF504E352BB096BFEA60 /* Pods_EZBasicKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */; };
+		A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		72F816DB229E73A800B4E0A0 /* EZInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZInstruction.swift; sourceTree = "<group>"; };
 		72F816E1229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDefaultDispatchable.swift; sourceTree = "<group>"; };
 		72F816E9229F80D500B4E0A0 /* EZBasicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EZBasicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTests.swift; sourceTree = "<group>"; };
 		E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67B06A9C84127C594C8EEF7 /* Pods-EZBasicKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
