@@ -101,6 +101,14 @@ class SelectionTests: QuickSpec {
         expect(isSuccess).to(equal(false))
         expect(self.selection.isSelected(6)).to(equal(false))
     }
+    
+    func test_SelectionItem() {
+        var item = self.selection.makeItem(1)
+        expect(item.object).to(equal(1))
+        expect(item.isSelected).to(equal(false))
+        item.isSelected = true
+        expect(self.selection.isSelected(1)).to(equal(true))
+    }
 }
 
 class IDObject: NSObject, Identifiable, Comparable {
