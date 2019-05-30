@@ -1,4 +1,6 @@
+platform:ios,'9.0'
 use_frameworks!
+inhibit_all_warnings!
 
 target 'EZBasicKit_Example' do
   pod 'EZBasicKit', :path => '../'
@@ -10,6 +12,6 @@ target 'EZBasicKit_Example' do
     pod 'Nimble'
     pod 'FBSnapshotTestCase'
     pod 'Nimble-Snapshots'
-    pod 'EZBasicKit', :path => '../'
   end
 end
+

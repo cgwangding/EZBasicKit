@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol EZINoHandleable: EZIHandleable {
+public protocol EZINoHandleable: EZIHandleable {
 
 }
 

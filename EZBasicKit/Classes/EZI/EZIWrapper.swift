@@ -89,7 +89,7 @@ open class EZIWrapper: NSObject {
         }
     }
 
-    func boolValue(forKey key: String) -> Bool? {
+    public func boolValue(forKey key: String) -> Bool? {
         if let s = self[key] {
             switch CaseInsensitiveString(s) {
             case "true":
@@ -104,7 +104,7 @@ open class EZIWrapper: NSObject {
         }
     }
 
-    func setBoolValue(_ value: Bool?, forKey key: String) {
+    public func setBoolValue(_ value: Bool?, forKey key: String) {
         if let v = value {
             self[key] = (v ? "true" : "false")
         } else {

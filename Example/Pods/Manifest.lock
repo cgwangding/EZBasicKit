@@ -1,28 +1,28 @@
 PODS:
-  - EZBasicKit (0.1.0):
-    - EZBasicKit/Animator (= 0.1.0)
-    - EZBasicKit/CustomUIKit (= 0.1.0)
-    - EZBasicKit/Extension (= 0.1.0)
-    - EZBasicKit/EZI (= 0.1.0)
-    - EZBasicKit/EZPresentation (= 0.1.0)
-    - EZBasicKit/Identifiable (= 0.1.0)
-    - EZBasicKit/ObjectsController (= 0.1.0)
-    - EZBasicKit/Selection (= 0.1.0)
-    - EZBasicKit/Utilities (= 0.1.0)
-  - EZBasicKit/Animator (0.1.0)
-  - EZBasicKit/CustomUIKit (0.1.0)
-  - EZBasicKit/Extension (0.1.0):
-    - EZBasicKit/Extension/FoundationExtension (= 0.1.0)
-    - EZBasicKit/Extension/UIKitExtension (= 0.1.0)
-  - EZBasicKit/Extension/FoundationExtension (0.1.0)
-  - EZBasicKit/Extension/UIKitExtension (0.1.0)
-  - EZBasicKit/EZI (0.1.0)
-  - EZBasicKit/EZPresentation (0.1.0):
+  - EZBasicKit (0.1.1):
+    - EZBasicKit/Animator (= 0.1.1)
+    - EZBasicKit/CustomUIKit (= 0.1.1)
+    - EZBasicKit/Extension (= 0.1.1)
+    - EZBasicKit/EZI (= 0.1.1)
+    - EZBasicKit/EZPresentation (= 0.1.1)
+    - EZBasicKit/Identifiable (= 0.1.1)
+    - EZBasicKit/ObjectsController (= 0.1.1)
+    - EZBasicKit/Selection (= 0.1.1)
+    - EZBasicKit/Utilities (= 0.1.1)
+  - EZBasicKit/Animator (0.1.1)
+  - EZBasicKit/CustomUIKit (0.1.1)
+  - EZBasicKit/Extension (0.1.1):
+    - EZBasicKit/Extension/FoundationExtension (= 0.1.1)
+    - EZBasicKit/Extension/UIKitExtension (= 0.1.1)
+  - EZBasicKit/Extension/FoundationExtension (0.1.1)
+  - EZBasicKit/Extension/UIKitExtension (0.1.1)
+  - EZBasicKit/EZI (0.1.1)
+  - EZBasicKit/EZPresentation (0.1.1):
     - EZBasicKit/Animator
-  - EZBasicKit/Identifiable (0.1.0)
-  - EZBasicKit/ObjectsController (0.1.0)
-  - EZBasicKit/Selection (0.1.0)
-  - EZBasicKit/Utilities (0.1.0)
+  - EZBasicKit/Identifiable (0.1.1)
+  - EZBasicKit/ObjectsController (0.1.1)
+  - EZBasicKit/Selection (0.1.1)
+  - EZBasicKit/Utilities (0.1.1)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -61,13 +61,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EZBasicKit: ce8a5858d31631e836f5ed272d83e06972792dca
+  EZBasicKit: 883f742f249345c92954b3d06081cc67fd0b9445
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: bbd1ab264bacc24a9ce24a8363bc05aac783aeb0
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
 
-PODFILE CHECKSUM: cd787ada7d278048e40357d954140be7a6f75b03
+PODFILE CHECKSUM: c8fe1ce0059239baa587993bbed65d7294ab1bbd
 
 COCOAPODS: 1.7.0.beta.3

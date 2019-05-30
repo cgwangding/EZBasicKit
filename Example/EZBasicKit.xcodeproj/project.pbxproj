@@ -45,6 +45,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		72F816DB229E73A800B4E0A0 /* EZInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZInstruction.swift; sourceTree = "<group>"; };
 		72F816E1229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDefaultDispatchable.swift; sourceTree = "<group>"; };
+		72F816E9229F80D500B4E0A0 /* EZBasicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EZBasicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67B06A9C84127C594C8EEF7 /* Pods-EZBasicKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,6 +74,7 @@
 		3FC7ADF6473F07D27E3B7B28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72F816E9229F80D500B4E0A0 /* EZBasicKit.framework */,
 				0128BF4946B9E5DA7211CFE3 /* Pods_EZBasicKit_Example.framework */,
 				E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */,
 			);
@@ -293,7 +295,6 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EZBasicKit/EZBasicKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework",
@@ -302,7 +303,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EZBasicKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble_Snapshots.framework",

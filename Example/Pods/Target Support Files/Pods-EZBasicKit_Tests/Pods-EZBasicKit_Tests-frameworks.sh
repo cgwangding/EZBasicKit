@@ -161,7 +161,6 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/EZBasicKit/EZBasicKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework"
@@ -169,7 +168,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "${BUILT_PRODUCTS_DIR}/EZBasicKit/EZBasicKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble-Snapshots/Nimble_Snapshots.framework"
