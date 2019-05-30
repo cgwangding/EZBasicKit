@@ -29,7 +29,7 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.source).notTo(beNil())
             })
 
-            it("selectedObjects count zero", closure: {
+            it("selectedObjects count", closure: {
                 expect(self.selection.selectedObjects.count).to(equal(0))
             })
 
@@ -55,18 +55,22 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.isSelected(5)).to(equal(true))
                 self.selection.setSelected(true, forObject: 6)
                 expect(self.selection.isSelected(6)).to(equal(true))
+                
+                self.selection.clear()
             })
             
-            it("selection objects count", closure: {
-                expect(self.selection.count).to(equal(6))
+            it("count", closure: {
+                expect(self.selection.count).to(equal(0))
             })
 
             it("clear function", closure: {
+                self.selection.setSelected(true, forObjects: [1,2,3])
+                expect(self.selection.count).to(equal(3))
                 self.selection.clear()
                 expect(self.selection.count).to(equal(0))
             })
             
-            it("setSelectedForObject to select or deselect one", closure: {
+            it("setSelectedForObject", closure: {
                 
                 var isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
                 expect(isSetSeletedSuccess).to(equal(true))
@@ -81,69 +85,75 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.selectedObjects.count).to(equal(0))
             })
             
-//            it(<#T##description: String##String#>, closure: <#T##() -> Void#>)
+            it("updateIfSourceAvaiable", closure: {
+                self.selection.setSelected(true, forObject: 1)
+                expect(self.selection.count).to(equal(1))
+                self.selection.updateIfSourceAvaiable()
+                expect(self.selection.count).to(equal(1))
+                
+                self.selection.clear()
+            })
+
+            it("setSelectedForObjects", closure: {
+                
+                var isSuccess = self.selection.setSelected(true, forObjects: [1,2,3])
+                expect(isSuccess).to(equal(true))
+                expect(self.selection.isSelected(1)).to(equal(true))
+                expect(self.selection.isSelected(2)).to(equal(true))
+                expect(self.selection.isSelected(3)).to(equal(true))
+                
+                isSuccess = self.selection.setSelected(true, forObjects: [1,2,3])
+                expect(isSuccess).to(equal(false))
+                expect(self.selection.isSelected(1)).to(equal(true))
+                expect(self.selection.isSelected(2)).to(equal(true))
+                expect(self.selection.isSelected(3)).to(equal(true))
+                
+                isSuccess = self.selection.setSelected(false, forObjects: [1,2,3])
+                expect(isSuccess).to(equal(true))
+                expect(self.selection.isSelected(1)).to(equal(false))
+                expect(self.selection.isSelected(2)).to(equal(false))
+                expect(self.selection.isSelected(3)).to(equal(false))
+            })
+            
+            it("isAllSelected", closure: {
+                expect(self.selection.isAllSelected).to(equal(false))
+                self.selection.setSelected(true, forObjects: [1,2,3])
+                expect(self.selection.isAllSelected).to(equal(false))
+                self.selection.setSelected(true, forObjects: [4,5,6])
+                expect(self.selection.isAllSelected).to(equal(true))
+                self.selection.clear()
+            })
+            
+            it("select and deselect ") {
+                var isSuccess = self.selection.select(6)
+                expect(isSuccess).to(equal(true))
+                expect(self.selection.isSelected(6)).to(equal(true))
+                isSuccess = self.selection.select(6)
+                expect(isSuccess).to(equal(false))
+                expect(self.selection.isSelected(6)).to(equal(true))
+                
+                isSuccess = self.selection.deselect(6)
+                expect(isSuccess).to(equal(true))
+                expect(self.selection.isSelected(6)).to(equal(false))
+                isSuccess = self.selection.deselect(6)
+                expect(isSuccess).to(equal(false))
+                expect(self.selection.isSelected(6)).to(equal(false))
+            }
+            
+            it("makeItem") {
+                var item = self.selection.makeItem(1)
+                expect(item.object).to(equal(1))
+                expect(item.isSelected).to(equal(false))
+            }
+            
+            it("item isSelected", closure: {
+                var item = self.selection.makeItem(1)
+                item.isSelected = true
+                expect(self.selection.isSelected(1)).to(equal(true))
+                item.isSelected = false
+                expect(self.selection.isSelected(1)).to(equal(false))
+            })
         }
-    }
-    
-    func test_setSelectedForObject() {
-        var isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
-        expect(isSetSeletedSuccess).to(equal(true))
-        expect(self.selection.isSelected(1)).to(equal(true))
-        isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
-        expect(isSetSeletedSuccess).to(equal(false))
-        expect(self.selection.isSelected(1)).to(equal(true))
-    }
-    
-    func test_updateIfSourceAvaiable() {
-        self.test_setSelectedForObject()
-        self.selection.updateIfSourceAvaiable()
-        expect(self.selection.selectedObjects.count).to(equal(1))
-    }
-    
-    func test_setSelectedForObjects() {
-        var isSuccess = self.selection.setSelected(true, forObjects: [1,2,3])
-        expect(isSuccess).to(equal(true))
-        expect(self.selection.isSelected(1)).to(equal(true))
-        expect(self.selection.isSelected(2)).to(equal(true))
-        expect(self.selection.isSelected(3)).to(equal(true))
-        isSuccess = self.selection.setSelected(true, forObjects: [1,2,3])
-        expect(isSuccess).to(equal(false))
-        expect(self.selection.isSelected(1)).to(equal(true))
-        expect(self.selection.isSelected(2)).to(equal(true))
-        expect(self.selection.isSelected(3)).to(equal(true))
-    }
-    
-    func test_isAllSelected() {
-        expect(self.selection.isAllSelected).to(equal(false))
-        self.selection.setSelected(true, forObjects: [1,2,3,4,5,6])
-        expect(self.selection.isAllSelected).to(equal(true))
-    }
-    
-    func test_select() {
-        var isSuccess = self.selection.select(6)
-        expect(isSuccess).to(equal(true))
-        expect(self.selection.isSelected(6)).to(equal(true))
-        isSuccess = self.selection.select(6)
-        expect(isSuccess).to(equal(false))
-        expect(self.selection.isSelected(6)).to(equal(true))
-    }
-    
-    func test_deselect() {
-        self.selection.select(6)
-        var isSuccess = self.selection.deselect(6)
-        expect(isSuccess).to(equal(true))
-        expect(self.selection.isSelected(6)).to(equal(false))
-        isSuccess = self.selection.deselect(6)
-        expect(isSuccess).to(equal(false))
-        expect(self.selection.isSelected(6)).to(equal(false))
-    }
-    
-    func test_SelectionItem() {
-        var item = self.selection.makeItem(1)
-        expect(item.object).to(equal(1))
-        expect(item.isSelected).to(equal(false))
-        item.isSelected = true
-        expect(self.selection.isSelected(1)).to(equal(true))
     }
 }
 
