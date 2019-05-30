@@ -18,13 +18,20 @@ class SelectionTests: QuickSpec {
     var selection: SetSelection<Container<Int>> = SetSelection<Container<Int>>()
 
     override func spec() {
+
         
         describe("selection") {
             beforeEach {
                 self.containers.objects = [1,2,3,4,5,6]
                 self.selection.source = self.containers
             }
-            
+
+            afterEach {
+                self.containers.objects = [1, 2, 3, 4, 5, 6]
+                self.selection.source = self.containers
+                self.selection.clear()
+            }
+
             it("source not nil", closure: {
                 expect(self.selection.source).notTo(beNil())
             })
@@ -55,12 +62,13 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.isSelected(5)).to(equal(true))
                 self.selection.setSelected(true, forObject: 6)
                 expect(self.selection.isSelected(6)).to(equal(true))
-                
-                self.selection.clear()
+                expect(self.selection.isSelected(7)).to(equal(false))
             })
             
-            it("count", closure: {
+            it("select count", closure: {
                 expect(self.selection.count).to(equal(0))
+                self.selection.setSelected(true, forObjects: [1,2,3])
+                expect(self.selection.count).to(equal(3))
             })
 
             it("clear function", closure: {
@@ -75,23 +83,23 @@ class SelectionTests: QuickSpec {
                 var isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
                 expect(isSetSeletedSuccess).to(equal(true))
                 expect(self.selection.count).to(equal(1))
-                expect(self.selection.selectedObjects.count).to(equal(1))
-                
+                expect(self.selection.isSelected(1)).to(equal(true))
+
                 isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
                 expect(isSetSeletedSuccess).to(equal(false))
                 
                 self.selection.setSelected(false, forObject: 1)
                 expect(self.selection.count).to(equal(0))
-                expect(self.selection.selectedObjects.count).to(equal(0))
+                expect(self.selection.isSelected(1)).to(equal(false))
+
             })
             
             it("updateIfSourceAvaiable", closure: {
-                self.selection.setSelected(true, forObject: 1)
-                expect(self.selection.count).to(equal(1))
+
+                self.selection.setSelected(true, forObject: 10)
                 self.selection.updateIfSourceAvaiable()
-                expect(self.selection.count).to(equal(1))
-                
-                self.selection.clear()
+                expect(self.selection.count).to(equal(0))
+                expect(self.selection.isSelected(10)).to(equal(false))
             })
 
             it("setSelectedForObjects", closure: {
@@ -113,6 +121,12 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.isSelected(1)).to(equal(false))
                 expect(self.selection.isSelected(2)).to(equal(false))
                 expect(self.selection.isSelected(3)).to(equal(false))
+
+                isSuccess = self.selection.setSelected(true, forObjects: [9,10])
+                expect(isSuccess).to(equal(true))
+                self.selection.updateIfSourceAvaiable()
+                expect(self.selection.isSelected(9)).to(equal(false))
+                expect(self.selection.isSelected(10)).to(equal(false))
             })
             
             it("isAllSelected", closure: {
@@ -121,7 +135,6 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.isAllSelected).to(equal(false))
                 self.selection.setSelected(true, forObjects: [4,5,6])
                 expect(self.selection.isAllSelected).to(equal(true))
-                self.selection.clear()
             })
             
             it("select and deselect ") {
