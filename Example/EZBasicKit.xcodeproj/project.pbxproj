@@ -32,7 +32,8 @@
 		72F816F4229FBCCF00B4E0A0 /* EZI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F816F3229FBCCF00B4E0A0 /* EZI.storyboard */; };
 		72F816F622A0D72E00B4E0A0 /* EZIURLBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816F522A0D72E00B4E0A0 /* EZIURLBridge.swift */; };
 		7A74DF504E352BB096BFEA60 /* Pods_EZBasicKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */; };
-		A885CDCA229E605A00DDF5D6 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		A81A7145229FBBBD00BC777F /* SetSelectionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81A7144229FBBBD00BC777F /* SetSelectionDemo.swift */; };
+		A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		72F816F1229FBAED00B4E0A0 /* EZIDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZIDemoViewController.swift; sourceTree = "<group>"; };
 		72F816F3229FBCCF00B4E0A0 /* EZI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EZI.storyboard; sourceTree = "<group>"; };
 		72F816F522A0D72E00B4E0A0 /* EZIURLBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZIURLBridge.swift; sourceTree = "<group>"; };
+		A81A7144229FBBBD00BC777F /* SetSelectionDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSelectionDemo.swift; sourceTree = "<group>"; };
+		A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTests.swift; sourceTree = "<group>"; };
 		E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67B06A9C84127C594C8EEF7 /* Pods-EZBasicKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				72F816EF229FB7E300B4E0A0 /* AppDelegate+EZI.swift */,
 				72F816F1229FBAED00B4E0A0 /* EZIDemoViewController.swift */,
 				72F816F3229FBCCF00B4E0A0 /* EZI.storyboard */,
+				A81A7143229FB30C00BC777F /* Selection */,
 			);
 			path = EZIDemo;
 			sourceTree = "<group>";
@@ -222,6 +226,14 @@
 				4555D91085748CF4473A1105 /* Pods-EZBasicKit_Tests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		A81A7143229FB30C00BC777F /* Selection */ = {
+			isa = PBXGroup;
+			children = (
+				A81A7144229FBBBD00BC777F /* SetSelectionDemo.swift */,
+			);
+			path = Selection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +438,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A81A7145229FBBBD00BC777F /* SetSelectionDemo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				72F816F0229FB7E300B4E0A0 /* AppDelegate+EZI.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
