@@ -29,12 +29,12 @@ class SelectionTests: QuickSpec {
                 expect(self.selection.source).notTo(beNil())
             })
             
-            context("given a source", {
-                it("its selectedObjects equal to 0 at the begining", closure: {
+            context("just init", {
+                it("selectedObjects 0", closure: {
                     expect(self.selection.selectedObjects.count).to(equal(0))
                 })
                 
-                it("the isSelected of every object must be false", closure: {
+                it("isSelected all false", closure: {
                     expect(self.selection.isSelected(1)).to(equal(false))
                     expect(self.selection.isSelected(2)).to(equal(false))
                     expect(self.selection.isSelected(3)).to(equal(false))
@@ -44,25 +44,32 @@ class SelectionTests: QuickSpec {
                 })
             })
             
-            it("its count is the selected objects' count", closure: {
+            it("count is selected count", closure: {
                 expect(self.selection.count).to(equal(0))
-                self.selection.setSelected(true, forObjects: [1,2,3,4,5,6])
-                expect(self.selection.count).to(equal(6))
             })
 
-            it("clear function to remove all objects from selection", closure: {
+            it("clear to remove all", closure: {
                 self.selection.clear()
                 expect(self.selection.count).to(equal(0))
             })
+            
+            it("setSelectedForObject to select or deselect one", closure: {
+                
+                var isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
+                expect(isSetSeletedSuccess).to(equal(true))
+                expect(self.selection.count).to(equal(1))
+                expect(self.selection.selectedObjects.count).to(equal(1))
+                
+                isSetSeletedSuccess = self.selection.setSelected(true, forObject: 1)
+                expect(isSetSeletedSuccess).to(equal(false))
+                
+                self.selection.setSelected(false, forObject: 1)
+                expect(self.selection.count).to(equal(0))
+                expect(self.selection.selectedObjects.count).to(equal(0))
+            })
+            
+//            it(<#T##description: String##String#>, closure: <#T##() -> Void#>)
         }
-    }
-    
-    func test_count() {
-        
-    }
-    
-    func test_clear() {
-        
     }
     
     func test_setSelectedForObject() {
