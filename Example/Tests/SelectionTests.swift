@@ -19,36 +19,49 @@ class SelectionTests: QuickSpec {
 
     override func spec() {
         
-        describe("a selection") {
+        describe("selection") {
             beforeEach {
                 self.containers.objects = [1,2,3,4,5,6]
                 self.selection.source = self.containers
             }
             
-            it("must have a source", closure: {
+            it("source not nil", closure: {
                 expect(self.selection.source).notTo(beNil())
             })
-            
-            context("just init", {
-                it("selectedObjects 0", closure: {
-                    expect(self.selection.selectedObjects.count).to(equal(0))
-                })
-                
-                it("isSelected all false", closure: {
-                    expect(self.selection.isSelected(1)).to(equal(false))
-                    expect(self.selection.isSelected(2)).to(equal(false))
-                    expect(self.selection.isSelected(3)).to(equal(false))
-                    expect(self.selection.isSelected(4)).to(equal(false))
-                    expect(self.selection.isSelected(5)).to(equal(false))
-                    expect(self.selection.isSelected(6)).to(equal(false))
-                })
-            })
-            
-            it("count is selected count", closure: {
-                expect(self.selection.count).to(equal(0))
+
+            it("selectedObjects count zero", closure: {
+                expect(self.selection.selectedObjects.count).to(equal(0))
             })
 
-            it("clear to remove all", closure: {
+            it("isSelected false", closure: {
+                expect(self.selection.isSelected(1)).to(equal(false))
+                expect(self.selection.isSelected(2)).to(equal(false))
+                expect(self.selection.isSelected(3)).to(equal(false))
+                expect(self.selection.isSelected(4)).to(equal(false))
+                expect(self.selection.isSelected(5)).to(equal(false))
+                expect(self.selection.isSelected(6)).to(equal(false))
+            })
+
+            it("isSelected true", closure: {
+                self.selection.setSelected(true, forObject: 1)
+                expect(self.selection.isSelected(1)).to(equal(true))
+                self.selection.setSelected(true, forObject:2)
+                expect(self.selection.isSelected(2)).to(equal(true))
+                self.selection.setSelected(true, forObject:3)
+                expect(self.selection.isSelected(3)).to(equal(true))
+                self.selection.setSelected(true, forObject:4)
+                expect(self.selection.isSelected(4)).to(equal(true))
+                self.selection.setSelected(true, forObject:5)
+                expect(self.selection.isSelected(5)).to(equal(true))
+                self.selection.setSelected(true, forObject: 6)
+                expect(self.selection.isSelected(6)).to(equal(true))
+            })
+            
+            it("selection objects count", closure: {
+                expect(self.selection.count).to(equal(6))
+            })
+
+            it("clear function", closure: {
                 self.selection.clear()
                 expect(self.selection.count).to(equal(0))
             })
