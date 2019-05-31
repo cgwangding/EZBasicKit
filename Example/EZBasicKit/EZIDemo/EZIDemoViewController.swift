@@ -11,5 +11,32 @@ import UIKit
 
 class EZIDemoViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+
+    var source: [String] = ["ezbuyapp://home", "http://home.com", "ezbuyint://home"]
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+    }
     
+}
+
+extension EZIDemoViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.source.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EZIDataCell", for: indexPath)
+        cell.textLabel?.text = self.source[indexPath.row]
+        return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+        
+    }
 }

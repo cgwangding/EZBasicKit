@@ -20,6 +20,8 @@ extension EZIDispatchable {
         switch instruction.type as! EZIType {
         case .home:
             return handleHome(instruction.wrapper)
+        case .unknown:
+            return .ignoring
         }
     }
 }

@@ -9,16 +9,26 @@
 import Foundation
 import EZBasicKit
 
-enum EZIType: String {
+enum EZIType: String, Equatable {
 
+    case unknown
     case home
 
-    init?(_ rawValue: CaseInsensitiveString) {
-        switch rawValue {
+    init(value: String?) {
+        guard let value = value else {
+            self = .unknown
+            return
+        }
+        switch CaseInsensitiveString(value) {
         case "home":
             self = .home
-        default: return nil
+        default:
+            self = .unknown
         }
+    }
+
+    static func ==(lhs: EZIType, rhs: EZIType) -> Bool {
+        return lhs.rawValue == rhs.rawValue
     }
 }
 
@@ -27,6 +37,8 @@ extension EZIType: EZInstructionType {
     func wrapperType(forComponents components: [String]) -> EZIWrapper.Type {
         switch self {
         case .home:
+            return EZIWrapper.self
+        case .unknown:
             return EZIWrapper.self
         }
     }

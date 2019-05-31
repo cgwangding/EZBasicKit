@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol EZIURLBridge {
+public protocol EZIURLBridge {
 
     func bridgeToEZI(from url: URL) -> EZInstruction?
 
@@ -29,7 +29,7 @@ public struct EZIURLBridgeOptions: OptionSet {
     public static let shopbackLink = EZIURLBridgeOptions(rawValue: 1 << 3)
 }
 
-private func makeDictionary(fromQueryItems queryItems: [URLQueryItem]?) -> [String: String] {
+public func makeDictionary(fromQueryItems queryItems: [URLQueryItem]?) -> [String: String] {
 
     var queries = [String: String]()
 
@@ -40,7 +40,7 @@ private func makeDictionary(fromQueryItems queryItems: [URLQueryItem]?) -> [Stri
     return queries
 }
 
-private func makeQueryItems(fromDictionary dict: [String: String]?) -> [URLQueryItem] {
+public func makeQueryItems(fromDictionary dict: [String: String]?) -> [URLQueryItem] {
 
     return dict?.map({ URLQueryItem(name: $0, value: $1) }) ?? []
 }
