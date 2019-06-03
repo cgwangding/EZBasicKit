@@ -10,14 +10,40 @@ import Foundation
 
 public protocol EZInstructionType {
 
+    var identifier: String { get }
+
     func wrapperType(forComponents components: [String]) -> EZIWrapper.Type
 }
 
-extension EZInstructionType {
+extension EZInstructionType  {
 
-    func wrapperType(forComponents components: [String]) -> EZIWrapper {
+    public func wrapperType(forComponents components: [String]) -> EZIWrapper {
         fatalError("需要有具体的类型遵守 EZInstructionType 协议")
     }
+}
+
+public func ==(lhs: EZInstructionType, rhs: EZInstructionType) -> Bool {
+    return lhs.identifier == rhs.identifier
+}
+
+public func ==<E:EZInstructionType>(lhs: E, rhs: E) -> Bool {
+    return lhs.identifier == rhs.identifier
+}
+
+public func ==<E:EZInstructionType>(lhs: EZInstructionType, rhs: E) -> Bool {
+    return lhs.identifier == rhs.identifier
+}
+
+public func !=(lhs: EZInstructionType, rhs: EZInstructionType) -> Bool {
+    return lhs.identifier != rhs.identifier
+}
+
+public func !=<E:EZInstructionType>(lhs: E, rhs: E) -> Bool {
+    return lhs.identifier != rhs.identifier
+}
+
+public func !=<E:EZInstructionType>(lhs: EZInstructionType, rhs: E) -> Bool {
+    return lhs.identifier != rhs.identifier
 }
 
 public struct EZInstruction {
@@ -43,7 +69,7 @@ public struct EZInstruction {
 
 }
 
-extension EZInstruction {
+public extension EZInstruction {
 
     public var wrapper: EZIWrapper {
         return self.type.wrapperType(forComponents: self.components).init(instruction: self)

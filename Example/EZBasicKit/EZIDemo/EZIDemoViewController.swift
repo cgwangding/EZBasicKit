@@ -8,18 +8,18 @@
 
 import Foundation
 import UIKit
+import EZBasicKit
 
 class EZIDemoViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var source: [String] = ["ezbuyapp://home", "http://home.com", "ezbuyint://home"]
+    var source: [String] = ["ezbuyapp://home"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-    
 }
 
 extension EZIDemoViewController: UITableViewDelegate, UITableViewDataSource {
@@ -37,6 +37,13 @@ extension EZIDemoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
 
-        
+        let url = self.source[indexPath.row]
+        if let ezi = EZInstruction(URL(string: url), bridgeOptions: [.ezbuyApp]) {
+            let action = self.handlerInChain(forEZI: ezi, fromFirstNode: false)
+            debugPrint(action)
+            action.handle()
+        }
     }
 }
+
+//extension EZIDemoViewController: EZIDefaultDispatchable {}

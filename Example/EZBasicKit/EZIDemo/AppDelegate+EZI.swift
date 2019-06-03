@@ -9,6 +9,8 @@
 import Foundation
 import EZBasicKit
 
+extension AppDelegate: EZINode {}
+
 extension AppDelegate: EZIDispatchable {
 
     func handleHome(_ wrapper: EZIWrapper) -> EZIHandlerAction {

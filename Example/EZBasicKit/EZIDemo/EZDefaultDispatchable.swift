@@ -17,12 +17,11 @@ protocol EZIDispatchable: EZIHandleable {
 extension EZIDispatchable {
 
     func handler(forEZI instruction: EZInstruction) -> EZIHandlerAction {
-        switch instruction.type as! EZIType {
-        case .home:
-            return handleHome(instruction.wrapper)
-        case .unknown:
-            return .ignoring
+        switch instruction.wrapper {
+        case let wrapper:
+            return self.handleHome(wrapper)
         }
+
     }
 }
 

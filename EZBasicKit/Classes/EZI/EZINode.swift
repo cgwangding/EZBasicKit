@@ -40,22 +40,22 @@ extension EZINode where Self: UIResponder {
     public var nextEZINode: EZINode? {
                 
         var next = self.next
-        
+
         while next != nil {
             if let node = next as? EZINode {
                 return node
             }
             next = next?.next
         }
-        
         return nil
     }
 }
 
+
 extension EZINode {
 
     public func handlerInChain(forEZI instruction: EZInstruction, fromFirstNode: Bool) -> EZIHandlerAction {
-    
+
         if fromFirstNode {
             return self.firstEZINode.handlerInChain(forEZI: instruction, fromFirstNode: false)
         } else {

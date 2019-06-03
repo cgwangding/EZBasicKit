@@ -9,6 +9,11 @@
 import UIKit
 import EZBasicKit
 
+extension EZIURLBridgeOptions {
+
+    public static let ezbuyApp: EZIURLBridgeOptions = EZIURLBridgeOptions(rawValue: 1 << 1)
+}
+
 class EZBuyAPPEZIURLBridge: EZIURLBridge {
 
     static let scheme = "ezbuyapp"
@@ -18,7 +23,7 @@ class EZBuyAPPEZIURLBridge: EZIURLBridge {
             return nil
         }
 
-        let queries = makeDictionary(fromQueryItems: components.queryItems)
+        let queries = components.queryItems?.toDictionary ?? [:]
         let comps = components.path.components(separatedBy: "/").filter({ !$0.isEmpty })
 
         let ezi = EZInstruction(type: EZIType(value: url.host), components: comps, info: queries, source: url)
@@ -28,7 +33,32 @@ class EZBuyAPPEZIURLBridge: EZIURLBridge {
 
     func bridgeToURL(from ezi: EZInstruction) -> URL? {
 
-        guard ezi.type != .unknown else { return nil }
-        var comp
+        guard ezi.type != EZIType.unknown else { return nil }
+
+        var urlComponents = URLComponents()
+        urlComponents.scheme = EZBuyAPPEZIURLBridge.scheme
+        urlComponents.host = ezi.type.identifier
+        urlComponents.path = ezi.path
+        urlComponents.queryItems = ezi.info.map({ URLQueryItem(name: $0.0, value: $0.1) })
+        return urlComponents.url
+    }
+}
+
+extension EZInstruction {
+
+    fileprivate static let ezbuyAppBridge: EZIURLBridge = EZBuyAPPEZIURLBridge()
+
+    init?(_ url: URL?, bridgeOptions: [EZIURLBridgeOptions]) {
+
+        guard let url = url else {
+            return nil
+        }
+
+        if bridgeOptions.contains(.ezbuyApp), let ezi = EZInstruction.ezbuyAppBridge.bridgeToEZI(from: url) {
+            self = ezi
+            return
+        }
+
+        return nil
     }
 }
