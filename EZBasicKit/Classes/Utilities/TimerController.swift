@@ -136,13 +136,13 @@ public class BackgroundCountDownTimerController: CountDownTimerController {
     public override init(interval: DispatchTimeInterval, times: Int, queue: DispatchQueue = .main, handler: @escaping (CountDownTimerController, _ leftTimes: Int) -> Void) {
         super.init(interval: interval, times: times, queue: queue, handler: handler)
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillResignActive, object: nil, queue: nil) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: nil) { [weak self] _ in
             guard let strongSelf = self else { return }
 
             strongSelf.startTime = CFAbsoluteTimeGetCurrent()
         }
         
-        NotificationCenter.default.addObserver(forName: NSNotification.Name.UIApplicationWillEnterForeground, object: nil, queue: nil) { [weak self] _ in
+        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: nil) { [weak self] _ in
             guard let strongSelf = self else { return }
             
             strongSelf.leftTimes -= Int(ceil(CFAbsoluteTimeGetCurrent() - strongSelf.startTime))

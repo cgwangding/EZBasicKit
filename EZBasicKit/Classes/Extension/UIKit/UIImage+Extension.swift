@@ -6,17 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - UIImage compress
 
 extension UIImage {
 
     public var pngData: Data? {
-        return UIImagePNGRepresentation(self)
-    }
-
-    public func jpegData(compressionQuality scale: CGFloat) -> Data? {
-        return UIImageJPEGRepresentation(self, scale)
+        return self.pngData()
     }
 
     public func compress(to kbLength: Int) -> UIImage {

@@ -20,7 +20,7 @@ extension TransitionAnimators {
             to.setViewToEnd()
             to.view.alpha = 0.0
             
-            container.bringSubview(toFront: to.view)
+            container.bringSubviewToFront(to.view)
             
         }.transit { container, from, to in
                 
