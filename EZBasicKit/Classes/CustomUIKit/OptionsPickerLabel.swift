@@ -169,7 +169,7 @@ public class OptionsPickerTextField: UITextField, UITextFieldDelegate, UIPickerV
         guard !self.options.isEmpty else { return }
         
         let index: Int = {
-            if let text = self.text, let index = self.options.index(of: text) {
+            if let text = self.text, let index = self.options.firstIndex(of: text) {
                 return index
             } else {
                 return 0

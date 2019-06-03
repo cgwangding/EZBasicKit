@@ -84,7 +84,7 @@ extension TransitionAnimators {
             guard let from = from, let to = to else { return }
             
             container.addSubview(from.view)
-            container.bringSubview(toFront: from.view)
+            container.bringSubviewToFront(from.view)
             
             to.setViewToEnd()
             from.setViewToEnd()

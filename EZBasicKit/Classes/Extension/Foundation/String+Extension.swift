@@ -49,7 +49,7 @@ extension String {
         return self.size(constraintSize, attributes: [NSAttributedString.Key.font: font])
     }
 
-    public func size(_ constraintSize: CGSize, attributes: [NSAttributedStringKey : Any]) -> CGSize {
+    public func size(_ constraintSize: CGSize, attributes: [NSAttributedString.Key : Any]) -> CGSize {
 
         let attr = NSAttributedString(string: self, attributes: attributes)
 

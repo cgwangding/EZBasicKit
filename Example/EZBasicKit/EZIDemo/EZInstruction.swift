@@ -11,22 +11,34 @@ import EZBasicKit
 
 enum EZIType: String {
 
+    case unknown
     case home
 
-    init?(_ rawValue: CaseInsensitiveString) {
-        switch rawValue {
+    init(value: String?) {
+        guard let value = value else {
+            self = .unknown
+            return
+        }
+        switch CaseInsensitiveString(value) {
         case "home":
             self = .home
-        default: return nil
+        default:
+            self = .unknown
         }
     }
 }
 
 extension EZIType: EZInstructionType {
+    
+    var identifier: String {
+        return self.rawValue
+    }
 
     func wrapperType(forComponents components: [String]) -> EZIWrapper.Type {
         switch self {
         case .home:
+            return EZIWrapper.self
+        case .unknown:
             return EZIWrapper.self
         }
     }
