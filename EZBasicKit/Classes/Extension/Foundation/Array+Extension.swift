@@ -22,16 +22,17 @@ extension Array {
     }
 }
 
-extension Array where Element: BinaryInteger {
-
-    public func sum() -> Element {
-        return self.reduce(0, { $0 + $1 })
-    }
-}
-
 extension Array where Element: Hashable {
 
     public func removeDuplicates() -> [Element] {
-        return Array(Set(self))
+
+        var result: [Element] = []
+
+        for e in self {
+            if !result.contains(e) {
+                result.append(e)
+            }
+        }
+        return result
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - to attribte string
 extension String {
@@ -22,12 +23,12 @@ extension String {
 // MARK: - 剔除空格以及换行
 extension String {
 
-    public var trimmingWhitespace: String {
-        return self.trimmingCharacters(in: CharacterSet.whitespaces)
+    public var trimmingAllWhitespace: String {
+        return self.replacingOccurrences(of: " ", with: "")
     }
 
-    public var trimmingWhitespaceAndNewline: String {
-        return self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+    public var trimmingAllWhitespaceAndNewline: String {
+        return self.trimmingAllWhitespace.replacingOccurrences(of: "\n", with: "")
     }
 }
 
@@ -64,20 +65,20 @@ extension String {
 
     public subscript(from index: Int) -> String? {
 
-        guard index <= self.count else { return nil }
+        guard index >= 0, index < self.count else { return nil }
         let start = self.index(self.startIndex, offsetBy: index)
         return String(self[start...])
     }
 
     public subscript(to index: Int) -> String? {
 
-        guard index >= 0 else { return nil }
-        let end = self.index(self.startIndex, offsetBy: min(index, self.count))
+        guard index >= 0, index < self.count else { return nil }
+        let end = self.index(self.startIndex, offsetBy: index)
         return String(self[...end])
     }
 
     public subscript(in range: ClosedRange<Int>) -> String? {
-        guard range.lowerBound >= 0, range.upperBound <= self.count else { return nil }
+        guard range.lowerBound >= 0, range.upperBound < self.count else { return nil }
         let start = self.index(self.startIndex, offsetBy: range.lowerBound)
         let end = self.index(self.startIndex, offsetBy: range.upperBound)
         return String(self[start...end])
@@ -139,7 +140,7 @@ extension String {
     }
 }
 
-// MARK: - 约等于，只能判断英文字母，忽略大小写
+// MARK: - 约等于，忽略大小写
 extension String {
 
     public static func ~=(lhs: String, rhs: String) -> Bool {
@@ -167,7 +168,7 @@ extension String {
         return self.matchs(pattern, option: option, matchOptions: matchOptions, range: range).count
     }
 
-    public func matchs(_ pattern: String, option: NSRegularExpression.Options, matchOptions: NSRegularExpression.MatchingOptions, range: NSRange) -> [NSTextCheckingResult] {
+    public func matchs(_ pattern: String, option: NSRegularExpression.Options = .caseInsensitive, matchOptions: NSRegularExpression.MatchingOptions = .withTransparentBounds, range: NSRange) -> [NSTextCheckingResult] {
         do {
             let exp = try NSRegularExpression(pattern: pattern, options: option)
             return exp.matches(in: self, options: matchOptions, range: range)

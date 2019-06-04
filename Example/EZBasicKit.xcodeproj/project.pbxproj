@@ -13,6 +13,13 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		72AE819C22A51A3C00DAFC24 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */; };
+		72AE819E22A51A9B00DAFC24 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */; };
+		72AE81A422A63F2B00DAFC24 /* DateFromatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */; };
+		72AE81A622A63F6600DAFC24 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72AE81A522A63F6600DAFC24 /* Quick.framework */; };
+		72AE81AA22A64BC900DAFC24 /* NSObjectExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE81A922A64BC900DAFC24 /* NSObjectExtensionTests.swift */; };
+		72AE81AC22A64E7E00DAFC24 /* NSRangeExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE81AB22A64E7E00DAFC24 /* NSRangeExtensionTests.swift */; };
+		72AE81AE22A654EB00DAFC24 /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE81AD22A654EB00DAFC24 /* StringExtensionTests.swift */; };
 		72F816DC229E73A800B4E0A0 /* EZInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816DB229E73A800B4E0A0 /* EZInstruction.swift */; };
 		72F816E2229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816E1229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift */; };
 		72F816F0229FB7E300B4E0A0 /* AppDelegate+EZI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816EF229FB7E300B4E0A0 /* AppDelegate+EZI.swift */; };
@@ -20,7 +27,7 @@
 		72F816F4229FBCCF00B4E0A0 /* EZI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72F816F3229FBCCF00B4E0A0 /* EZI.storyboard */; };
 		72F816F622A0D72E00B4E0A0 /* EZIURLBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F816F522A0D72E00B4E0A0 /* EZIURLBridge.swift */; };
 		7A74DF504E352BB096BFEA60 /* Pods_EZBasicKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */; };
-		A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */; };
+		A885CDCA229E605A00DDF5D6 /* (null) in Sources */ = {isa = PBXBuildFile; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* EZBasicKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZBasicKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTests.swift; sourceTree = "<group>"; };
+		72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
+		72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFromatterTests.swift; sourceTree = "<group>"; };
+		72AE81A522A63F6600DAFC24 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72AE81A922A64BC900DAFC24 /* NSObjectExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtensionTests.swift; sourceTree = "<group>"; };
+		72AE81AB22A64E7E00DAFC24 /* NSRangeExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSRangeExtensionTests.swift; sourceTree = "<group>"; };
+		72AE81AD22A654EB00DAFC24 /* StringExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		72F816DB229E73A800B4E0A0 /* EZInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZInstruction.swift; sourceTree = "<group>"; };
 		72F816E1229E8B6A00B4E0A0 /* EZDefaultDispatchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZDefaultDispatchable.swift; sourceTree = "<group>"; };
 		72F816E9229F80D500B4E0A0 /* EZBasicKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = EZBasicKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72AE81A622A63F6600DAFC24 /* Quick.framework in Frameworks */,
 				7A74DF504E352BB096BFEA60 /* Pods_EZBasicKit_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -81,6 +96,7 @@
 		3FC7ADF6473F07D27E3B7B28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72AE81A522A63F6600DAFC24 /* Quick.framework */,
 				72F816E9229F80D500B4E0A0 /* EZBasicKit.framework */,
 				0128BF4946B9E5DA7211CFE3 /* Pods_EZBasicKit_Example.framework */,
 				E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */,
@@ -134,7 +150,12 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */,
+				72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */,
+				72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */,
+				72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */,
+				72AE81A922A64BC900DAFC24 /* NSObjectExtensionTests.swift */,
+				72AE81AB22A64E7E00DAFC24 /* NSRangeExtensionTests.swift */,
+				72AE81AD22A654EB00DAFC24 /* StringExtensionTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -386,7 +407,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */,
+				72AE81A422A63F2B00DAFC24 /* DateFromatterTests.swift in Sources */,
+				72AE81AA22A64BC900DAFC24 /* NSObjectExtensionTests.swift in Sources */,
+				72AE81AE22A654EB00DAFC24 /* StringExtensionTests.swift in Sources */,
+				72AE81AC22A64E7E00DAFC24 /* NSRangeExtensionTests.swift in Sources */,
+				72AE819C22A51A3C00DAFC24 /* SelectionTests.swift in Sources */,
+				A885CDCA229E605A00DDF5D6 /* (null) in Sources */,
+				72AE819E22A51A9B00DAFC24 /* ArrayExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,6 +586,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -571,6 +599,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZBasicKit_Example.app/EZBasicKit_Example";
 			};
@@ -580,6 +610,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4555D91085748CF4473A1105 /* Pods-EZBasicKit_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -588,6 +619,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EZBasicKit_Example.app/EZBasicKit_Example";
 			};
