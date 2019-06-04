@@ -82,8 +82,8 @@ extension Predicate {
     }
 }
 
-// The Expectation style intended for comparison to a PredicateStatus.
-public enum ExpectationStyle {
+// Question: Should this be exposed? It's safer to not for now and decide later.
+internal enum ExpectationStyle {
     case toMatch, toNotMatch
 }
 
@@ -91,9 +91,9 @@ public enum ExpectationStyle {
 /// predicate.
 public struct PredicateResult {
     /// Status indicates if the predicate matches, does not match, or fails.
-    public var status: PredicateStatus
+    var status: PredicateStatus
     /// The error message that can be displayed if it does not match
-    public var message: ExpectationMessage
+    var message: ExpectationMessage
 
     /// Constructs a new PredicateResult with a given status and error message
     public init(status: PredicateStatus, message: ExpectationMessage) {
@@ -108,7 +108,7 @@ public struct PredicateResult {
     }
 
     /// Converts the result to a boolean based on what the expectation intended
-    public func toBoolean(expectation style: ExpectationStyle) -> Bool {
+    internal func toBoolean(expectation style: ExpectationStyle) -> Bool {
         return status.toBoolean(expectation: style)
     }
 }
@@ -242,7 +242,7 @@ extension Predicate {
 }
 
 #if os(macOS) || os(iOS) || os(tvOS) || os(watchOS)
-public typealias PredicateBlock = (_ actualExpression: Expression<NSObject>) throws -> NMBPredicateResult
+public typealias PredicateBlock = (_ actualExpression: Expression<NSObject>) -> NMBPredicateResult
 
 public class NMBPredicate: NSObject {
     private let predicate: PredicateBlock
@@ -251,24 +251,20 @@ public class NMBPredicate: NSObject {
         self.predicate = predicate
     }
 
-    func satisfies(_ expression: @escaping () throws -> NSObject?, location: SourceLocation) -> NMBPredicateResult {
+    func satisfies(_ expression: @escaping () -> NSObject!, location: SourceLocation) -> NMBPredicateResult {
         let expr = Expression(expression: expression, location: location)
-        do {
-            return try self.predicate(expr)
-        } catch let error {
-            return PredicateResult(status: .fail, message: .fail("unexpected error thrown: <\(error)>")).toObjectiveC()
-        }
+        return self.predicate(expr)
     }
 }
 
 extension NMBPredicate: NMBMatcher {
-    public func matches(_ actualBlock: @escaping () -> NSObject?, failureMessage: FailureMessage, location: SourceLocation) -> Bool {
+    public func matches(_ actualBlock: @escaping () -> NSObject!, failureMessage: FailureMessage, location: SourceLocation) -> Bool {
         let result = satisfies(actualBlock, location: location).toSwift()
         result.message.update(failureMessage: failureMessage)
         return result.status.toBoolean(expectation: .toMatch)
     }
 
-    public func doesNotMatch(_ actualBlock: @escaping () -> NSObject?, failureMessage: FailureMessage, location: SourceLocation) -> Bool {
+    public func doesNotMatch(_ actualBlock: @escaping () -> NSObject!, failureMessage: FailureMessage, location: SourceLocation) -> Bool {
         let result = satisfies(actualBlock, location: location).toSwift()
         result.message.update(failureMessage: failureMessage)
         return result.status.toBoolean(expectation: .toNotMatch)
@@ -311,7 +307,7 @@ final public class NMBPredicateStatus: NSObject {
     public static let doesNotMatch: NMBPredicateStatus = NMBPredicateStatus(status: 1)
     public static let fail: NMBPredicateStatus = NMBPredicateStatus(status: 2)
 
-    public override var hash: Int { return self.status.hashValue }
+    public override var hashValue: Int { return self.status.hashValue }
 
     public override func isEqual(_ object: Any?) -> Bool {
         guard let otherPredicate = object as? NMBPredicateStatus else {

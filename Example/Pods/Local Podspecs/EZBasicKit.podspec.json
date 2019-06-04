@@ -1,6 +1,6 @@
 {
   "name": "EZBasicKit",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "summary": "A short description of EZBasicKit.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/cgwangding@163.com/EZBasicKit",
@@ -13,62 +13,15 @@
   },
   "source": {
     "git": "https://github.com/cgwangding@163.com/EZBasicKit.git",
-    "tag": "0.1.1"
+    "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "9.0"
+    "ios": "8.0"
   },
-  "swift_versions": "5.0",
   "subspecs": [
     {
       "name": "Identifiable",
       "source_files": "EZBasicKit/Classes/Identifiable/*.swift"
-    },
-    {
-      "name": "EZI",
-      "source_files": "EZBasicKit/Classes/EZI/*.swift"
-    },
-    {
-      "name": "ObjectsController",
-      "source_files": "EZBasicKit/Classes/ObjectsController/*.swift"
-    },
-    {
-      "name": "Selection",
-      "source_files": "EZBasicKit/Classes/Selection/*.swift"
-    },
-    {
-      "name": "Animator",
-      "source_files": "EZBasicKit/Classes/Animator/*.swift"
-    },
-    {
-      "name": "Extension",
-      "subspecs": [
-        {
-          "name": "UIKitExtension",
-          "source_files": "EZBasicKit/Classes/Extension/UIKit/*.swift"
-        },
-        {
-          "name": "FoundationExtension",
-          "source_files": "EZBasicKit/Classes/Extension/Foundation/*.swift"
-        }
-      ]
-    },
-    {
-      "name": "CustomUIKit",
-      "source_files": "EZBasicKit/Classes/CustomUIKit/*.swift"
-    },
-    {
-      "name": "Utilities",
-      "source_files": "EZBasicKit/Classes/Utilities/*.swift"
-    },
-    {
-      "name": "EZPresentation",
-      "source_files": "EZBasicKit/Classes/EZPresentation/*.swift",
-      "dependencies": {
-        "EZBasicKit/Animator": [
-
-        ]
-      }
     }
   ]
 }
