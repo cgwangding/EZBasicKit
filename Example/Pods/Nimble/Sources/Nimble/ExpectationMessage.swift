@@ -152,10 +152,8 @@ public indirect enum ExpectationMessage {
     // Backwards compatibility: converts ExpectationMessage tree to FailureMessage
     internal func update(failureMessage: FailureMessage) {
         switch self {
-        case let .fail(msg) where !msg.isEmpty:
+        case let .fail(msg):
             failureMessage.stringValue = msg
-        case .fail:
-            break
         case let .expectedTo(msg):
             failureMessage.actualValue = nil
             failureMessage.postfixMessage = msg
