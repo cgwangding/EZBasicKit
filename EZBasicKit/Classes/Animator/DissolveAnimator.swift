@@ -10,7 +10,7 @@ import Foundation
 
 extension TransitionAnimators {
 
-    public static func makeDissolveAnimator(_ duration: TimeInterval = 0.3) -> UIViewControllerAnimatedTransitioning {
+    public static func makeDissolveAnimator(_ duration: TimeInterval = 0.3) -> AbstractTransitionAnimator {
 
         return BasicTransitionAnimator(duration: duration).initial { container, from, to in
 
