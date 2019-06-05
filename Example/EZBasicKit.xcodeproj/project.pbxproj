@@ -13,6 +13,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
+		727378DA22A769DB00A5C3CF /* Animator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727378D922A769DB00A5C3CF /* Animator.storyboard */; };
 		72AE819C22A51A3C00DAFC24 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */; };
 		72AE819E22A51A9B00DAFC24 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */; };
 		72AE81A422A63F2B00DAFC24 /* DateFromatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */; };
@@ -53,6 +54,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* EZBasicKit_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EZBasicKit_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		727378D922A769DB00A5C3CF /* Animator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Animator.storyboard; sourceTree = "<group>"; };
 		72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTests.swift; sourceTree = "<group>"; };
 		72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFromatterTests.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				727378D822A769C400A5C3CF /* AnimatorDemo */,
 				72F816DA229E736B00B4E0A0 /* EZIDemo */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
@@ -167,6 +170,14 @@
 				607FACEA1AFB9204008FA782 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		727378D822A769C400A5C3CF /* AnimatorDemo */ = {
+			isa = PBXGroup;
+			children = (
+				727378D922A769DB00A5C3CF /* Animator.storyboard */,
+			);
+			path = AnimatorDemo;
 			sourceTree = "<group>";
 		};
 		72F816DA229E736B00B4E0A0 /* EZIDemo */ = {
@@ -285,6 +296,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				72F816F4229FBCCF00B4E0A0 /* EZI.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				727378DA22A769DB00A5C3CF /* Animator.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
