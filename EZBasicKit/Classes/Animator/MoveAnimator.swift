@@ -44,7 +44,7 @@ extension TransitionAnimators {
         }
     }
     
-    public static func makeMoveOutAnimator(_ duration: TimeInterval, to edge: UIRectEdge) -> AbstractTransitionAnimator {
+    public static func makeMoveOutAnimator(_ duration: TimeInterval = 0.3, to edge: UIRectEdge) -> AbstractTransitionAnimator {
         
         return self.makeMoveInAnimator(duration, from: edge).reversed
     }
