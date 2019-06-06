@@ -193,7 +193,6 @@
 				72AE81A922A64BC900DAFC24 /* NSObjectExtensionTests.swift */,
 				72AE81AB22A64E7E00DAFC24 /* NSRangeExtensionTests.swift */,
 				72AE81AD22A654EB00DAFC24 /* StringExtensionTests.swift */,
-				A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */,
 				A897873E22A10D34009AB91C /* IdentifiableTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
@@ -515,7 +514,6 @@
 				72AE81AC22A64E7E00DAFC24 /* NSRangeExtensionTests.swift in Sources */,
 				72AE819C22A51A3C00DAFC24 /* SelectionTests.swift in Sources */,
 				72AE819E22A51A9B00DAFC24 /* ArrayExtensionTests.swift in Sources */,
-				A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */,
 				A897874022A10D65009AB91C /* IdentifiableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
