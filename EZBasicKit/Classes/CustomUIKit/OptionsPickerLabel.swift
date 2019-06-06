@@ -33,7 +33,13 @@ public final class OptionsPickerLabel: UILabel {
         super.init(frame: frame)
         self.initialize()
     }
-    
+
+
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        self.initialize()
+    }
+
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         self.initialize()
@@ -46,6 +52,7 @@ public final class OptionsPickerLabel: UILabel {
     }
     
     private func initialize() {
+        self.isUserInteractionEnabled = true
         self.textField.isHidden = true
         self.textField.addTarget(self, action: #selector(OptionsPickerLabel.textFieldEditingChanged(_:)), for: .editingChanged)
         self.addSubview(self.textField)

@@ -33,7 +33,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrX-Cv-I22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="-421"/>
+            <point key="canvasLocation" x="541" y="-425"/>
         </scene>
         <!--Animator-->
         <scene sceneID="zrI-BP-tfh">
@@ -43,7 +43,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95Z-2y-XAK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="702" y="-374"/>
+            <point key="canvasLocation" x="470" y="-382"/>
+        </scene>
+        <!--CustomUIKit-->
+        <scene sceneID="Chd-1d-M1f">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CustomUIKit" id="kHB-uR-QUl" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="gCm-lb-l4w"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wtw-zg-Qtf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="487" y="-341"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="m5V-0a-zDg">
@@ -73,7 +83,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="C14-n2-Nf0" kind="push" id="NHF-st-NPt"/>
+                                            <segue destination="C14-n2-Nf0" kind="show" id="NHF-st-NPt"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="QUA-H2-R0t" style="IBUITableViewCellStyleDefault" id="9Gw-dh-UNV">
@@ -93,7 +103,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="G5p-jg-ef9" kind="push" id="7dZ-Ld-MvA"/>
+                                            <segue destination="G5p-jg-ef9" kind="show" id="7dZ-Ld-MvA"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="VbP-wV-ZdO" style="IBUITableViewCellStyleDefault" id="bOc-0v-w8X">
@@ -103,7 +113,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VbP-wV-ZdO">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="CustomeUIKit" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VbP-wV-ZdO">
                                                     <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -112,6 +122,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="kHB-uR-QUl" kind="show" id="ZvM-c1-yoF"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

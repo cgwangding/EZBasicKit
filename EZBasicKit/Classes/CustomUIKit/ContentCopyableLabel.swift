@@ -8,7 +8,13 @@
 
 import UIKit
 
+public typealias Target = UIView
+
 public class ContentCopyableLabel: UILabel {
+
+    public var customMenuTargetRect: (() -> (CGRect, Target))?
+
+    public var customCopyAction: ((String) -> Void)?
 
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,13 +44,21 @@ public class ContentCopyableLabel: UILabel {
             return
         } else {
             becomeFirstResponder()
-            menu.setTargetRect(self.bounds, in: self.superview ?? self)
+            if let (rect, target) = self.customMenuTargetRect?() {
+                menu.setTargetRect(rect, in: target)
+            } else {
+                menu.setTargetRect(self.bounds, in: self)
+            }
             menu.setMenuVisible(true, animated: false)
         }
     }
 
     public override func copy(_ sender: Any?) {
-        UIPasteboard.general.string = self.text
+        if let action = self.customCopyAction {
+            action(self.text ?? "")
+        } else {
+            UIPasteboard.general.string = self.text
+        }
     }
 
     public override var canBecomeFirstResponder: Bool {

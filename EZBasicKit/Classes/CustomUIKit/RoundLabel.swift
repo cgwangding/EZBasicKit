@@ -1,16 +1,23 @@
 //
-//  RoundButton.swift
-//  ezbuy
+//  RoundLabel.swift
+//  EZBasicKit
 //
-//  Created by Rocke on 16/6/7.
-//  Copyright © 2016年 com.ezbuy. All rights reserved.
+//  Created by wangding on 2019/6/5.
 //
 
 import UIKit
 
 @IBDesignable
-public class RoundButton: UIButton {
-    
+public class RoundLabel: UILabel {
+
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     @IBInspectable
     public var cornerRadius: CGFloat = 2 {
         didSet {
@@ -22,7 +29,7 @@ public class RoundButton: UIButton {
     @IBInspectable
     public var borderColor: UIColor? {
         didSet {
-             self.layer.borderColor = self.borderColor?.cgColor
+            self.layer.borderColor = self.borderColor?.cgColor
         }
     }
 
