@@ -53,31 +53,26 @@ open class StrokeBorderView: UIView {
             p.addLine(to: CGPoint(x: bounds.size.width - halfWidth, y: bounds.size.height - halfWidth))
             p.addLine(to: CGPoint(x: bounds.origin.x + halfWidth, y: bounds.size.height - halfWidth))
             p.addLine(to: CGPoint(x: bounds.origin.x + halfWidth, y: bounds.origin.y))
-            debugPrint("all")
         }
 
         if self.rectEdge.contains(.left) {
             p.move(to: CGPoint(x: bounds.origin.x, y: bounds.origin.y + halfWidth))
             p.addLine(to: CGPoint(x: bounds.origin.x, y: bounds.size.height))
-            debugPrint("left")
         }
 
         if self.rectEdge.contains(.top) {
             p.move(to: CGPoint(x: bounds.origin.x, y: bounds.origin.y + halfWidth))
             p.addLine(to: CGPoint(x: bounds.size.width - halfWidth, y: bounds.origin.y + halfWidth))
-            debugPrint("top")
         }
 
         if self.rectEdge.contains(.right) {
             p.move(to: CGPoint(x: bounds.size.width - halfWidth, y: bounds.origin.y + halfWidth))
             p.addLine(to: CGPoint(x: bounds.size.width - halfWidth, y: bounds.size.height - halfWidth))
-            debugPrint("right")
         }
 
         if self.rectEdge.contains(.bottom) {
             p.move(to: CGPoint(x: bounds.origin.x, y: bounds.size.height - halfWidth))
             p.addLine(to: CGPoint(x: bounds.size.width - halfWidth, y: bounds.size.height - halfWidth))
-            debugPrint("bottom")
         }
 
         return p
