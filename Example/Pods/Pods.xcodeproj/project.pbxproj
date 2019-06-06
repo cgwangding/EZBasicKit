@@ -117,6 +117,7 @@
 		6F43C1B525D5EB7B5DC41AFB1950B42F /* BeGreaterThan.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4FC3009682910DB5C9DC39D4934547D /* BeGreaterThan.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7020AB463CEEF45508FCF889A6CF03A8 /* iOSSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEFB43A6A730BCDBC40E5D4FF5FBADE1 /* iOSSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724D79E38A9AF700AFCE9854C77A2C7B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58F3B7D6ADCC9647A4F423CEFF7544 /* XCTest.framework */; };
+		727378E722A7D6BC00A5C3CF /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727378E622A7D6BC00A5C3CF /* RoundLabel.swift */; };
 		73FDDA0878D617C6A95CE5EBF5A4E342 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECB90F7D6927C66B61378A491BC4438F /* UIButton+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		77C4D5F16A6066628B0B7D6AD87183E0 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8978BE1FE3A255F17131A229556DDBF7 /* ExampleMetadata.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		791C03EFFF06649DA66FAF30BC35CD16 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = CA77D48A54FE1671E151188022831912 /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -460,6 +461,7 @@
 		6F2FB393566CE101C972025A2AC9917D /* ContentCopyableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentCopyableLabel.swift; path = EZBasicKit/Classes/CustomUIKit/ContentCopyableLabel.swift; sourceTree = "<group>"; };
 		70416D94781EDE7FD9C448B6CA798AE5 /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		71369DA488121B9AE3C73BC4D577D07A /* CwlMachBadInstructionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CwlMachBadInstructionHandler.m; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m; sourceTree = "<group>"; };
+		727378E622A7D6BC00A5C3CF /* RoundLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = EZBasicKit/Classes/CustomUIKit/RoundLabel.swift; sourceTree = "<group>"; };
 		73140E14E6C59E611E4BED91E9981F34 /* ObjectsControllerBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectsControllerBox.swift; path = EZBasicKit/Classes/ObjectsController/ObjectsControllerBox.swift; sourceTree = "<group>"; };
 		7658BC34405CCC1E976D1BA2468ACB93 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		78D8B28F3D380A2B21A5F8895A28DD58 /* AssertionRecorder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssertionRecorder.swift; path = Sources/Nimble/Adapters/AssertionRecorder.swift; sourceTree = "<group>"; };
@@ -1078,6 +1080,7 @@
 		D57F0768C82D9E391CD19298D3D91433 /* CustomUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				727378E622A7D6BC00A5C3CF /* RoundLabel.swift */,
 				218A845B38A0AE2E8C08C3C54743F469 /* CircleImageView.swift */,
 				6F2FB393566CE101C972025A2AC9917D /* ContentCopyableLabel.swift */,
 				09F1EEDD768EED41475CFE3E7BA6DEA4 /* EZNavigationController.swift */,
@@ -1806,6 +1809,7 @@
 				BBFBCD5B25CEA82EB21637C672BF87DD /* AbstractObjectsController.swift in Sources */,
 				01BAD79900CDA09FD98E9B0B8F7FF54E /* Array+Extension.swift in Sources */,
 				43F4BD32D61D50988A9515ABEB8509EB /* BatchFetchController.swift in Sources */,
+				727378E722A7D6BC00A5C3CF /* RoundLabel.swift in Sources */,
 				9595118EF8914B896D85A64154D88218 /* CaseInsensitiveString.swift in Sources */,
 				7BC9BE21F687934248A7A188B742756A /* CircleImageView.swift in Sources */,
 				B0033A88D3677545234D54DE6D6EFDD2 /* CollectionType+Identifiable.swift in Sources */,

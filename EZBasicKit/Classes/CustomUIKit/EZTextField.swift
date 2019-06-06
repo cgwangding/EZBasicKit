@@ -8,6 +8,7 @@
 
 import UIKit
 
+@IBDesignable
 public class EZTextField : UITextField {
 
     @IBInspectable public var borderColor : UIColor? {

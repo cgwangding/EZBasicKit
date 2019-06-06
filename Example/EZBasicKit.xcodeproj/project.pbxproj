@@ -17,6 +17,7 @@
 		727378DC22A774E500A5C3CF /* AnimatorDemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727378DB22A774E500A5C3CF /* AnimatorDemoTableViewController.swift */; };
 		727378DE22A7954500A5C3CF /* AnimatorTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727378DD22A7954500A5C3CF /* AnimatorTestViewController.swift */; };
 		727378E122A7A6BF00A5C3CF /* CustomUIKit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727378E022A7A6BF00A5C3CF /* CustomUIKit.storyboard */; };
+		727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727378E222A7C90700A5C3CF /* CustomUIKitDemoViewController.swift */; };
 		72AE819C22A51A3C00DAFC24 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */; };
 		72AE819E22A51A9B00DAFC24 /* ArrayExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */; };
 		72AE81A422A63F2B00DAFC24 /* DateFromatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */; };
@@ -61,6 +62,7 @@
 		727378DB22A774E500A5C3CF /* AnimatorDemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorDemoTableViewController.swift; sourceTree = "<group>"; };
 		727378DD22A7954500A5C3CF /* AnimatorTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatorTestViewController.swift; sourceTree = "<group>"; };
 		727378E022A7A6BF00A5C3CF /* CustomUIKit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomUIKit.storyboard; sourceTree = "<group>"; };
+		727378E222A7C90700A5C3CF /* CustomUIKitDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIKitDemoViewController.swift; sourceTree = "<group>"; };
 		72AE819B22A51A3C00DAFC24 /* SelectionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTests.swift; sourceTree = "<group>"; };
 		72AE819D22A51A9B00DAFC24 /* ArrayExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionTests.swift; sourceTree = "<group>"; };
 		72AE81A122A63C4700DAFC24 /* DateFromatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFromatterTests.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				727378E022A7A6BF00A5C3CF /* CustomUIKit.storyboard */,
+				727378E222A7C90700A5C3CF /* CustomUIKitDemoViewController.swift */,
 			);
 			path = CustomUIKitDemo;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				72F816F2229FBAED00B4E0A0 /* EZIDemoViewController.swift in Sources */,
 				72F816DC229E73A800B4E0A0 /* EZInstruction.swift in Sources */,
 				72F816F622A0D72E00B4E0A0 /* EZIURLBridge.swift in Sources */,
+				727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */,
 				727378DE22A7954500A5C3CF /* AnimatorTestViewController.swift in Sources */,
 				727378DC22A774E500A5C3CF /* AnimatorDemoTableViewController.swift in Sources */,
 			);
