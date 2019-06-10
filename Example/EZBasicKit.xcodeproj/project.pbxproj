@@ -40,6 +40,7 @@
 		A8FE9DB622AE4C02007259DC /* CaseInsensitiveStringDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */; };
 		A8FE9DB822AE4FB0007259DC /* OptionsControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */; };
 		A8FE9DBA22AE59A8007259DC /* TimerControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB922AE59A8007259DC /* TimerControllerDemo.swift */; };
+		A8FE9DBC22AE5DC6007259DC /* TextFieldHelperDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DBB22AE5DC6007259DC /* TextFieldHelperDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +92,7 @@
 		A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseInsensitiveStringDemo.swift; sourceTree = "<group>"; };
 		A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControllerDemo.swift; sourceTree = "<group>"; };
 		A8FE9DB922AE59A8007259DC /* TimerControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerDemo.swift; sourceTree = "<group>"; };
+		A8FE9DBB22AE5DC6007259DC /* TextFieldHelperDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHelperDemo.swift; sourceTree = "<group>"; };
 		E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67B06A9C84127C594C8EEF7 /* Pods-EZBasicKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -265,6 +267,7 @@
 				A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */,
 				A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */,
 				A8FE9DB922AE59A8007259DC /* TimerControllerDemo.swift */,
+				A8FE9DBB22AE5DC6007259DC /* TextFieldHelperDemo.swift */,
 			);
 			path = UtilitiesDemo;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A80A7BCB22B8CE03004C8EFB /* SetSelectionDemo.swift in Sources */,
+				A8FE9DBC22AE5DC6007259DC /* TextFieldHelperDemo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				72F816F0229FB7E300B4E0A0 /* AppDelegate+EZI.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
