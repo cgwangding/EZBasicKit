@@ -35,6 +35,8 @@
 		A80A7BCB22B8CE03004C8EFB /* SetSelectionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */; };
 		A80A7BCD22B8CE1B004C8EFB /* Selection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */; };
 		A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */; };
+		A885CDCA229E605A00DDF5D6 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		A8FE9DB222AE4774007259DC /* BatchFetchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,7 @@
 		A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSelectionDemo.swift; sourceTree = "<group>"; };
 		A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selection.storyboard; sourceTree = "<group>"; };
 		A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDemoViewController.swift; sourceTree = "<group>"; };
+		A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchFetchDemoViewController.swift; sourceTree = "<group>"; };
 		E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67B06A9C84127C594C8EEF7 /* Pods-EZBasicKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -149,6 +152,7 @@
 				727378D822A769C400A5C3CF /* AnimatorDemo */,
 				72F816DA229E736B00B4E0A0 /* EZIDemo */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				A8FE9DB022AE471B007259DC /* UtilitiesDemo */,
 				727378DF22A7A6B100A5C3CF /* CustomUIKitDemo */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -246,6 +250,14 @@
 			children = (
 			);
 			name = "Recovered References";
+            sourceTree = "<group>";
+        };
+		A8FE9DB022AE471B007259DC /* UtilitiesDemo */ = {
+			isa = PBXGroup;
+			children = (
+				A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */,
+			);
+			path = UtilitiesDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +471,7 @@
 				72F816F2229FBAED00B4E0A0 /* EZIDemoViewController.swift in Sources */,
 				A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */,
 				72F816DC229E73A800B4E0A0 /* EZInstruction.swift in Sources */,
+				A8FE9DB222AE4774007259DC /* BatchFetchDemoViewController.swift in Sources */,
 				72F816F622A0D72E00B4E0A0 /* EZIURLBridge.swift in Sources */,
 				727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */,
 				727378DE22A7954500A5C3CF /* AnimatorTestViewController.swift in Sources */,
