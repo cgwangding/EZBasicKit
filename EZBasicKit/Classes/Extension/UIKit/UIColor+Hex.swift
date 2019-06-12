@@ -51,7 +51,7 @@ extension UIColor {
 extension UIColor {
 
     // Don't create the same image, reuse it!!!
-    func createImage(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
+    public func createImage(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
         UIGraphicsBeginImageContext(size)
         let ctx = UIGraphicsGetCurrentContext()
         ctx?.setFillColor(self.cgColor)
