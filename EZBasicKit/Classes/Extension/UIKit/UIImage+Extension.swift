@@ -266,7 +266,7 @@ extension UIImage {
 // MARK: - gif data
 extension UIImage {
 
-    public func image(with gifData: Data) -> UIImage? {
+    public static func GIFImage(with gifData: Data) -> UIImage? {
 
         guard let source = CGImageSourceCreateWithData(gifData as CFData, nil) else {
             return nil
@@ -276,38 +276,41 @@ extension UIImage {
 
         var animatedImage: [UIImage] = []
 
-        var totalDuration: CGFloat = 0
+        var totalDuration = 0.0
 
         for i in 0..<count {
-            if let imageRef = CGImageSourceCreateImageAtIndex(source, i, nil) {
-                animatedImage.append(UIImage(cgImage: imageRef))
-                totalDuration += self.ez_frameDuration(at: i, source: source)
+            guard let imageRef = CGImageSourceCreateImageAtIndex(source, i, nil) else {
+                return nil
+            }
+            
+            if count == 1 {
+                totalDuration = .infinity
             } else {
-                continue
+                totalDuration += self.getFrameDuration(from: source, at: i)
+                animatedImage.append(UIImage(cgImage: imageRef))
             }
         }
-        return UIImage.animatedImage(with: animatedImage, duration: TimeInterval(totalDuration / 1000))
+        
+        return UIImage.animatedImage(with: animatedImage, duration: totalDuration)
     }
 
-    private func ez_frameDuration(at index: Int, source: CGImageSource) -> CGFloat {
-
-        var duration: CGFloat = 0.1
-
-        guard let frameProperties = CGImageSourceCopyPropertiesAtIndex(source, index, nil) as? [CFString : Any] else {
-            return duration
-        }
-
-        guard let gifPropertyies = frameProperties[kCGImagePropertyGIFDictionary] as? [CFString : Any] else { return duration }
-        if let delayTimeUnclamped = gifPropertyies[kCGImagePropertyGIFUnclampedDelayTime] as? CGFloat {
-            duration = delayTimeUnclamped
-        } else if let delayTime = gifPropertyies[kCGImagePropertyGIFDelayTime] as? CGFloat {
-            duration = delayTime
-        }
-
-        if duration < 0.011 {
-            duration = 0.1
-        }
-
-        return duration
+    static private func getFrameDuration(from gifInfo: [String: Any]?) -> TimeInterval {
+        let defaultFrameDuration = 0.1
+        guard let gifInfo = gifInfo else { return defaultFrameDuration }
+        
+        let unclampedDelayTime = gifInfo[kCGImagePropertyGIFUnclampedDelayTime as String] as? NSNumber
+        let delayTime = gifInfo[kCGImagePropertyGIFDelayTime as String] as? NSNumber
+        let duration = unclampedDelayTime ?? delayTime
+        
+        guard let frameDuration = duration else { return defaultFrameDuration }
+        return frameDuration.doubleValue > 0.011 ? frameDuration.doubleValue : defaultFrameDuration
+    }
+    
+    static private func getFrameDuration(from imageSource: CGImageSource, at index: Int) -> TimeInterval {
+        guard let properties = CGImageSourceCopyPropertiesAtIndex(imageSource, index, nil)
+            as? [String: Any] else { return 0.0 }
+        
+        let gifInfo = properties[kCGImagePropertyGIFDictionary as String] as? [String: Any]
+        return getFrameDuration(from: gifInfo)
     }
 }

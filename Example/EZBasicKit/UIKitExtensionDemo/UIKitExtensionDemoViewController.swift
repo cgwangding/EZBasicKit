@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZBasicKit
 
 class UIKitExtensionDemoViewController: UIViewController {
     
@@ -22,20 +23,91 @@ class UIKitExtensionDemoViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var originImageView: UIImageView!
+    
+    @IBOutlet weak var compressImageView: UIImageView!
+    
+    @IBOutlet weak var circleImageView: UIImageView!
+    
+    @IBOutlet weak var gifImageView: UIImageView!
+    
+    @IBOutlet weak var water1ImageView: UIImageView!
+    
+    @IBOutlet weak var water2ImageView: UIImageView!
+    
+    @IBOutlet weak var water3ImageView: UIImageView!
+    
+    @IBOutlet weak var water4ImageView: UIImageView!
+    
+    
+    
+    @IBOutlet weak var croppedImageView: UIImageView!
+    
+    @IBOutlet weak var cropped2ImageView: UIImageView!
+    
+    
+    @IBOutlet weak var colorImageView: UIImageView!
+    
+    
     fileprivate var currentIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupTimeIntervalButton()
+        //        self.setupTimeIntervalButton()
         self.setupEnlargeInsetBtn()
         self.setupColor()
         self.setupImage()
+        self.waterImage()
     }
 }
 
+
+
+// UIImage+Extension
 extension UIKitExtensionDemoViewController {
+    
     fileprivate func setupImage() {
+        compressImage()
+//        colorImage()
+        creatCircleImage()
+        croppedImage()
+        gifImage()
+        waterImage()
+    }
+    
+    private func gifImage() {
+        guard let path = Bundle.main.path(forResource: "joy", ofType: "gif"), let data = NSData(contentsOfFile: path) as Data? else { return }
         
+        self.gifImageView.image = UIImage.GIFImage(with: data)
+    }
+    
+    private func waterImage() {
+        if let originalImage = UIImage(named: "original"), let waterImage = UIImage(named: "hot") {
+            self.water1ImageView.image = originalImage.addWaterMark(img: waterImage, in: self.water1ImageView.bounds)
+        }
+        
+        
+        
+    }
+    
+    private func creatMirroredImage() {
+        
+    }
+    
+    private func croppedImage() {
+        
+    }
+    
+    private func creatCircleImage() {
+        self.circleImageView.image = UIImage(named: "original")?.circleImage
+    }
+    
+    private func colorImage() {
+        self.colorImageView.image = UIImage(color: UIColor.green, size: CGSize(width: 60, height: 60))
+    }
+    
+    private func compressImage() {
+        self.compressImageView.image = UIImage(named: "original")!.compress(to: 100)
     }
 }
 

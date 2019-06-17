@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3E28CF62F8F152487437F08F /* Pods_EZBasicKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0128BF4946B9E5DA7211CFE3 /* Pods_EZBasicKit_Example.framework */; };
+		5C2E60CE22B7615C00527490 /* joy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 5C2E60CD22B7615B00527490 /* joy.gif */; };
 		5CA242FF22B0DA50003ACB81 /* UIKitExtension.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA242FE22B0DA50003ACB81 /* UIKitExtension.storyboard */; };
 		5CA2430122B0DDDC003ACB81 /* UIKitExtensionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA2430022B0DDDC003ACB81 /* UIKitExtensionDemoViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
@@ -70,6 +71,7 @@
 		0128BF4946B9E5DA7211CFE3 /* Pods_EZBasicKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B9FFE63088E04B93F83800E /* Pods-EZBasicKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4555D91085748CF4473A1105 /* Pods-EZBasicKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		5C2E60CD22B7615B00527490 /* joy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = joy.gif; sourceTree = "<group>"; };
 		5CA242FE22B0DA50003ACB81 /* UIKitExtension.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIKitExtension.storyboard; sourceTree = "<group>"; };
 		5CA2430022B0DDDC003ACB81 /* UIKitExtensionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitExtensionDemoViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EZBasicKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZBasicKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -202,6 +204,7 @@
 				727378DF22A7A6B100A5C3CF /* CustomUIKitDemo */,
 				5CA242FD22B0DA04003ACB81 /* UIKitExtensionDemo */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+				5C2E60CD22B7615B00527490 /* joy.gif */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
@@ -434,6 +437,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				727378DA22A769DB00A5C3CF /* Animator.storyboard in Resources */,
 				A8C0B8B222B8EA0E0056F1D8 /* Utilities.storyboard in Resources */,
+				5C2E60CE22B7615C00527490 /* joy.gif in Resources */,
 				5CA242FF22B0DA50003ACB81 /* UIKitExtension.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				7268351A22E1A4C200F95DC4 /* EZMenuDemo.storyboard in Resources */,
