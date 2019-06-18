@@ -18,34 +18,58 @@ public class CardsDataController: NSObject {
     }
 }
 
-public class CreditCard: NSObject {
+public class CreditCard: NSObject, Identifiable {
     
+    public var identifier: String {
+        return self.cardNum
+    }
+    
+    public let cardNum: String
+    
+    public init(num: String) {
+        self.cardNum = num
+        super.init()
+    }
+    
+    public override var hash: Int {
+        return self.nsHashValue
+    }
+    
+    public override func isEqual(_ object: Any?) -> Bool {
+        return self.nsIsEqual(object)
+    }
 }
 
-class CardsDataViewController: UITableViewController {
+class CardsDataViewController: UIViewController {
     
+    @IBOutlet weak var tableView: UITableView!
     var controller: CardsDataController?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //load credit card data and assign to controllr
-        self.controller = CardsDataController(cards: [])
+        let card1 = CreditCard(num: "4242424242424242")
+        let card2 = CreditCard(num: "4444000000000000")
+        let card3 = CreditCard(num: "5555555555556666")
+        self.controller = CardsDataController(cards: [card1, card2, card3])
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.allowsMultipleSelection = false
     }
+}
+
+extension CardsDataViewController: UITableViewDelegate, UITableViewDataSource {
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return controller?.cardsController?.options.count ?? 0
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: CardsDataCell = tableView.dequeueReusableCell(withIdentifier: CardsDataCell.id, for: indexPath) as! CardsDataCell
         let option = controller?.cardsController?.options.object(at: indexPath.row)
         cell.cardInfo = option
@@ -54,7 +78,7 @@ class CardsDataViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         controller?.cardsController?.selectedOption = controller?.cardsController?.options.object(at: indexPath.row)
     }
 }
@@ -69,17 +93,25 @@ class CardsDataCell: UITableViewCell {
         }
     }
     
-    lazy var selectButton: UIButton = {
-        let b = UIButton(frame: CGRect(x: 0, y: 0, width: 44, height: 44))
-        return b
-    }()
+    @IBOutlet weak var selectButton: UIButton!
+    @IBOutlet weak var cardNumLabel: UILabel!
     
     func updateCell(info: CreditCard?) {
         
+        if let num = info?.cardNum.dropLast(4) {
+            self.cardNumLabel.text = "**** " + num
+        } else {
+            self.cardNumLabel.text = nil
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         selectButton.isSelected = selected
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        cardInfo = nil
     }
 }
