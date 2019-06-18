@@ -75,19 +75,23 @@ extension UIKitExtensionDemoViewController {
         waterImage()
     }
     
+    /// - gif 图片
     private func gifImage() {
         guard let path = Bundle.main.path(forResource: "joy", ofType: "gif"), let data = NSData(contentsOfFile: path) as Data? else { return }
         
         self.gifImageView.image = UIImage.GIFImage(with: data)
     }
     
+    /// - 添加水印
     private func waterImage() {
-        if let originalImage = UIImage(named: "original"), let waterImage = UIImage(named: "hot") {
-            self.water1ImageView.image = originalImage.addWaterMark(img: waterImage, in: self.water1ImageView.bounds)
-        }
         
+        self.water1ImageView.image = UIImage(named: "original")!.addWaterMark(img: UIImage(named: "hot")!, in: self.water1ImageView.bounds)
+
+        self.water2ImageView.image = UIImage(named: "original")!.addWatermarkInCenter(img: UIImage(named: "hot")!, size: CGSize(width: 60, height: 60))
+
+        self.water3ImageView.image = UIImage(named: "original")!.addWatermark(text: "版本所有", point: self.water3ImageView.center, attributes: [NSAttributedString.Key.foregroundColor: UIColor.green])
         
-        
+        self.water4ImageView.image = UIImage(named: "original")!.addWatermark(text: "翻版必究", point: self.water4ImageView.center, font: UIFont.systemFont(ofSize: 16))
     }
     
     private func creatMirroredImage() {

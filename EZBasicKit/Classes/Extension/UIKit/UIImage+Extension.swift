@@ -212,7 +212,7 @@ extension UIImage {
 
     public func addWaterMark(img: UIImage,in rect: CGRect) -> UIImage? {
 
-        UIGraphicsBeginImageContextWithOptions(self.size, false, 0)
+        UIGraphicsBeginImageContext(self.size)
         self.draw(in: CGRect(origin: CGPoint.zero, size: self.size))
         defer {
             UIGraphicsEndImageContext()
@@ -222,11 +222,10 @@ extension UIImage {
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 
-    public func addWatermark(img: UIImage,
-                            center: CGPoint,
+    public func addWatermarkInCenter(img: UIImage,
                             size: CGSize) -> UIImage? {
-        let rect = CGRect(x: center.x - size.width / 2,
-                          y: center.y - size.height / 2,
+        let rect = CGRect(x: (self.size.width - size.width) / 2,
+                          y: (self.size.height - size.height) / 2,
                           width: size.width,
                           height: size.height)
 
