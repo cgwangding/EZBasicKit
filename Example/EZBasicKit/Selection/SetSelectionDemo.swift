@@ -34,7 +34,8 @@ class ProductController: NSObject {
         //load data
         let p1 = IDObject(id: 1)
         let p2 = IDObject(id: 2)
-        self.products = [p1, p2]
+        let p3 = IDObject(id: 3)
+        self.products = [p1, p2, p3]
     }
 }
 
@@ -44,7 +45,7 @@ extension ProductController: ObjectsContainer {
     }
 }
 
-class IDObject: NSObject {
+class IDObject: NSObject, Identifiable {
     
     let identifier: Int
     
@@ -54,10 +55,10 @@ class IDObject: NSObject {
     }
     
     override var hash: Int {
-        return self.hashValue
+        return self.nsHashValue
     }
     
     override func isEqual(_ object: Any?) -> Bool {
-        return self.isEqual(object)
+        return self.nsIsEqual(object)
     }
 }
