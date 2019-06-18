@@ -36,6 +36,7 @@
 		A80A7BCD22B8CE1B004C8EFB /* Selection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */; };
 		A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */; };
 		A885CDCA229E605A00DDF5D6 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		A8C0B8B222B8EA0E0056F1D8 /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */; };
 		A8FE9DB222AE4774007259DC /* BatchFetchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */; };
 		A8FE9DB622AE4C02007259DC /* CaseInsensitiveStringDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */; };
 		A8FE9DB822AE4FB0007259DC /* OptionsControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */; };
@@ -88,6 +89,7 @@
 		A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSelectionDemo.swift; sourceTree = "<group>"; };
 		A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selection.storyboard; sourceTree = "<group>"; };
 		A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDemoViewController.swift; sourceTree = "<group>"; };
+		A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchFetchDemoViewController.swift; sourceTree = "<group>"; };
 		A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseInsensitiveStringDemo.swift; sourceTree = "<group>"; };
 		A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControllerDemo.swift; sourceTree = "<group>"; };
@@ -268,6 +270,7 @@
 				A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */,
 				A8FE9DB922AE59A8007259DC /* TimerControllerDemo.swift */,
 				A8FE9DBB22AE5DC6007259DC /* TextFieldHelperDemo.swift */,
+				A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */,
 			);
 			path = UtilitiesDemo;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				727378E122A7A6BF00A5C3CF /* CustomUIKit.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				727378DA22A769DB00A5C3CF /* Animator.storyboard in Resources */,
+				A8C0B8B222B8EA0E0056F1D8 /* Utilities.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
