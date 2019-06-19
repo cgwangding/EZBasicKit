@@ -34,3 +34,43 @@ public enum Origin: String {
         }
     }
 }
+
+class CaseInsensitiveStringViewController: UIViewController {
+    @IBOutlet weak var textField: UITextField!
+    
+    var tag: Int = -100
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func doneButtonDidTapped(_ sender: UIButton) {
+        let origin = Origin(code: textField.text ?? "")
+        
+        let lastRedLabel = view.viewWithTag(tag) as? UILabel
+        lastRedLabel?.backgroundColor = UIColor.clear
+        
+        switch origin {
+        case .china:
+            tag = 200
+        case .singpore:
+            tag = 201
+        case .malaysia:
+            tag = 202
+        case .thailand:
+            tag = 203
+        case .pakistan:
+            tag = 204
+        default:
+            tag = -100
+        }
+        
+        guard tag != -100 else {
+            self.presentAlert(title: "", message: "No such country", buttontitle: "OK")
+            return
+        }
+        
+        let currentLabel = view.viewWithTag(tag) as? UILabel
+        currentLabel?.backgroundColor = UIColor.red
+    }
+}
