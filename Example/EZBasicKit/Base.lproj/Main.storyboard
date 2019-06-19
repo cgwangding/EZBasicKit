@@ -55,6 +55,14 @@
             </objects>
             <point key="canvasLocation" x="487" y="-341"/>
         </scene>
+        <!--SelectionDemoViewController-->
+        <scene sceneID="haE-fh-zTQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Selection" referencedIdentifier="SelectionDemoViewController" id="RJo-Hg-255" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iiw-Xk-tiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="719" y="-277"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="m5V-0a-zDg">
             <objects>
@@ -124,6 +132,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="kHB-uR-QUl" kind="show" id="ZvM-c1-yoF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="qPT-YT-mAb" style="IBUITableViewCellStyleDefault" id="2OP-P0-2hT">
+                                        <rect key="frame" x="0.0" y="132" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2OP-P0-2hT" id="w3I-r0-4yj">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qPT-YT-mAb">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="RJo-Hg-255" kind="show" id="oe0-b7-c6f"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
