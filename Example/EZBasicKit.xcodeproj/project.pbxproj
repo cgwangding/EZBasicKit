@@ -35,15 +35,13 @@
 		A80A7BCB22B8CE03004C8EFB /* SetSelectionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */; };
 		A80A7BCD22B8CE1B004C8EFB /* Selection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */; };
 		A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */; };
-		A885CDCA229E605A00DDF5D6 /* (null) in Sources */ = {isa = PBXBuildFile; };
+		A897874022A10D65009AB91C /* IdentifiableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A897873E22A10D34009AB91C /* IdentifiableTests.swift */; };
 		A8C0B8B222B8EA0E0056F1D8 /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */; };
 		A8FE9DB222AE4774007259DC /* BatchFetchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */; };
 		A8FE9DB622AE4C02007259DC /* CaseInsensitiveStringDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */; };
 		A8FE9DB822AE4FB0007259DC /* OptionsControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */; };
 		A8FE9DBA22AE59A8007259DC /* TimerControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB922AE59A8007259DC /* TimerControllerDemo.swift */; };
 		A8FE9DBC22AE5DC6007259DC /* TextFieldHelperDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DBB22AE5DC6007259DC /* TextFieldHelperDemo.swift */; };
-		A885CDCA229E605A00DDF5D6 /* SelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */; };
-		A897874022A10D65009AB91C /* IdentifiableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A897873E22A10D34009AB91C /* IdentifiableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,14 +89,13 @@
 		A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSelectionDemo.swift; sourceTree = "<group>"; };
 		A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selection.storyboard; sourceTree = "<group>"; };
 		A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDemoViewController.swift; sourceTree = "<group>"; };
+		A897873E22A10D34009AB91C /* IdentifiableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableTests.swift; sourceTree = "<group>"; };
 		A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchFetchDemoViewController.swift; sourceTree = "<group>"; };
 		A8FE9DB522AE4C02007259DC /* CaseInsensitiveStringDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseInsensitiveStringDemo.swift; sourceTree = "<group>"; };
 		A8FE9DB722AE4FB0007259DC /* OptionsControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsControllerDemo.swift; sourceTree = "<group>"; };
 		A8FE9DB922AE59A8007259DC /* TimerControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerControllerDemo.swift; sourceTree = "<group>"; };
 		A8FE9DBB22AE5DC6007259DC /* TextFieldHelperDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldHelperDemo.swift; sourceTree = "<group>"; };
-		A885CDC9229E605A00DDF5D6 /* SelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionTests.swift; sourceTree = "<group>"; };
-		A897873E22A10D34009AB91C /* IdentifiableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableTests.swift; sourceTree = "<group>"; };
 		E3D50504702D2D207B476F96 /* Pods-EZBasicKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Tests/Pods-EZBasicKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		E514207592C2A7E799829C47 /* Pods_EZBasicKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EZBasicKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67B06A9C84127C594C8EEF7 /* Pods-EZBasicKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EZBasicKit_Example.release.xcconfig"; path = "Target Support Files/Pods-EZBasicKit_Example/Pods-EZBasicKit_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -163,7 +160,6 @@
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				A80A7BC922B8CE03004C8EFB /* Selection */,
-				A8FE9DAD22AE33B5007259DC /* IdentifiableDemo */,
 				727378D822A769C400A5C3CF /* AnimatorDemo */,
 				72F816DA229E736B00B4E0A0 /* EZIDemo */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
@@ -266,8 +262,8 @@
 			children = (
 			);
 			name = "Recovered References";
-            sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
 		A8FE9DB022AE471B007259DC /* UtilitiesDemo */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,14 +275,6 @@
 				A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */,
 			);
 			path = UtilitiesDemo;
-            sourceTree = "<group>";
-        };
-		A8FE9DAD22AE33B5007259DC /* IdentifiableDemo */ = {
-			isa = PBXGroup;
-			children = (
-				A8FE9DAE22AE33D3007259DC /* IdentifiableDemo.swift */,
-			);
-			path = IdentifiableDemo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -504,7 +492,6 @@
 				A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */,
 				72F816DC229E73A800B4E0A0 /* EZInstruction.swift in Sources */,
 				A8FE9DB222AE4774007259DC /* BatchFetchDemoViewController.swift in Sources */,
-				A8FE9DAF22AE33D3007259DC /* IdentifiableDemo.swift in Sources */,
 				72F816F622A0D72E00B4E0A0 /* EZIURLBridge.swift in Sources */,
 				A8FE9DB822AE4FB0007259DC /* OptionsControllerDemo.swift in Sources */,
 				727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */,
