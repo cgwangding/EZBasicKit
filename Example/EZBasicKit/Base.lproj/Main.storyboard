@@ -61,7 +61,15 @@
                 <viewControllerPlaceholder storyboardName="Selection" referencedIdentifier="SelectionDemoViewController" id="RJo-Hg-255" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiw-Xk-tiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="719" y="-277"/>
+            <point key="canvasLocation" x="588" y="-274"/>
+        </scene>
+        <!--Utilities-->
+        <scene sceneID="o1O-Tc-fBu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Utilities" id="ARY-J0-wdf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNs-ek-fmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="542" y="-214"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="m5V-0a-zDg">
@@ -152,6 +160,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="RJo-Hg-255" kind="show" id="oe0-b7-c6f"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="bTW-V9-ybj" style="IBUITableViewCellStyleDefault" id="Npr-WQ-sNv">
+                                        <rect key="frame" x="0.0" y="176" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Npr-WQ-sNv" id="zmo-gG-SH1">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Utilities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bTW-V9-ybj">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ARY-J0-wdf" kind="show" id="Ww1-Qi-8qE"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
