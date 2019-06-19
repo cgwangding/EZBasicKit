@@ -64,7 +64,7 @@ open class PhoneNumberTextFieldHelper: TextFieldHelper {
 
     let tolerancePrefix: String?
 
-    init(lengthLimit: Int? = nil, decorators: [(string: NSString, location: Int)]? = nil, tolerancePrefix: String? = nil) {
+    public init(lengthLimit: Int? = nil, decorators: [(string: NSString, location: Int)]? = nil, tolerancePrefix: String? = nil) {
 
         var accl = 0
         self.decorators = decorators?.map({
