@@ -18,6 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="umP-02-Z2r">
+                            <rect key="frame" x="0.0" y="132" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
                         <sections>
                             <tableViewSection id="x0j-fT-7Sk">
                                 <cells>
@@ -117,9 +122,10 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-wt-qBx">
-                                                    <rect key="frame" x="352" y="7" width="46" height="30"/>
-                                                    <state key="normal" title="Button"/>
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-wt-qBx">
+                                                    <rect key="frame" x="380" y="11" width="18" height="22"/>
+                                                    <state key="normal" image="btnUnselected"/>
+                                                    <state key="selected" image="btnSelected"/>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -135,6 +141,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xyc-HF-vyw" id="M34-0C-Wdc"/>
+                                    <outlet property="delegate" destination="Xyc-HF-vyw" id="gMY-Mo-0XN"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzf-uP-tW3">
                                 <rect key="frame" x="0.0" y="818" width="414" height="44"/>
@@ -217,12 +227,22 @@
                                     <constraint firstAttribute="height" constant="88" id="aha-du-J1Y"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVl-Tk-1pH">
+                                <rect key="frame" x="16" y="420" width="382" height="61"/>
+                                <string key="text">Enter backgroud and wait for a moment to see the difference between CountDownTimerController and BackgroundCountDownTimerController</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99750591070000005" green="0.54225399699999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Uso-bA-K1G" firstAttribute="leading" secondItem="RRM-1K-Bz8" secondAttribute="leading" id="AEb-dS-WGa"/>
                             <constraint firstItem="dXr-4z-0w7" firstAttribute="top" secondItem="Uso-bA-K1G" secondAttribute="bottom" constant="100" id="BqU-Mw-JeD"/>
                             <constraint firstItem="dXr-4z-0w7" firstAttribute="leading" secondItem="RRM-1K-Bz8" secondAttribute="leading" id="Bqv-cJ-5hn"/>
+                            <constraint firstItem="RRM-1K-Bz8" firstAttribute="trailing" secondItem="gVl-Tk-1pH" secondAttribute="trailing" constant="16" id="DKd-BY-wzW"/>
+                            <constraint firstItem="gVl-Tk-1pH" firstAttribute="top" secondItem="dXr-4z-0w7" secondAttribute="bottom" constant="50" id="JOL-Ex-fbX"/>
+                            <constraint firstItem="gVl-Tk-1pH" firstAttribute="leading" secondItem="RRM-1K-Bz8" secondAttribute="leading" constant="16" id="RuK-NY-7cc"/>
                             <constraint firstItem="RRM-1K-Bz8" firstAttribute="trailing" secondItem="Uso-bA-K1G" secondAttribute="trailing" id="akC-Xd-qFd"/>
                             <constraint firstItem="Uso-bA-K1G" firstAttribute="top" secondItem="RRM-1K-Bz8" secondAttribute="top" constant="50" id="b3F-gH-sJ2"/>
                             <constraint firstItem="RRM-1K-Bz8" firstAttribute="trailing" secondItem="dXr-4z-0w7" secondAttribute="trailing" id="okC-8V-DE3"/>
@@ -239,4 +259,8 @@
             <point key="canvasLocation" x="976.81159420289862" y="-5.3571428571428568"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="btnSelected" width="18" height="18"/>
+        <image name="btnUnselected" width="18" height="18"/>
+    </resources>
 </document>
