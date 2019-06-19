@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="umP-02-Z2r">
-                            <rect key="frame" x="0.0" y="132" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="176" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </view>
@@ -83,6 +83,26 @@
                                             <segue destination="icI-xl-vYP" kind="show" id="baT-Z1-qRU"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="L8j-3Z-O6c" style="IBUITableViewCellStyleDefault" id="o38-KZ-Mjw">
+                                        <rect key="frame" x="0.0" y="132" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="o38-KZ-Mjw" id="f20-TS-Y6J">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="TextFieldHelperDemo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="L8j-3Z-O6c">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Tnz-5h-mP3" kind="show" id="0BK-Rl-gjw"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -123,7 +143,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-wt-qBx">
-                                                    <rect key="frame" x="380" y="11" width="18" height="22"/>
+                                                    <rect key="frame" x="382" y="11" width="16" height="22"/>
                                                     <state key="normal" image="btnUnselected"/>
                                                     <state key="selected" image="btnSelected"/>
                                                 </button>
@@ -257,6 +277,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2D-TK-Li6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="976.81159420289862" y="-5.3571428571428568"/>
+        </scene>
+        <!--Text Field Helper View Controller-->
+        <scene sceneID="GDb-Nj-Zs4">
+            <objects>
+                <viewController id="Tnz-5h-mP3" customClass="TextFieldHelperViewController" customModule="EZBasicKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xpg-3V-0co">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5eP-5a-Qcq">
+                                <rect key="frame" x="0.0" y="94" width="414" height="44"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="suC-Lg-GYG">
+                                        <rect key="frame" x="16" y="7" width="382" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="suC-Lg-GYG" firstAttribute="centerY" secondItem="5eP-5a-Qcq" secondAttribute="centerY" id="Air-NL-CyW"/>
+                                    <constraint firstAttribute="height" constant="44" id="FZT-be-dIW"/>
+                                    <constraint firstItem="suC-Lg-GYG" firstAttribute="leading" secondItem="5eP-5a-Qcq" secondAttribute="leading" constant="16" id="Lkt-cB-Hi7"/>
+                                    <constraint firstAttribute="trailing" secondItem="suC-Lg-GYG" secondAttribute="trailing" constant="16" id="w0z-4x-aKn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="GE3-LT-tpf" firstAttribute="trailing" secondItem="5eP-5a-Qcq" secondAttribute="trailing" id="EgQ-VE-OSU"/>
+                            <constraint firstItem="5eP-5a-Qcq" firstAttribute="leading" secondItem="GE3-LT-tpf" secondAttribute="leading" id="dfi-YR-um5"/>
+                            <constraint firstItem="5eP-5a-Qcq" firstAttribute="top" secondItem="GE3-LT-tpf" secondAttribute="top" constant="50" id="iua-zk-Qid"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GE3-LT-tpf"/>
+                    </view>
+                    <connections>
+                        <outlet property="textField" destination="suC-Lg-GYG" id="5xU-jv-Ark"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJt-ll-fU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="654"/>
         </scene>
     </scenes>
     <resources>
