@@ -43,7 +43,12 @@ public class CreditCard: NSObject, Identifiable {
 class CardsDataViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    var controller: CardsDataController?
+    
+    var controller: CardsDataController? {
+        didSet {
+            self.tableView.reloadData()
+        }
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -56,6 +61,7 @@ class CardsDataViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView()
     }
 }
 
