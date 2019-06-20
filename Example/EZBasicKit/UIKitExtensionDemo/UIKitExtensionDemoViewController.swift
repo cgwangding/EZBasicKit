@@ -9,6 +9,32 @@
 import UIKit
 import EZBasicKit
 
+enum actionType: Int {
+    case compress     = 1001
+    case color        = 1002
+    case circle       = 1003
+    case cropped      = 1004
+    case mirrored     = 1005
+    case rotate       = 1006
+    case scaled       = 1007
+    case cornerRadius = 1008
+    case water1       = 1009
+    case water2       = 1010
+    case water3       = 1011
+    case water4       = 1012
+    case GIF          = 1013
+    case badgeShown   = 1014
+    case textShown    = 1015
+    case snapShot     = 1016
+}
+
+enum alertStyle: Int {
+    case defalut = 2001
+    case alert   = 2002
+    case autoDismiss = 2003
+}
+
+
 class UIKitExtensionDemoViewController: UIViewController {
     
     @IBOutlet weak var intervalButton: UIButton!
@@ -25,29 +51,13 @@ class UIKitExtensionDemoViewController: UIViewController {
     
     @IBOutlet weak var originImageView: UIImageView!
     
-    @IBOutlet weak var compressImageView: UIImageView!
+    @IBOutlet weak var tappedImageView: UIImageView!
     
-    @IBOutlet weak var circleImageView: UIImageView!
+    @IBOutlet weak var tipLabel: UILabel!
     
-    @IBOutlet weak var gifImageView: UIImageView!
+    @IBOutlet weak var displayView: UIView!
     
-    @IBOutlet weak var water1ImageView: UIImageView!
-    
-    @IBOutlet weak var water2ImageView: UIImageView!
-    
-    @IBOutlet weak var water3ImageView: UIImageView!
-    
-    @IBOutlet weak var water4ImageView: UIImageView!
-    
-    
-    
-    @IBOutlet weak var croppedImageView: UIImageView!
-    
-    @IBOutlet weak var cropped2ImageView: UIImageView!
-    
-    
-    @IBOutlet weak var colorImageView: UIImageView!
-    
+    @IBOutlet weak var displayImageView: UIImageView!
     
     fileprivate var currentIndex: Int = 0
     
@@ -56,64 +66,115 @@ class UIKitExtensionDemoViewController: UIViewController {
         //        self.setupTimeIntervalButton()
         self.setupEnlargeInsetBtn()
         self.setupColor()
-        self.setupImage()
-        self.waterImage()
+        self.setupImageView()
     }
+    
+    
+    /// UIViewController + Extension
+    @IBAction func alertStyleButtonTapped(_ sender: UIButton) {
+        switch sender.tag {
+            
+        case alertStyle.defalut.rawValue:
+            self.presentAlert(title: "", message: "default") { (alert) in
+                let ignoreAction = UIAlertAction(title: "Ignore", style: .default, handler: nil)
+                alert.addAction(ignoreAction)
+                
+                let viewAction = UIAlertAction(title: "View", style: .default, handler: nil)
+                alert.addAction(viewAction)
+            }
+            
+        case alertStyle.alert.rawValue:
+            self.presentAlert(title: "", message: "alert", buttontitle: "OK")
+            
+        case alertStyle.autoDismiss.rawValue:
+            self.presentAutoDismissAlert(message: "autoDissmiss", delay: 2, finished: nil)
+            
+        default: break
+        }
+    }
+    
+    
+    
+    /// UIView + Extension
+    @IBAction func viewExtensionButtonTapped(_ sender: UIButton) {
+        switch sender.tag {
+        case actionType.badgeShown.rawValue:
+            self.displayView.isBadgeShown = true
+            
+        case actionType.textShown.rawValue:
+            self.displayView.badgeText = "10"
+            
+        case actionType.snapShot.rawValue:
+            self.displayImageView.image = self.displayView.snapShot()
+            
+        default:
+            break
+        }
+    }
+    
+    
+    /// UIImage+Extension
+    @IBAction func mirroredButtonTapped(_ sender: UIButton) {
+        
+        switch sender.tag {
+        case actionType.compress.rawValue:
+            self.originImageView.image = UIImage(named: "original")!.compress(to: 100)
+            
+        case actionType.color.rawValue:
+            self.originImageView.image = UIImage(color: UIColor.green, size: CGSize(width: 60, height: 60))
+            
+        case actionType.circle.rawValue:
+             self.originImageView.image = UIImage(named: "original")?.circleImage
+            
+        case actionType.cropped.rawValue:
+            self.originImageView.image = UIImage(named: "original")?.circleImage
+            
+        case actionType.mirrored.rawValue:
+            self.originImageView.image = UIImage(named: "original")?.mirrored
+            
+        case actionType.rotate.rawValue:
+            self.originImageView.image = UIImage(named: "original")?.rotated(by: 90)
+            
+        case actionType.scaled.rawValue:
+            self.originImageView.image = UIImage(named: "original")?.scaled(to: CGSize(width: 60, height: 60))
+            
+        case actionType.cornerRadius.rawValue:
+            self.originImageView.image = UIImage(named: "original")?.image(with: 10, backgroundColor: UIColor.gray)
+            
+        case actionType.water1.rawValue:
+            self.originImageView.image = UIImage(named: "original")!.addWaterMark(img: UIImage(named: "hot")!, in: self.originImageView.bounds)
+            
+        case actionType.water2.rawValue:
+            self.originImageView.image = UIImage(named: "original")!.addWatermarkInCenter(img: UIImage(named: "hot")!, size: CGSize(width: 60, height: 60))
+            
+        case actionType.water3.rawValue:
+            self.originImageView.image = UIImage(named: "original")!.addWatermark(text: "版本所有", point: CGPoint(x: 20, y: 20), attributes: [NSAttributedString.Key.foregroundColor: UIColor.green])
+            
+        case actionType.water4.rawValue:
+            self.originImageView.image = UIImage(named: "original")!.addWatermark(text: "翻版必究", point: CGPoint(x: 20, y: 20), font: UIFont.systemFont(ofSize: 16))
+            
+        case actionType.GIF.rawValue:
+            guard let path = Bundle.main.path(forResource: "joy", ofType: "gif"), let data = NSData(contentsOfFile: path) as Data? else { return }
+            
+            self.originImageView.image = UIImage.GIFImage(with: data)
+      
+        default:
+            break
+        }
+    }
+    
 }
 
-
-
-// UIImage+Extension
 extension UIKitExtensionDemoViewController {
-    
-    fileprivate func setupImage() {
-        compressImage()
-//        colorImage()
-        creatCircleImage()
-        croppedImage()
-        gifImage()
-        waterImage()
+    fileprivate func setupImageView() {
+        self.tappedImageView.ez_addTarget(self, action: #selector(touchMe))
     }
     
-    /// - gif 图片
-    private func gifImage() {
-        guard let path = Bundle.main.path(forResource: "joy", ofType: "gif"), let data = NSData(contentsOfFile: path) as Data? else { return }
-        
-        self.gifImageView.image = UIImage.GIFImage(with: data)
-    }
-    
-    /// - 添加水印
-    private func waterImage() {
-        
-        self.water1ImageView.image = UIImage(named: "original")!.addWaterMark(img: UIImage(named: "hot")!, in: self.water1ImageView.bounds)
-
-        self.water2ImageView.image = UIImage(named: "original")!.addWatermarkInCenter(img: UIImage(named: "hot")!, size: CGSize(width: 60, height: 60))
-
-        self.water3ImageView.image = UIImage(named: "original")!.addWatermark(text: "版本所有", point: self.water3ImageView.center, attributes: [NSAttributedString.Key.foregroundColor: UIColor.green])
-        
-        self.water4ImageView.image = UIImage(named: "original")!.addWatermark(text: "翻版必究", point: self.water4ImageView.center, font: UIFont.systemFont(ofSize: 16))
-    }
-    
-    private func creatMirroredImage() {
-        
-    }
-    
-    private func croppedImage() {
-        
-    }
-    
-    private func creatCircleImage() {
-        self.circleImageView.image = UIImage(named: "original")?.circleImage
-    }
-    
-    private func colorImage() {
-        self.colorImageView.image = UIImage(color: UIColor.green, size: CGSize(width: 60, height: 60))
-    }
-    
-    private func compressImage() {
-        self.compressImageView.image = UIImage(named: "original")!.compress(to: 100)
+    @objc func touchMe() {
+        self.tipLabel.text = "选中了"
     }
 }
+
 
 // UIColor+Hex
 extension UIKitExtensionDemoViewController {
