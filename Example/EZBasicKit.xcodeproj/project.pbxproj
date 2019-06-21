@@ -35,6 +35,8 @@
 		A80A7BCB22B8CE03004C8EFB /* SetSelectionDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */; };
 		A80A7BCD22B8CE1B004C8EFB /* Selection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */; };
 		A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */; };
+		A818BD7A22BCB7530034E710 /* ObjectsController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A818BD7922BCB7530034E710 /* ObjectsController.storyboard */; };
+		A818BD7C22BCB7830034E710 /* ObjectsControllerBaseDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818BD7B22BCB7830034E710 /* ObjectsControllerBaseDemo.swift */; };
 		A897874022A10D65009AB91C /* IdentifiableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A897873E22A10D34009AB91C /* IdentifiableTests.swift */; };
 		A8C0B8B222B8EA0E0056F1D8 /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */; };
 		A8FE9DB222AE4774007259DC /* BatchFetchDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */; };
@@ -89,6 +91,8 @@
 		A80A7BCA22B8CE03004C8EFB /* SetSelectionDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetSelectionDemo.swift; sourceTree = "<group>"; };
 		A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selection.storyboard; sourceTree = "<group>"; };
 		A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDemoViewController.swift; sourceTree = "<group>"; };
+		A818BD7922BCB7530034E710 /* ObjectsController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObjectsController.storyboard; sourceTree = "<group>"; };
+		A818BD7B22BCB7830034E710 /* ObjectsControllerBaseDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsControllerBaseDemo.swift; sourceTree = "<group>"; };
 		A897873E22A10D34009AB91C /* IdentifiableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableTests.swift; sourceTree = "<group>"; };
 		A8C0B8B122B8EA0E0056F1D8 /* Utilities.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		A8FE9DB122AE4774007259DC /* BatchFetchDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchFetchDemoViewController.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 		A818BD7822BCB7060034E710 /* ObjectsControllerDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A818BD7922BCB7530034E710 /* ObjectsController.storyboard */,
+				A818BD7B22BCB7830034E710 /* ObjectsControllerBaseDemo.swift */,
 			);
 			path = ObjectsControllerDemo;
 			sourceTree = "<group>";
@@ -374,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A818BD7A22BCB7530034E710 /* ObjectsController.storyboard in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				72F816F4229FBCCF00B4E0A0 /* EZI.storyboard in Resources */,
 				A80A7BCD22B8CE1B004C8EFB /* Selection.storyboard in Resources */,
@@ -503,6 +510,7 @@
 				72F816F622A0D72E00B4E0A0 /* EZIURLBridge.swift in Sources */,
 				A8FE9DB822AE4FB0007259DC /* OptionsControllerDemo.swift in Sources */,
 				727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */,
+				A818BD7C22BCB7830034E710 /* ObjectsControllerBaseDemo.swift in Sources */,
 				727378DE22A7954500A5C3CF /* AnimatorTestViewController.swift in Sources */,
 				A8FE9DBA22AE59A8007259DC /* TimerControllerDemo.swift in Sources */,
 				727378DC22A774E500A5C3CF /* AnimatorDemoTableViewController.swift in Sources */,
