@@ -71,6 +71,14 @@
             </objects>
             <point key="canvasLocation" x="542" y="-214"/>
         </scene>
+        <!--ObjectsController-->
+        <scene sceneID="diX-cO-xUB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ObjectsController" id="C9Z-Uh-jed" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eh9-vX-F2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="-148"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="m5V-0a-zDg">
             <objects>
@@ -180,6 +188,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="ARY-J0-wdf" kind="show" id="Ww1-Qi-8qE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="1vy-cf-iDs" style="IBUITableViewCellStyleDefault" id="BY1-ow-xKD">
+                                        <rect key="frame" x="0.0" y="220" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BY1-ow-xKD" id="H3n-ba-vOB">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="ObjectsController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1vy-cf-iDs">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="C9Z-Uh-jed" kind="show" id="jQQ-Z6-HMi"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
