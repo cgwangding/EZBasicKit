@@ -159,6 +159,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				A818BD7822BCB7060034E710 /* ObjectsControllerDemo */,
 				A80A7BC922B8CE03004C8EFB /* Selection */,
 				727378D822A769C400A5C3CF /* AnimatorDemo */,
 				72F816DA229E736B00B4E0A0 /* EZIDemo */,
@@ -262,6 +263,13 @@
 			children = (
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		A818BD7822BCB7060034E710 /* ObjectsControllerDemo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ObjectsControllerDemo;
 			sourceTree = "<group>";
 		};
 		A8FE9DB022AE471B007259DC /* UtilitiesDemo */ = {
