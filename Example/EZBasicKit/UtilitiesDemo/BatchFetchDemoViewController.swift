@@ -71,13 +71,17 @@ extension BatchFetchDemoViewController: BatchFetchControllerDelegate {
         
         let processing = resultController.loadMore(completion: { (inserted) -> Void in
             
-            self.tableView.reloadData()
-            
-            context.completeBatchFetching()
+            //asyncAfter method is to imitate http requst, when you have real http request, delete this method
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.tableView.reloadData()
+                context.completeBatchFetching()
+            }
             
         }, failure: { (error) -> Void in
             
-            context.completeBatchFetching()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                context.completeBatchFetching()
+            }
         }) 
         
         if processing {
