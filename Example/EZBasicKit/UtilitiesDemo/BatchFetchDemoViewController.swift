@@ -93,17 +93,15 @@ class ResultDataController: OffsetBasedObjectsController<Emoji> {
         var emojis: [Emoji] = []
         
         
-        for i in (offset + 1)...(offset + limit) {
+        for i in (offset)..<(offset + limit) {
             
             if let emojiCode = list().object(at: i) {
                 let emoji = Emoji(code: emojiCode)
+                debugPrint(emoji.code)
                 emojis.append(emoji)
             }
         }
         
-        emojis.forEach { (emoji) in
-            debugPrint(emoji.code)
-        }
         completion(emojis)
         
         return true
