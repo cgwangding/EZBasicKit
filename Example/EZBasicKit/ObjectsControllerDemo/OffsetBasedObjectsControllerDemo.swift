@@ -9,12 +9,14 @@
 import UIKit
 import EZBasicKit
 
-class OffsetBasedObjectsControllerDemo: UITableViewController {
+class OffsetBasedObjectsControllerDemo: UIViewController {
     
     fileprivate let fatchController = BatchFetchController()
     
     fileprivate let controller = EmojiListController()
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -35,7 +37,7 @@ class OffsetBasedObjectsControllerDemo: UITableViewController {
         }
     }
     
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
         self.fatchController.batchFetchIfNeeded(for: scrollView)
     }
 }
@@ -43,21 +45,23 @@ class OffsetBasedObjectsControllerDemo: UITableViewController {
 extension OffsetBasedObjectsControllerDemo: BatchFetchControllerDelegate {
     
     func shouldBatchFetch(for scrollView: UIScrollView) -> Bool {
-        print("=========\(controller.hasMore)")
         return controller.hasMore
     }
     
     func scrollView(_ scrollView: UIScrollView, willBeginBatchFetchWith context: BatchFetchContext) {
         
         let processing = controller.loadMore(completion: { (inserted) -> Void in
-            
-            self.tableView.reloadData()
-            
-            context.completeBatchFetching()
+            //asyncAfter method is to imitate http requst, when you have real http request, delete this method
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.tableView.reloadData()
+                context.completeBatchFetching()
+            }
             
         }, failure: { (error) -> Void in
             
-            context.completeBatchFetching()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                context.completeBatchFetching()
+            }
         })
         
         if processing {
@@ -66,13 +70,13 @@ extension OffsetBasedObjectsControllerDemo: BatchFetchControllerDelegate {
     }
 }
 
-extension OffsetBasedObjectsControllerDemo {
+extension OffsetBasedObjectsControllerDemo: UITableViewDelegate, UITableViewDataSource {
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return controller.objects.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OffsetBaseObjectsControllerCell", for: indexPath)
         let emoji = controller.objects.object(at: indexPath.row)
         cell.textLabel?.text = emoji?.code
@@ -92,12 +96,9 @@ class EmojiListController: OffsetBasedObjectsController<Emoji> {
             
             if let emojiCode = list().object(at: i) {
                 let emoji = Emoji(code: emojiCode)
+                debugPrint(emoji.code)
                 emojis.append(emoji)
             }
-        }
-        
-        emojis.forEach { (emoji) in
-            debugPrint(emoji.code)
         }
         completion(emojis)
         return true
