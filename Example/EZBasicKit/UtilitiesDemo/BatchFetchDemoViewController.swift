@@ -20,6 +20,7 @@ class BatchFetchDemoViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 44
         fatchController.fetchDelegate = self
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,7 +57,6 @@ extension BatchFetchDemoViewController {
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         self.fatchController.batchFetchIfNeeded(for: scrollView)
     }
 }

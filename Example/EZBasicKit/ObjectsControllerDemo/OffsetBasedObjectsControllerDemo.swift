@@ -7,24 +7,99 @@
 //
 
 import UIKit
+import EZBasicKit
 
-class OffsetBasedObjectsControllerDemo: UIViewController {
+class OffsetBasedObjectsControllerDemo: UITableViewController {
+    
+    fileprivate let fatchController = BatchFetchController()
+    
+    fileprivate let controller = EmojiListController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        tableView.tableFooterView = UIView()
+        fatchController.fetchDelegate = self
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
     }
-    */
+    
+    func loadData() {
+        let _ = controller.reload(completion: { (_) in
+            self.tableView.reloadData()
+        }) { (error) in
+            print(error)
+        }
+    }
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        self.fatchController.batchFetchIfNeeded(for: scrollView)
+    }
+}
 
+extension OffsetBasedObjectsControllerDemo: BatchFetchControllerDelegate {
+    
+    func shouldBatchFetch(for scrollView: UIScrollView) -> Bool {
+        print("=========\(controller.hasMore)")
+        return controller.hasMore
+    }
+    
+    func scrollView(_ scrollView: UIScrollView, willBeginBatchFetchWith context: BatchFetchContext) {
+        
+        let processing = controller.loadMore(completion: { (inserted) -> Void in
+            
+            self.tableView.reloadData()
+            
+            context.completeBatchFetching()
+            
+        }, failure: { (error) -> Void in
+            
+            context.completeBatchFetching()
+        })
+        
+        if processing {
+            context.beginBatchFetching()
+        }
+    }
+}
+
+extension OffsetBasedObjectsControllerDemo {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return controller.objects.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "OffsetBaseObjectsControllerCell", for: indexPath)
+        let emoji = controller.objects.object(at: indexPath.row)
+        cell.textLabel?.text = emoji?.code
+        
+        return cell
+    }
+}
+
+class EmojiListController: OffsetBasedObjectsController<Emoji> {
+    
+    override func loadObjects(atOffset offset: Int, limit: Int, completion: @escaping (([Emoji]) -> Void), failure: @escaping (Error) -> Void) -> Bool {
+        
+        //request sever to load data
+        var emojis: [Emoji] = []
+        
+        for i in (offset)..<(offset + limit) {
+            
+            if let emojiCode = list().object(at: i) {
+                let emoji = Emoji(code: emojiCode)
+                emojis.append(emoji)
+            }
+        }
+        
+        emojis.forEach { (emoji) in
+            debugPrint(emoji.code)
+        }
+        completion(emojis)
+        return true
+    }
 }
