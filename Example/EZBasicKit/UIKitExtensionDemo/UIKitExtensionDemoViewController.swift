@@ -63,7 +63,7 @@ class UIKitExtensionDemoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        self.setupTimeIntervalButton()
+                self.setupTimeIntervalButton()
         self.setupEnlargeInsetBtn()
         self.setupColor()
         self.setupImageView()
@@ -106,6 +106,9 @@ class UIKitExtensionDemoViewController: UIViewController {
             
         case actionType.snapShot.rawValue:
             self.displayImageView.image = self.displayView.snapShot()
+        
+        case actionType.cornerRadius.rawValue:
+            self.displayView.setCornerRadius(10)
             
         default:
             break

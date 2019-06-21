@@ -266,7 +266,7 @@
                                 <rect key="frame" x="16" y="586" width="382" height="30"/>
                                 <subviews>
                                     <button opaque="NO" tag="1014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwr-Z9-EBh">
-                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="95.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <state key="normal" title="Badge"/>
                                         <connections>
@@ -274,17 +274,24 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efP-0j-cNM">
-                                        <rect key="frame" x="127.5" y="0.0" width="127" height="30"/>
+                                        <rect key="frame" x="95.5" y="0.0" width="95.5" height="30"/>
                                         <state key="normal" title="text"/>
                                         <connections>
                                             <action selector="viewExtensionButtonTapped:" destination="fv4-bO-aq4" eventType="touchUpInside" id="xLP-nQ-hcl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1016" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kQH-ad-gEh">
-                                        <rect key="frame" x="254.5" y="0.0" width="127.5" height="30"/>
+                                        <rect key="frame" x="191" y="0.0" width="95.5" height="30"/>
                                         <state key="normal" title="snap"/>
                                         <connections>
                                             <action selector="viewExtensionButtonTapped:" destination="fv4-bO-aq4" eventType="touchUpInside" id="pgV-ZL-VOo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNO-X7-vca">
+                                        <rect key="frame" x="286.5" y="0.0" width="95.5" height="30"/>
+                                        <state key="normal" title="CornerRadius"/>
+                                        <connections>
+                                            <action selector="viewExtensionButtonTapped:" destination="fv4-bO-aq4" eventType="touchUpInside" id="5j0-dR-hpx"/>
                                         </connections>
                                     </button>
                                 </subviews>
