@@ -1,20 +1,20 @@
 //
-//  OffsetBasedObjectsControllerDemo.swift
+//  MultiplyDataSourcePageObjectsControllerDemo.swift
 //  EZBasicKit_Example
 //
-//  Created by ezbuy on 2019/6/21.
+//  Created by ezbuy on 2019/7/16.
 //  Copyright © 2019 CocoaPods. All rights reserved.
 //
 
 import UIKit
 import EZBasicKit
 
-class OffsetBasedObjectsControllerDemo: UIViewController {
-    
+class MultiplyDataSourceViewController: UIViewController {
+
     fileprivate let fatchController = BatchFetchController()
     
-    fileprivate let controller = EmojiListController()
-
+    fileprivate let controller = EmojiListMultiplyDataSourceController()
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class OffsetBasedObjectsControllerDemo: UIViewController {
     }
 }
 
-extension OffsetBasedObjectsControllerDemo: BatchFetchControllerDelegate {
+extension MultiplyDataSourceViewController: BatchFetchControllerDelegate {
     
     func shouldBatchFetch(for scrollView: UIScrollView) -> Bool {
         return controller.hasMore
@@ -70,14 +70,14 @@ extension OffsetBasedObjectsControllerDemo: BatchFetchControllerDelegate {
     }
 }
 
-extension OffsetBasedObjectsControllerDemo: UITableViewDelegate, UITableViewDataSource {
+extension MultiplyDataSourceViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return controller.objects.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OffsetBaseObjectsControllerCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MultiplyDataSourceDemoCell", for: indexPath)
         let emoji = controller.objects.object(at: indexPath.row)
         cell.textLabel?.text = emoji?.code
         
@@ -85,13 +85,14 @@ extension OffsetBasedObjectsControllerDemo: UITableViewDelegate, UITableViewData
     }
 }
 
-class EmojiListController: OffsetBasedObjectsController<Emoji> {
+class EmojiListMultiplyDataSourceController: MultiplyDataSourcePageObjectsController<Emoji> {
     
     override func loadObjects(atOffset offset: Int, limit: Int, completion: @escaping (([Emoji]) -> Void), failure: @escaping (Error) -> Void) -> Bool {
         
         //request sever to load data
         var emojis: [Emoji] = []
-        debugPrint("EmojiListController: offset=\(offset) limit=\(limit)")
+        
+        debugPrint("EmojiListMultiplyDataSourceController: offset=\(offset) limit=\(limit)")
         
         for i in (offset)..<(offset + limit) {
             
