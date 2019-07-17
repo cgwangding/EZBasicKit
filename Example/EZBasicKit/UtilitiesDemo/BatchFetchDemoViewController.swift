@@ -20,6 +20,7 @@ class BatchFetchDemoViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         tableView.rowHeight = 44
         fatchController.fetchDelegate = self
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -56,7 +57,6 @@ extension BatchFetchDemoViewController {
     }
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         self.fatchController.batchFetchIfNeeded(for: scrollView)
     }
 }
@@ -71,13 +71,17 @@ extension BatchFetchDemoViewController: BatchFetchControllerDelegate {
         
         let processing = resultController.loadMore(completion: { (inserted) -> Void in
             
-            self.tableView.reloadData()
-            
-            context.completeBatchFetching()
+            //asyncAfter method is to imitate http requst, when you have real http request, delete this method
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.tableView.reloadData()
+                context.completeBatchFetching()
+            }
             
         }, failure: { (error) -> Void in
             
-            context.completeBatchFetching()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                context.completeBatchFetching()
+            }
         }) 
         
         if processing {
@@ -93,17 +97,15 @@ class ResultDataController: OffsetBasedObjectsController<Emoji> {
         var emojis: [Emoji] = []
         
         
-        for i in (offset + 1)...(offset + limit) {
+        for i in (offset)..<(offset + limit) {
             
             if let emojiCode = list().object(at: i) {
                 let emoji = Emoji(code: emojiCode)
+                debugPrint(emoji.code)
                 emojis.append(emoji)
             }
         }
         
-        emojis.forEach { (emoji) in
-            debugPrint(emoji.code)
-        }
         completion(emojis)
         
         return true
