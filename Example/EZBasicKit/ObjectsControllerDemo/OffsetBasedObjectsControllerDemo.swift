@@ -89,19 +89,22 @@ class EmojiListController: OffsetBasedObjectsController<Emoji> {
     
     override func loadObjects(atOffset offset: Int, limit: Int, completion: @escaping (([Emoji]) -> Void), failure: @escaping (Error) -> Void) -> Bool {
         
-        //request sever to load data
-        var emojis: [Emoji] = []
-        debugPrint("EmojiListController: offset=\(offset) limit=\(limit)")
-        
-        for i in (offset)..<(offset + limit) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            //request sever to load data
+            var emojis: [Emoji] = []
+            debugPrint("EmojiListController: offset=\(offset) limit=\(limit)")
             
-            if let emojiCode = list().object(at: i) {
-                let emoji = Emoji(code: emojiCode)
-                debugPrint(emoji.code)
-                emojis.append(emoji)
+            for i in (offset)..<(offset + limit) {
+                
+                if let emojiCode = list().object(at: i) {
+                    let emoji = Emoji(code: emojiCode)
+                    debugPrint(emoji.code)
+                    emojis.append(emoji)
+                }
             }
+            completion(emojis)
         }
-        completion(emojis)
+        
         return true
     }
 }
