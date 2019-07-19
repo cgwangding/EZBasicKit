@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="2 width red border, inset at left of 30 " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AZn-2c-NsJ" customClass="EZTextField" customModule="EZBasicKit">
-                                <rect key="frame" x="10" y="159" width="305" height="17"/>
+                                <rect key="frame" x="10" y="159" width="245" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="1Mx-41-uf8"/>
                                 </constraints>
@@ -269,7 +269,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Xzn-Nh-Lxw" kind="show" id="g5B-xs-yaI"/>
+                                    <segue destination="GZ8-Er-69L" kind="show" id="eAh-91-4ZB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -315,20 +315,163 @@
             </objects>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6pp-QH-4i0">
+        <!--Gradient View Demo-->
+        <scene sceneID="CIY-1R-T62">
             <objects>
-                <viewController id="Xzn-Nh-Lxw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c76-Gv-ue1">
+                <viewController id="QV7-6r-KmC" customClass="EZGradientViewDemo" customModule="EZBasicKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2z-QF-Crm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="XAr-g3-CGS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="620"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="ILU-k1-vdv">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="620"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ezr-ON-87k" customClass="EZGradientView" customModule="EZBasicKit">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="hXd-gp-hjn"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mb9-2Q-He0" customClass="EZGradientView" customModule="EZBasicKit">
+                                                <rect key="frame" x="0.0" y="210" width="200" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="IDZ-dI-6Rl"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEh-DG-m5t" customClass="EZGradientView" customModule="EZBasicKit">
+                                                <rect key="frame" x="0.0" y="420" width="200" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="kTl-X8-5MA"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="uh2-MJ-Ytz"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Wgp-NR-qys">
+                                        <rect key="frame" x="214" y="0.0" width="200" height="620"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J2P-ek-EDP" customClass="EZGradientView" customModule="EZBasicKit">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="fR6-ER-Mbj"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fTd-je-gMo" customClass="EZGradientView" customModule="EZBasicKit">
+                                                <rect key="frame" x="0.0" y="210" width="200" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="YS4-q9-8Rz"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Iu-hr-JMB" customClass="EZGradientView" customModule="EZBasicKit">
+                                                <rect key="frame" x="0.0" y="420" width="200" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="ubO-bY-m2z"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="nae-yF-mLT"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="620" id="sEc-ax-nSl"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZwP-Gq-N4g" firstAttribute="trailing" secondItem="XAr-g3-CGS" secondAttribute="trailing" id="5ro-5o-izX"/>
+                            <constraint firstItem="XAr-g3-CGS" firstAttribute="top" secondItem="ZwP-Gq-N4g" secondAttribute="top" id="mGU-70-IV9"/>
+                            <constraint firstItem="XAr-g3-CGS" firstAttribute="leading" secondItem="ZwP-Gq-N4g" secondAttribute="leading" id="y2B-ds-8qF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZwP-Gq-N4g"/>
+                    </view>
+                    <connections>
+                        <outlet property="gradientView1" destination="ezr-ON-87k" id="OTO-I6-SZr"/>
+                        <outlet property="gradientView2" destination="mb9-2Q-He0" id="Qc2-OE-HK5"/>
+                        <outlet property="gradientView3" destination="J2P-ek-EDP" id="uWD-en-9K2"/>
+                        <outlet property="gradientView4" destination="fTd-je-gMo" id="vqu-YU-ymH"/>
+                        <outlet property="gradientView5" destination="CEh-DG-m5t" id="QXf-eo-WwI"/>
+                        <outlet property="gradientView6" destination="9Iu-hr-JMB" id="IAC-u5-RVE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OKq-PR-G5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1876.8115942028987" y="34.821428571428569"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="7fi-Hl-QvG">
+            <objects>
+                <tableViewController id="GZ8-Er-69L" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TAE-5d-5oK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="IOe-8f-o0U"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pmJ-lf-ZqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <sections>
+                            <tableViewSection id="fJ1-fw-8Pg">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Hm1-je-UEK" style="IBUITableViewCellStyleDefault" id="ExX-5M-8BA">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ExX-5M-8BA" id="Qf0-Cy-Ctq">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="EZGradientViewDemo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hm1-je-UEK">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="QV7-6r-KmC" kind="show" id="6qZ-qG-aRz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="JiU-10-bXR" style="IBUITableViewCellStyleDefault" id="VRk-Qc-VU7">
+                                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VRk-Qc-VU7" id="SB0-rq-VLS">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="EZSafePWDViewDemo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JiU-10-bXR">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="GZ8-Er-69L" id="YFz-lJ-r76"/>
+                            <outlet property="delegate" destination="GZ8-Er-69L" id="2DC-JA-sxH"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="pOP-4B-g5A"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bHp-BH-or2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="826" y="41"/>
+            <point key="canvasLocation" x="964" y="35"/>
         </scene>
     </scenes>
 </document>
