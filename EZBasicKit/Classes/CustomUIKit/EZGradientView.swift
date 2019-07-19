@@ -22,15 +22,17 @@ public class EZGradientView: UIView {
         return layer
     }()
     
-    public var startPoint: CGPoint? {
+    @IBInspectable
+    public var startPoint: CGPoint = CGPoint(x: 0.5, y: 0) {
         didSet {
-            gradientLayer.startPoint = self.startPoint ?? CGPoint(x: 0.5, y: 0)
+            gradientLayer.startPoint = self.startPoint
         }
     }
     
-    public var endPoint: CGPoint? {
+    @IBInspectable
+    public var endPoint: CGPoint = CGPoint(x: 0.5, y: 1) {
         didSet {
-            gradientLayer.endPoint = self.endPoint ?? CGPoint(x: 0.5, y: 1)
+            gradientLayer.endPoint = self.endPoint
         }
     }
     
@@ -46,8 +48,7 @@ public class EZGradientView: UIView {
         }
     }
 
-
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         if !(self.layer.sublayers?.contains(self.gradientLayer) ?? false) {
             self.layer.addSublayer(self.gradientLayer)
@@ -55,7 +56,7 @@ public class EZGradientView: UIView {
         self.backgroundColor = UIColor.clear
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         if !(self.layer.sublayers?.contains(self.gradientLayer) ?? false) {
             self.layer.addSublayer(self.gradientLayer)
@@ -63,7 +64,7 @@ public class EZGradientView: UIView {
         self.backgroundColor = UIColor.clear
     }
 
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         self.gradientLayer.frame = self.bounds
     }
