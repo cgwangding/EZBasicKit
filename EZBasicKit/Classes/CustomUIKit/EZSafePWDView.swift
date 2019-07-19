@@ -41,7 +41,7 @@ fileprivate class DotView: UIView {
             if self.isSecureText {
                 self.dotLabel.layer.cornerRadius = self.dotWH / 2
                 self.dotLabel.layer.masksToBounds = true
-                self.dotLabel.backgroundColor = Colors.c333333
+                self.dotLabel.backgroundColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
                 self.dotLabel.frame = CGRect(x: (w - self.dotWH) / 2, y: (h - self.dotWH) / 2, width: self.dotWH, height: self.dotWH)
             } else {
                 self.dotLabel.layer.cornerRadius = 0
@@ -67,7 +67,7 @@ fileprivate class DotView: UIView {
         label.text = self.text
         label.layer.cornerRadius = self.dotWH / 2
         label.layer.masksToBounds = true
-        label.backgroundColor = Colors.c333333
+        label.backgroundColor = UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
         label.isHidden = self.isDotHidden
         label.isUserInteractionEnabled = false
         label.textAlignment = .center
@@ -93,7 +93,7 @@ public class EZSafePWDView: UIView {
     public var pwdCount: Int = 6
 
     @IBInspectable
-    public var borderColor: UIColor = Colors.ccecece {
+    public var borderColor: UIColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1) {
         didSet {
             self.layer.borderColor = self.borderColor.cgColor
         }
@@ -178,7 +178,7 @@ public class EZSafePWDView: UIView {
             self.bringSubviewToFront(dotView)
 
             let lineView = UIView()
-            lineView.backgroundColor = Colors.ceeeeee
+            lineView.backgroundColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1)
             lineView.frame = CGRect(x: dotView.frame.maxX, y: 3, width: 1, height: h - 6)
             self.addSubview(lineView)
         }
