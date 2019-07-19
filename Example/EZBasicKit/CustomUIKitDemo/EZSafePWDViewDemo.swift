@@ -28,4 +28,14 @@ class EZSafePWDViewDemo: UIViewController {
             //do something
         }
     }
+    
+    @IBAction func changeBorderColorDidTapped(_ sender: UIButton) {
+        let selected = sender.isSelected
+        sender.isSelected = !selected
+        self.safePWDView.borderColor = selected ? UIColor(0xcecece) : UIColor(0x0099ff)
+    }
+    
+    @IBAction func switchDidTapped(_ sender: UISwitch) {
+        self.safePWDView.isSecureText = sender.isOn
+    }
 }

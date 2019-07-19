@@ -394,18 +394,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-Lp-kvn" customClass="EZSafePWDView" customModule="EZBasicKit">
-                                <rect key="frame" x="72" y="426" width="270" height="44"/>
+                                <rect key="frame" x="94.5" y="426" width="225" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3pA-AE-MHw"/>
-                                    <constraint firstAttribute="width" constant="270" id="tMM-pN-xhM"/>
+                                    <constraint firstAttribute="width" constant="225" id="tMM-pN-xhM"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="pwdCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldShowKeyboard" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwq-x4-NwK">
+                                <rect key="frame" x="16" y="376" width="145" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Change Border Color">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeBorderColorDidTapped:" destination="8ik-1s-U12" eventType="touchUpInside" id="0Kq-7L-tO0"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hh2-d9-o35">
+                                <rect key="frame" x="120.5" y="325" width="51" height="31"/>
+                                <color key="onTintColor" red="1" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="switchDidTapped:" destination="8ik-1s-U12" eventType="valueChanged" id="yWj-Xp-68m"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="isSecureText" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-hN-11a">
+                                <rect key="frame" x="16" y="330.5" width="96.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.35294117650000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="hh2-d9-o35" firstAttribute="leading" secondItem="nb6-hN-11a" secondAttribute="trailing" constant="8" id="34N-LQ-DYb"/>
+                            <constraint firstItem="hh2-d9-o35" firstAttribute="centerY" secondItem="nb6-hN-11a" secondAttribute="centerY" id="9mw-wK-IuA"/>
                             <constraint firstItem="Z9e-Lp-kvn" firstAttribute="centerX" secondItem="3dc-1B-g3z" secondAttribute="centerX" id="Dbq-DS-dIz"/>
+                            <constraint firstItem="nb6-hN-11a" firstAttribute="leading" secondItem="HHV-nj-H12" secondAttribute="leading" constant="16" id="EQL-p4-Vsu"/>
+                            <constraint firstItem="hwq-x4-NwK" firstAttribute="top" secondItem="hh2-d9-o35" secondAttribute="bottom" constant="20" id="TbM-4I-2wi"/>
                             <constraint firstItem="Z9e-Lp-kvn" firstAttribute="centerY" secondItem="3dc-1B-g3z" secondAttribute="centerY" id="ZBJ-22-Bxw"/>
+                            <constraint firstItem="hwq-x4-NwK" firstAttribute="leading" secondItem="HHV-nj-H12" secondAttribute="leading" constant="16" id="ZWJ-GZ-6W8"/>
+                            <constraint firstItem="Z9e-Lp-kvn" firstAttribute="top" secondItem="hwq-x4-NwK" secondAttribute="bottom" constant="20" id="n3O-U2-fwb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HHV-nj-H12"/>
                     </view>
