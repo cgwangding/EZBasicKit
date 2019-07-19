@@ -20,10 +20,11 @@ class EZGradientViewDemo: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //gradientView with different type
         let colorArr = [UIColor(0xfff6b7), UIColor(0xf6416c)]
         gradientView1.gradientColors = colorArr
         gradientView2.gradientColors = colorArr
-        gradientView4.gradientColors = colorArr
         gradientView3.gradientColors = colorArr
         
         if #available(iOS 12.0, *) {
@@ -33,9 +34,12 @@ class EZGradientViewDemo: UIViewController {
             // Fallback on earlier versions
         }
         
+        //gradientView with different start point and end point
+        gradientView4.gradientColors = colorArr
         gradientView4.startPoint = CGPoint(x: 0, y: 0)
         gradientView4.endPoint = CGPoint(x: 1, y: 1)
         
+        //gradientView with three colors and different locations
         let colorArr1 = [UIColor(0x12c2e9), UIColor(0xc471ed), UIColor(0xf64f59)]
         gradientView5.gradientColors = colorArr1
         gradientView6.gradientColors = colorArr1
