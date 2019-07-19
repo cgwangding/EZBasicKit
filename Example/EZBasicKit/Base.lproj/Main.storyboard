@@ -33,7 +33,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mrX-Cv-I22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="-425"/>
+            <point key="canvasLocation" x="541" y="-424"/>
         </scene>
         <!--Animator-->
         <scene sceneID="zrI-BP-tfh">
@@ -61,7 +61,7 @@
                 <viewControllerPlaceholder storyboardName="Selection" referencedIdentifier="SelectionDemoViewController" id="RJo-Hg-255" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiw-Xk-tiU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="-274"/>
+            <point key="canvasLocation" x="570" y="-305"/>
         </scene>
         <!--Utilities-->
         <scene sceneID="o1O-Tc-fBu">
@@ -69,7 +69,7 @@
                 <viewControllerPlaceholder storyboardName="Utilities" id="ARY-J0-wdf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNs-ek-fmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="542" y="-214"/>
+            <point key="canvasLocation" x="463" y="-264"/>
         </scene>
         <!--ObjectsController-->
         <scene sceneID="diX-cO-xUB">
@@ -77,7 +77,15 @@
                 <viewControllerPlaceholder storyboardName="ObjectsController" id="C9Z-Uh-jed" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eh9-vX-F2c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="-148"/>
+            <point key="canvasLocation" x="512" y="-215"/>
+        </scene>
+        <!--EZMenuDemo-->
+        <scene sceneID="clm-QT-os4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EZMenuDemo" id="lx6-dC-3BY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtP-X2-vvP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="493" y="-175"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="m5V-0a-zDg">
@@ -208,6 +216,26 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="C9Z-Uh-jed" kind="show" id="jQQ-Z6-HMi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="XbM-iW-aar" style="IBUITableViewCellStyleDefault" id="4zZ-Xy-rsz">
+                                        <rect key="frame" x="0.0" y="264" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4zZ-Xy-rsz" id="rUX-p9-0Vv">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="EZMenu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XbM-iW-aar">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lx6-dC-3BY" kind="show" id="TfI-hk-bkj"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

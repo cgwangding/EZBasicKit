@@ -31,12 +31,9 @@ TODO: Add long description of the pod here.
     s.ios.deployment_target = '9.0'
     s.swift_version = '5.0'
     
-
-  # s.source_files = 'EZBasicKit/Classes/**/*'
-
-  # s.resource_bundles = {
-  #   'EZBasicKit' => ['EZBasicKit/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'EZBasicKit' => ['EZBasicKit/Assets/*.*']
+  }
 
 #   s.public_header_files = 'Pod/Classes/**/*'
   # s.frameworks = 'UIKit', 'MapKit'
@@ -83,6 +80,9 @@ TODO: Add long description of the pod here.
     s.subspec 'EZPresentation' do |a|
         a.source_files = 'EZBasicKit/Classes/EZPresentation/*.swift'
         a.dependency 'EZBasicKit/Animator'
-        
+    end
+
+    s.subspec 'EZMenu' do |a|
+        a.source_files = 'EZBasicKit/Classes/EZMenu/*.swift'
     end
 end

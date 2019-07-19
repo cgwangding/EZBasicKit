@@ -4,6 +4,7 @@ PODS:
     - EZBasicKit/CustomUIKit (= 0.1.1)
     - EZBasicKit/Extension (= 0.1.1)
     - EZBasicKit/EZI (= 0.1.1)
+    - EZBasicKit/EZMenu (= 0.1.1)
     - EZBasicKit/EZPresentation (= 0.1.1)
     - EZBasicKit/Identifiable (= 0.1.1)
     - EZBasicKit/ObjectsController (= 0.1.1)
@@ -17,6 +18,7 @@ PODS:
   - EZBasicKit/Extension/FoundationExtension (0.1.1)
   - EZBasicKit/Extension/UIKitExtension (0.1.1)
   - EZBasicKit/EZI (0.1.1)
+  - EZBasicKit/EZMenu (0.1.1)
   - EZBasicKit/EZPresentation (0.1.1):
     - EZBasicKit/Animator
   - EZBasicKit/Identifiable (0.1.1)
@@ -61,7 +63,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EZBasicKit: 55db29865627fe688b561ba55559f402d6275084
+  EZBasicKit: 37ed6c397835e913a6caafdb716998a49e0de986
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37

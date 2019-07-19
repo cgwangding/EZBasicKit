@@ -18,7 +18,7 @@ class EZIDemoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        debugPrint(EZMenuController.shared)
     }
 }
 
