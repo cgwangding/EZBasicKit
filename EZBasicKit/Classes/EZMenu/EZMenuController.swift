@@ -115,12 +115,10 @@ extension EZMenuController {
         shared.popoverPresentationController?.permittedArrowDirections = [.up, .down]
         shared.popoverPresentationController?.delegate = self
         shared.popoverPresentationController?.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        if viewController?.presentingViewController == nil {
-            EZMenuController.shared.isMenuVisible = visible
-            viewController?.present(shared, animated: false, completion: {
-                self.collectionView.reloadData()
-            })
-        }
+        EZMenuController.shared.isMenuVisible = visible
+        viewController?.present(shared, animated: false, completion: {
+            self.collectionView.reloadData()
+        })
     }
 }
 
