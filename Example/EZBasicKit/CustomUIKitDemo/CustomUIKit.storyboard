@@ -409,7 +409,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKq-PR-G5h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1876.8115942028987" y="34.821428571428569"/>
+            <point key="canvasLocation" x="1914" y="-246"/>
+        </scene>
+        <!--SafePWD View Demo-->
+        <scene sceneID="BKs-d8-4iO">
+            <objects>
+                <viewController id="8ik-1s-U12" customClass="EZSafePWDViewDemo" customModule="EZBasicKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3dc-1B-g3z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z9e-Lp-kvn" customClass="EZSafePWDView" customModule="EZBasicKit">
+                                <rect key="frame" x="72" y="426" width="270" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="3pA-AE-MHw"/>
+                                    <constraint firstAttribute="width" constant="270" id="tMM-pN-xhM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Z9e-Lp-kvn" firstAttribute="centerX" secondItem="3dc-1B-g3z" secondAttribute="centerX" id="Dbq-DS-dIz"/>
+                            <constraint firstItem="Z9e-Lp-kvn" firstAttribute="centerY" secondItem="3dc-1B-g3z" secondAttribute="centerY" id="ZBJ-22-Bxw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HHV-nj-H12"/>
+                    </view>
+                    <connections>
+                        <outlet property="safePWDView" destination="Z9e-Lp-kvn" id="7XJ-fC-wwk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e74-iE-LE2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913" y="411"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="7fi-Hl-QvG">
@@ -458,6 +490,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8ik-1s-U12" kind="show" id="UgU-0e-ATY"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

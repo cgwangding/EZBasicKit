@@ -38,6 +38,7 @@
 		A80A7BCD22B8CE1B004C8EFB /* Selection.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */; };
 		A80A7BCF22B8D0EC004C8EFB /* SelectionDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */; };
 		A818138222E1B84E00AC764D /* EZGradientViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818138122E1B84E00AC764D /* EZGradientViewDemo.swift */; };
+		A818138422E1C3AF00AC764D /* EZSafePWDViewDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818138322E1C3AF00AC764D /* EZSafePWDViewDemo.swift */; };
 		A818BD7A22BCB7530034E710 /* ObjectsController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A818BD7922BCB7530034E710 /* ObjectsController.storyboard */; };
 		A818BD7C22BCB7830034E710 /* ObjectsControllerBaseDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818BD7B22BCB7830034E710 /* ObjectsControllerBaseDemo.swift */; };
 		A818BD7E22BCC3BE0034E710 /* OffsetBasedObjectsControllerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818BD7D22BCC3BE0034E710 /* OffsetBasedObjectsControllerDemo.swift */; };
@@ -101,6 +102,7 @@
 		A80A7BCC22B8CE1B004C8EFB /* Selection.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Selection.storyboard; sourceTree = "<group>"; };
 		A80A7BCE22B8D0EC004C8EFB /* SelectionDemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionDemoViewController.swift; sourceTree = "<group>"; };
 		A818138122E1B84E00AC764D /* EZGradientViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZGradientViewDemo.swift; sourceTree = "<group>"; };
+		A818138322E1C3AF00AC764D /* EZSafePWDViewDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EZSafePWDViewDemo.swift; sourceTree = "<group>"; };
 		A818BD7922BCB7530034E710 /* ObjectsController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ObjectsController.storyboard; sourceTree = "<group>"; };
 		A818BD7B22BCB7830034E710 /* ObjectsControllerBaseDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectsControllerBaseDemo.swift; sourceTree = "<group>"; };
 		A818BD7D22BCC3BE0034E710 /* OffsetBasedObjectsControllerDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffsetBasedObjectsControllerDemo.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				727378E022A7A6BF00A5C3CF /* CustomUIKit.storyboard */,
 				727378E222A7C90700A5C3CF /* CustomUIKitDemoViewController.swift */,
 				A818138122E1B84E00AC764D /* EZGradientViewDemo.swift */,
+				A818138322E1C3AF00AC764D /* EZSafePWDViewDemo.swift */,
 			);
 			path = CustomUIKitDemo;
 			sourceTree = "<group>";
@@ -546,6 +549,7 @@
 				A8FE9DB822AE4FB0007259DC /* OptionsControllerDemo.swift in Sources */,
 				A823657F22DDBCAE005E22F4 /* OneRequestObjectsControllerDemo.swift in Sources */,
 				727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */,
+				A818138422E1C3AF00AC764D /* EZSafePWDViewDemo.swift in Sources */,
 				A818BD7C22BCB7830034E710 /* ObjectsControllerBaseDemo.swift in Sources */,
 				727378DE22A7954500A5C3CF /* AnimatorTestViewController.swift in Sources */,
 				A8FE9DBA22AE59A8007259DC /* TimerControllerDemo.swift in Sources */,
