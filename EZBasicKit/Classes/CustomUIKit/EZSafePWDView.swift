@@ -125,7 +125,7 @@ public class EZSafePWDView: UIView {
         super.init(coder: aDecoder)
     }
 
-    lazy var textField: NoneActionTextField = {
+    public lazy var textField: NoneActionTextField = {
         let tf = NoneActionTextField()
         tf.borderStyle = .none
         tf.keyboardType = .numberPad
