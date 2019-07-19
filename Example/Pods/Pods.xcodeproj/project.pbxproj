@@ -170,6 +170,8 @@
 		A77FB3828885AFD984B947D72CD326B6 /* NimbleXCTestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EDE32F5098B1614CC9A0624A5B31386 /* NimbleXCTestHandler.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A7E1A592144F00DBCD68A669EB28897B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71FB3076524CF59799A04B53B4403C2 /* NSObject+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A90B8BDD76109E8E6219936EFD8C697D /* MaxLimitObjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B7E6019CA01066744D09BD0FE5ACE /* MaxLimitObjectsController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		A818137C22E1AE0A00AC764D /* EZSafePWDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818137A22E1AE0A00AC764D /* EZSafePWDView.swift */; };
+		A818137D22E1AE0A00AC764D /* EZGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818137B22E1AE0A00AC764D /* EZGradientView.swift */; };
 		A971D89C528D23212F024B371F0E1718 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = CB8534CBED999FB2C77FA433A10EF50B /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD3F605157BC1D67630E2FF5EEB0457F /* InnerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158575D6BDF376095C3E843386ABB0 /* InnerPresentationController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		AE4567622CF3F1F640A74D85092670EA /* MatchError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9696391D28295CAB6D6D4F6DFAD672 /* MatchError.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -526,6 +528,9 @@
 		A7246A95E57AA96239C28233D6F65FA9 /* BatchFetchController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchFetchController.swift; path = EZBasicKit/Classes/Utilities/BatchFetchController.swift; sourceTree = "<group>"; };
 		A7C801787630180FF4EFCE029F4642F7 /* UIImage+Compare.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Compare.h"; path = "FBSnapshotTestCase/Categories/UIImage+Compare.h"; sourceTree = "<group>"; };
 		A8597120FF6DB6737E5D35C875ADD32B /* UIViewController+EZI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+EZI.swift"; path = "EZBasicKit/Classes/EZI/UIViewController+EZI.swift"; sourceTree = "<group>"; };
+		A818137A22E1AE0A00AC764D /* EZSafePWDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZSafePWDView.swift; path = EZBasicKit/Classes/CustomUIKit/EZSafePWDView.swift; sourceTree = "<group>"; };
+		A818137B22E1AE0A00AC764D /* EZGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZGradientView.swift; path = EZBasicKit/Classes/CustomUIKit/EZGradientView.swift; sourceTree = "<group>"; };
+		A85B7CC550E6B6764B56B0E12FE70682 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "EZBasicKit/Classes/Extension/UIKit/UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		A864D4E931A761319A17F2670B4EF370 /* QuickSpecBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpecBase.m; path = Sources/QuickSpecBase/QuickSpecBase.m; sourceTree = "<group>"; };
 		AA0C8B816E1AC7B122B72D48584F48C6 /* OffsetBasedObjectsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OffsetBasedObjectsController.swift; path = EZBasicKit/Classes/ObjectsController/OffsetBasedObjectsController.swift; sourceTree = "<group>"; };
 		AA394C8CC20BD458BB126337C9A10B88 /* CwlCatchException.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CwlCatchException.h; path = Carthage/Checkouts/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h; sourceTree = "<group>"; };
@@ -1152,6 +1157,17 @@
 				C2389BCBC13598AB7C5AEA39D46B7194 /* EZIURLBridge.swift */,
 				1CCA08317407CCB2D17AB56253170B9E /* EZIWrapper.swift */,
 				A8597120FF6DB6737E5D35C875ADD32B /* UIViewController+EZI.swift */,
+				A818137B22E1AE0A00AC764D /* EZGradientView.swift */,
+				A818137A22E1AE0A00AC764D /* EZSafePWDView.swift */,
+				727378E622A7D6BC00A5C3CF /* RoundLabel.swift */,
+				218A845B38A0AE2E8C08C3C54743F469 /* CircleImageView.swift */,
+				6F2FB393566CE101C972025A2AC9917D /* ContentCopyableLabel.swift */,
+				09F1EEDD768EED41475CFE3E7BA6DEA4 /* EZNavigationController.swift */,
+				DD9119441776BDB306C002433F990B6B /* EZTextField.swift */,
+				6153D6F6FC7E542FEAA93066284AC6E7 /* OptionsPickerLabel.swift */,
+				7C53D8902C48CA6DF7E2FD7533905E03 /* ReusableView.swift */,
+				496AFEC6F452F49A846E52054746ED22 /* RoundButton.swift */,
+				97F4A419C63D2CEBA4AE075CF1EE01FB /* StrokeBorderView.swift */,
 			);
 			name = EZI;
 			sourceTree = "<group>";
@@ -1970,6 +1986,94 @@
 				3EB2CB57C153AA6944A2ECBE412CA0AE /* PrettyDynamicTypeSyntax.swift in Sources */,
 				291D759B7AEDC85B52231F2346AB1A36 /* PrettySyntax.swift in Sources */,
 				36FA472533DE3511917AB04A26543287 /* XCTestObservationCenter+CurrentTestCaseTracker.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C16469153509588C65BC029A41B759FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBFBCD5B25CEA82EB21637C672BF87DD /* AbstractObjectsController.swift in Sources */,
+				01BAD79900CDA09FD98E9B0B8F7FF54E /* Array+Extension.swift in Sources */,
+				43F4BD32D61D50988A9515ABEB8509EB /* BatchFetchController.swift in Sources */,
+				727378E722A7D6BC00A5C3CF /* RoundLabel.swift in Sources */,
+				9595118EF8914B896D85A64154D88218 /* CaseInsensitiveString.swift in Sources */,
+				7BC9BE21F687934248A7A188B742756A /* CircleImageView.swift in Sources */,
+				B0033A88D3677545234D54DE6D6EFDD2 /* CollectionType+Identifiable.swift in Sources */,
+				F62CA065C20415A75674AA66260363C1 /* ContentCopyableLabel.swift in Sources */,
+				EF96B48F1EF729AA2B8734B471FD609A /* DateFormat+Extension.swift in Sources */,
+				2A7FB4B46B4D01ED52B49DC55CAE0890 /* Dictionary+Identifiable.swift in Sources */,
+				65266F798A75DF8089E6215BD79195E7 /* DissolveAnimator.swift in Sources */,
+				E7E2055CD80733B8DD2016C0A52A8697 /* EdgePanTransitionDelegate.swift in Sources */,
+				D301C6A73F28884D33EDB8F0C4600397 /* EZBasicKit-dummy.m in Sources */,
+				48FA27A3E20608B8EAB4DE552B23FFA6 /* EZIHandleable.swift in Sources */,
+				7BA6BB05FE3877902BE09B693FD62DE1 /* EZINode.swift in Sources */,
+				BAE2363D263CD6560E852EF5D38A3D48 /* EZINoHandleable.swift in Sources */,
+				8DAF9DE65946DDAE5E38543773054523 /* EZInstruction.swift in Sources */,
+				64B16A30378D66DACD9492B818BD71C0 /* EZIURLBridge.swift in Sources */,
+				EAC96443086F389AA2BE1F42A4CAC515 /* EZIWrapper.swift in Sources */,
+				49EF8C8CE07BA0607CD8F2D427DC2FD5 /* EZNavigationController.swift in Sources */,
+				D2E2A97DD7C0D4FD4948976C4A6B8A13 /* EZTextField.swift in Sources */,
+				240E2E9AAC64FC3D3379A5EF60B56F5E /* Identifiable+Comparable.swift in Sources */,
+				54BC1FD60493C750C60426B772699B71 /* Identifiable+Generator.swift in Sources */,
+				32F49C8BB023CDACE09B2541A71EC666 /* Identifiable+Hashable.swift in Sources */,
+				C092ED1484D84605384E9227F39FD174 /* Identifiable+KeyPath.swift in Sources */,
+				582B48A268F9BA3FF1527018AF651CE2 /* Identifiable+NSObject.swift in Sources */,
+				8788A196E7B98D519D1A67B604A7C757 /* Identifiable.swift in Sources */,
+				FFD06D6782F71CCCBA455A05133B9629 /* IdentifiableWrapper.swift in Sources */,
+				2795BA4E6F71BDCCD087F4170A7478FB /* InnerMoveAnimator.swift in Sources */,
+				1121AF5D84BF531DA79365F62EA91178 /* InnerPopoverClearBackgroundPresentationController.swift in Sources */,
+				F6FC9006C6F494B02CB114FBAC517CBD /* InnerPopoverPresentationController.swift in Sources */,
+				AA7C26EEC58EFFA951512526B8758DBB /* InnerPopoverTransition.swift in Sources */,
+				2313F7691EBFAE4E5FF9B3E500CE2390 /* InnerPresentationController.swift in Sources */,
+				1AB5B77AC995E297C72DF6300DD99D6E /* MaxLimitObjectsController.swift in Sources */,
+				2AE82F50066F33FE69AC358180D29FEF /* MoveAnimator.swift in Sources */,
+				7A1BBB76841758C1E0F6A0BA7AC04182 /* MultiplyDataSourcePageObjectsController.swift in Sources */,
+				CC7CF57D35588210F76830836FB42035 /* NSAttributeString+Extension.swift in Sources */,
+				37AA141C7240FFA7A207A4BAF91EA358 /* NSObject+Extension.swift in Sources */,
+				2B2AE4C66FC21BDA308512160A7E0AC8 /* NSRange+Extension.swift in Sources */,
+				8E1123460E46D428D83F404E7E955E39 /* ObjectGroup.swift in Sources */,
+				BEF80B31445DDBE402478B8382EAD426 /* ObjectsContainer.swift in Sources */,
+				FD3335A415E2C91DB2EE026E87999420 /* ObjectsController.swift in Sources */,
+				02FF279313838967426CE8845A83D93F /* ObjectsControllerBase.swift in Sources */,
+				7E0CC4AE1A645B186445AD0151E8714B /* ObjectsControllerBox.swift in Sources */,
+				D6248BD914F64F704A817C5E4DBFCD41 /* ObjectsSelection.swift in Sources */,
+				25F8B3FE97756F41B1EAAC2706A58E76 /* OffsetBasedObjectsController.swift in Sources */,
+				15909A3362F6F079067FD59EA6653F9B /* OneRequestObjectsController.swift in Sources */,
+				D70AD92AE7D2DC772DB0856FCAA9A746 /* OptionsController.swift in Sources */,
+				623F1918288381323D983A76BF0E7F45 /* OptionsPickerLabel.swift in Sources */,
+				DA1B31ABF377B8C521D7C24D51EC7937 /* PanAnimator.swift in Sources */,
+				4B257323E5D7FD1D8C1CD2E48BFD2505 /* PushAnimator.swift in Sources */,
+				F2DB2F89E36C2ACA2344FFA14A9B1BB5 /* ReusableView.swift in Sources */,
+				00E0B6C5648A2B94ADA7C2DDC0E26758 /* RoundButton.swift in Sources */,
+				A818137D22E1AE0A00AC764D /* EZGradientView.swift in Sources */,
+				6725A339769C1E7A7C3894720BD74D3D /* ScaleAnimator.swift in Sources */,
+				EA8CB22E9AA5E8603A4520579D274247 /* SelectionItem.swift in Sources */,
+				8A594681FFCCC477ABD098F1A825EAB1 /* SequenceType+Identifiable.swift in Sources */,
+				4A1B19FC774AC0252C0E0011C87E19CE /* SetSelection.swift in Sources */,
+				8EB821D6EAE99971C790E1A6B1B40219 /* String+Extension.swift in Sources */,
+				5EB503727090A59D88ED85754E0A4400 /* StrokeBorderView.swift in Sources */,
+				1443B056163590FA0B07393E443B74B6 /* SwipeTransitionDelegate.swift in Sources */,
+				0FE9015D0DDEAAE59C2B748724285006 /* TextFieldHelper.swift in Sources */,
+				664563BA97553B0DCD7C62E664CD7628 /* TimerController.swift in Sources */,
+				9358B41378AD84A76E6C0C679DC2AD23 /* TransitionAnimator.swift in Sources */,
+				35C2F1082029EFDB1B8468A1FD4C7B71 /* TransitionAnimators.swift in Sources */,
+				797CB939F66995C112AD5167AFA18796 /* UIApplication+Extension.swift in Sources */,
+				73FDDA0878D617C6A95CE5EBF5A4E342 /* UIButton+Extension.swift in Sources */,
+				A818137C22E1AE0A00AC764D /* EZSafePWDView.swift in Sources */,
+				B99A6126CFB145E2445974FA53E42AB6 /* UICollectionView+Extension.swift in Sources */,
+				04DA2B981AEACCE73CF5A42541D6A793 /* UIColor+Hex.swift in Sources */,
+				65EA8C2EEE1AC17D31350F53EC60B15E /* UIDevice+Extension.swift in Sources */,
+				89D99301FC4955B539B1D7F8B926A296 /* UIImage+Extension.swift in Sources */,
+				3B9DFB60F1E704CE2CC1D6AE93B99855 /* UIImageView+Extension.swift in Sources */,
+				595625000E81BCC2CF31880E4B95769C /* UIScrollView+Extension.swift in Sources */,
+				426AD714168F012B24BD8BD3DE4B5826 /* UIStoryboard+Extension.swift in Sources */,
+				FA0D9920FC16C95F23599062D0073A1E /* UITableView+Extension.swift in Sources */,
+				A706CC5E755E5336B7E787388419F769 /* UIView+Badge.swift in Sources */,
+				633E17636349E44BD58992212CBAA2D5 /* UIView+Extension.swift in Sources */,
+				E395FAB8A8FB53B07378AF46C04A7915 /* UIViewController+Extension.swift in Sources */,
+				CD1494E08F3C2F4B217F4C1F944814B0 /* UIViewController+EZI.swift in Sources */,
+				41EB95D6CB15D0733ED1BD5D857E88C2 /* URL+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
