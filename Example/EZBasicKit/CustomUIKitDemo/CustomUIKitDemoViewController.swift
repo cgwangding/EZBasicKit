@@ -27,7 +27,7 @@ class CustomUIKitDemoViewController: UIViewController {
         self.optionalPickerLabel.options = ["1", "2", "3"]
         self.optionalPickerLabel.confirm = { text in
             debugPrint("select a \(text)")
-        }
+        } 
     }
     
 
