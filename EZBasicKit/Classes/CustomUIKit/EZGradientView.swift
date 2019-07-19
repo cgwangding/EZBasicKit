@@ -8,19 +8,44 @@
 
 import UIKit
 
-class EZGradientView: UIView {
+public class EZGradientView: UIView {
 
-    var gradientColors: [UIColor] = [] {
+    public var gradientColors: [UIColor] = [] {
         didSet {
             self.gradientLayer.colors = self.gradientColors.map({ $0.cgColor })
         }
     }
 
-    lazy var gradientLayer: CAGradientLayer = {
+    public lazy var gradientLayer: CAGradientLayer = {
         let layer = CAGradientLayer()
         layer.frame = self.bounds
         return layer
     }()
+    
+    public var startPoint: CGPoint? {
+        didSet {
+            gradientLayer.startPoint = self.startPoint ?? CGPoint(x: 0.5, y: 0)
+        }
+    }
+    
+    public var endPoint: CGPoint? {
+        didSet {
+            gradientLayer.endPoint = self.endPoint ?? CGPoint(x: 0.5, y: 1)
+        }
+    }
+    
+    public var locations: [NSNumber]? {
+        didSet {
+            gradientLayer.locations = self.locations
+        }
+    }
+    
+    public var type: CAGradientLayerType = .axial {
+        didSet {
+            gradientLayer.type = self.type
+        }
+    }
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
