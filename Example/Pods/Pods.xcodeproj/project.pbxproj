@@ -171,6 +171,7 @@
 		A7E1A592144F00DBCD68A669EB28897B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71FB3076524CF59799A04B53B4403C2 /* NSObject+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A8142DF722E1C993009CCCEF /* EZSafePWDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8142DF522E1C993009CCCEF /* EZSafePWDView.swift */; };
 		A8142DF822E1C993009CCCEF /* EZGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8142DF622E1C993009CCCEF /* EZGradientView.swift */; };
+		A82417BC22E59B2600C47719 /* EZBasicKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82417BB22E59B2600C47719 /* EZBasicKit.swift */; };
 		A90B8BDD76109E8E6219936EFD8C697D /* MaxLimitObjectsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1B7E6019CA01066744D09BD0FE5ACE /* MaxLimitObjectsController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A971D89C528D23212F024B371F0E1718 /* Quick.h in Headers */ = {isa = PBXBuildFile; fileRef = CB8534CBED999FB2C77FA433A10EF50B /* Quick.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD3F605157BC1D67630E2FF5EEB0457F /* InnerPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9158575D6BDF376095C3E843386ABB0 /* InnerPresentationController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -531,6 +532,7 @@
 		A8142DF622E1C993009CCCEF /* EZGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZGradientView.swift; path = EZBasicKit/Classes/CustomUIKit/EZGradientView.swift; sourceTree = "<group>"; };
 		A818137A22E1AE0A00AC764D /* EZSafePWDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZSafePWDView.swift; path = EZBasicKit/Classes/CustomUIKit/EZSafePWDView.swift; sourceTree = "<group>"; };
 		A818137B22E1AE0A00AC764D /* EZGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZGradientView.swift; path = EZBasicKit/Classes/CustomUIKit/EZGradientView.swift; sourceTree = "<group>"; };
+		A82417BB22E59B2600C47719 /* EZBasicKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EZBasicKit.swift; path = EZBasicKit/Classes/EZBasicKit.swift; sourceTree = "<group>"; };
 		A8597120FF6DB6737E5D35C875ADD32B /* UIViewController+EZI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+EZI.swift"; path = "EZBasicKit/Classes/EZI/UIViewController+EZI.swift"; sourceTree = "<group>"; };
 		A864D4E931A761319A17F2670B4EF370 /* QuickSpecBase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpecBase.m; path = Sources/QuickSpecBase/QuickSpecBase.m; sourceTree = "<group>"; };
 		AA0C8B816E1AC7B122B72D48584F48C6 /* OffsetBasedObjectsController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OffsetBasedObjectsController.swift; path = EZBasicKit/Classes/ObjectsController/OffsetBasedObjectsController.swift; sourceTree = "<group>"; };
@@ -1072,6 +1074,7 @@
 		CA5C90BB4CF1AD435F63F00E92B560FE /* EZBasicKit */ = {
 			isa = PBXGroup;
 			children = (
+				A82417BB22E59B2600C47719 /* EZBasicKit.swift */,
 				3422DBF3B3F2DDDBF7F74ECE37060E18 /* Animator */,
 				278156D82EED620C1CEA49D3A37FE587 /* CustomUIKit */,
 				5ED4DC3936395F9B2F2B16AFDE95B39F /* Extension */,
@@ -1825,6 +1828,7 @@
 				B56422385BB261FD95C6E5FB56EB36B1 /* UITableView+Extension.swift in Sources */,
 				A61782A61C85BB29481CB7115CB23D46 /* UIView+Badge.swift in Sources */,
 				11DFC1E0F6C04A0986EDAFB2FEB40721 /* UIView+Extension.swift in Sources */,
+				A82417BC22E59B2600C47719 /* EZBasicKit.swift in Sources */,
 				344EC00327B274B69E4E1E972F3EBABB /* UIViewController+Extension.swift in Sources */,
 				2D6A7ACE98C9B17359B8F614D0F7D55C /* UIViewController+EZI.swift in Sources */,
 				6731BB22E16EE664B229B77C68DE2705 /* URL+Extension.swift in Sources */,
