@@ -32,7 +32,7 @@ class UIKitExtensionController: UIViewController {
     
     fileprivate func setupColor() {
         self.hexColorLabel.textColor = UIColor(0x949494)
-        self.randomLabel.textColor = UIColor().random
+        self.randomLabel.textColor = UIColor.random
         self.imageView.image = UIColor.green.createImage(self.imageView.bounds.size)
     }
 }
