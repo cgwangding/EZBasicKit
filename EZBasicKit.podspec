@@ -15,10 +15,10 @@ Pod::Spec.new do |s|
     A ezbuy iOS basic develop framework.
                        DESC
 
-    s.homepage         = 'https://github.com/cgwangding@163.com/EZBasicKit'
+    s.homepage         = 'https://github.com/ezbuy-ios/EZBasicKit'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'cgwangding@163.com' => 'wangding@ezbuy.com' }
-    s.source           = { :git => 'https://github.com/cgwangding@163.com/EZBasicKit.git', :tag => s.version.to_s }
+    s.source           = { :git => 'git@github.com:ezbuy-ios/EZBasicKit.git', :tag => s.version.to_s }
 
     s.ios.deployment_target = '9.0'
     s.swift_version = '5.0'
