@@ -87,6 +87,14 @@
             </objects>
             <point key="canvasLocation" x="493" y="-175"/>
         </scene>
+        <!--UIKitExtension-->
+        <scene sceneID="k8q-ou-c57">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UIKitExtension" id="lgW-wp-qGI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HMY-l8-YfH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="-126"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="m5V-0a-zDg">
             <objects>
@@ -238,6 +246,27 @@
                                             <segue destination="lx6-dC-3BY" kind="show" id="TfI-hk-bkj"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="zYS-kY-cWJ" style="IBUITableViewCellStyleDefault" id="L8K-R3-xbD">
+                                        <rect key="frame" x="0.0" y="308" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L8K-R3-xbD" id="dcX-q6-rqe">
+                                            <rect key="frame" x="0.0" y="0.0" width="341" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="UIKitExtenstion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zYS-kY-cWJ">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="lgW-wp-qGI" kind="show" trigger="accessoryAction" id="RbY-jd-xf0"/>
+                                            <segue destination="lgW-wp-qGI" kind="show" id="Tkf-QS-uFQ"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -253,4 +282,7 @@
             <point key="canvasLocation" x="63" y="-197"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RbY-jd-xf0"/>
+    </inferredMetricsTieBreakers>
 </document>
