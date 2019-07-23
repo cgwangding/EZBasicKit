@@ -8,36 +8,26 @@
 
 Pod::Spec.new do |s|
     s.name             = 'EZBasicKit'
-    s.version          = '0.1.1'
-    s.summary          = 'A short description of EZBasicKit.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+    s.version          = '1.0.0'
+    s.summary          = 'EZBasicKit is framework from ezbuy"
 
     s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    A ezbuy iOS basic develop framework.
                        DESC
 
     s.homepage         = 'https://github.com/cgwangding@163.com/EZBasicKit'
-    # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
     s.license          = { :type => 'MIT', :file => 'LICENSE' }
     s.author           = { 'cgwangding@163.com' => 'wangding@ezbuy.com' }
     s.source           = { :git => 'https://github.com/cgwangding@163.com/EZBasicKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
     s.ios.deployment_target = '9.0'
     s.swift_version = '5.0'
     
-  s.resource_bundles = {
-    'EZBasicKit' => ['EZBasicKit/Assets/*.*']
-  }
+    s.resource_bundles = {
+        'EZBasicKit' => ['EZBasicKit/Assets/*.*']
+    }
 
-#   s.public_header_files = 'Pod/Classes/**/*'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.frameworks = 'UIKit', 'Foundation'
 
     s.subspec 'Identifiable' do |a|
         a.source_files = 'EZBasicKit/Classes/Identifiable/*.swift'
