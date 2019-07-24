@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint EZBasicKit.podspec' to ensure this is a
+# Be sure to run `pod lib lint EZBasicKit.podspec" to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,41 +7,80 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'EZBasicKit'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of EZBasicKit.'
+    s.name             = "EZBasicKit"
+    s.version          = "1.0.0"
+    s.summary          = "EZBasicKit is framework from ezbuy"
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    s.description      = <<-DESC
+    A ezbuy iOS basic develop framework.
                        DESC
 
-  s.homepage         = 'https://github.com/cgwangding@163.com/EZBasicKit'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'cgwangding@163.com' => 'wangding@ezbuy.com' }
-  s.source           = { :git => 'https://github.com/cgwangding@163.com/EZBasicKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+    s.homepage         = "https://github.com/ezbuy-ios/EZBasicKit"
+    s.license          = { :type => "MIT", :file => "LICENSE" }
+    s.author           = { "cgwangding@163.com" => "wangding@ezbuy.com" }
+    s.source           = { :git => "https://github.com/ezbuy-ios/EZBasicKit.git", :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+    s.ios.deployment_target = "9.0"
+    s.swift_version = "5.0"
+    
+    s.resource_bundles = {
+        "EZBasicKit" => ["EZBasicKit/Assets/*.*"]
+    }
 
-  # s.source_files = 'EZBasicKit/Classes/**/*'
+    s.frameworks = "UIKit", "Foundation"
 
-  # s.resource_bundles = {
-  #   'EZBasicKit' => ['EZBasicKit/Assets/*.png']
-  # }
+    s.subspec "Identifiable" do |a|
+        a.source_files = "EZBasicKit/Classes/Identifiable/*.swift"
+    end
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+    s.subspec "EZI" do |a| 
+        a.source_files = "EZBasicKit/Classes/EZI/*.swift"
+        a.dependency "EZBasicKit/Utilities"
+        
+    end
 
-#   s.subspec 'Identifiable' do |a|
-#       a.source_files = 'EZBasicKit/Classes/Identifiable/*.swift'
-#   end
+    s.subspec "ObjectsController" do |a|
+        a.source_files = "EZBasicKit/Classes/ObjectsController/*.swift"
+    end
 
+    s.subspec "Selection" do |a|
+        a.source_files = "EZBasicKit/Classes/Selection/*.swift"
+    end
+
+    s.subspec "Animator" do |a|
+        a.source_files = "EZBasicKit/Classes/Animator/*.swift"
+    end
+
+    s.subspec "Extension" do |a|
+        a.subspec "UIKitExtension" do |b|
+            b.source_files = "EZBasicKit/Classes/Extension/UIKit/*.swift"
+            b.dependency "EZBasicKit/Extension/FoundationExtension"
+            
+        end
+
+        a.subspec "FoundationExtension" do |b|
+            b.source_files = "EZBasicKit/Classes/Extension/Foundation/*.swift"
+        end
+    end
+
+    s.subspec "CustomUIKit" do |a|
+        a.source_files = "EZBasicKit/Classes/CustomUIKit/*.swift"
+        a.dependency "EZBasicKit/Extension/FoundationExtension"
+        
+    end
+
+    s.subspec "Utilities" do |a|
+        a.source_files = "EZBasicKit/Classes/Utilities/*.swift"
+    end
+
+    s.subspec "EZPresentation" do |a|
+        a.source_files = "EZBasicKit/Classes/EZPresentation/*.swift"
+        a.dependency "EZBasicKit/Animator"
+    end
+
+    s.subspec "EZMenu" do |a|
+        a.source_files = "EZBasicKit/Classes/EZMenu/*.swift"
+        a.dependency "EZBasicKit/Extension/FoundationExtension"
+        
+    end
 end

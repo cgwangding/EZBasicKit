@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZBasicKit
 
 class ViewController: UIViewController {
 
