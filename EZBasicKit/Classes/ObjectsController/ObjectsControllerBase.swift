@@ -23,7 +23,7 @@ open class ObjectsControllerBase<Object>: AbstractObjectsController<Object> {
 
     fileprivate var _hasMore: Bool = true
 
-    internal(set) open override var hasMore: Bool {
+    open override var hasMore: Bool {
         get {
             return self._hasMore
         }
