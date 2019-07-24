@@ -82,7 +82,6 @@ open class StrokeBorderView: UIView {
         super.layoutSubviews()
 
         let layer = self.layer
-        let bounds = self.bounds
 
         let borderLayer = self.borderLayer
         borderLayer.frame = layer.bounds

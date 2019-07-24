@@ -157,6 +157,7 @@ public class EZNavigationController: UINavigationController, UINavigationControl
             
         case .changed:
             changed(edgePan: edgePan)
+        default: break
         }
     }
     
@@ -249,7 +250,6 @@ public class EZNavigationController: UINavigationController, UINavigationControl
         if let image = self.screenSnapshot(), let vc = self.viewControllers.object(at: count - 1) {
             mapping[vc.hashValue] = image
         }
-        debugPrint("Push", mapping)
         super.pushViewController(viewController, animated: animated)
     }
     

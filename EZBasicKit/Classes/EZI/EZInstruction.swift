@@ -69,7 +69,7 @@ public struct EZInstruction {
 
 }
 
-public extension EZInstruction {
+extension EZInstruction {
 
     public var wrapper: EZIWrapper {
         return self.type.wrapperType(forComponents: self.components).init(instruction: self)

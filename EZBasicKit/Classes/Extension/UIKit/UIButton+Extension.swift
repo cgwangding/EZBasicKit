@@ -80,9 +80,6 @@ extension DispatchQueue {
         }
         onceTracker.append(token)
         block()
-        defer {
-            print("block执行完毕")
-        }
     }
 }
 

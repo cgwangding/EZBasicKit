@@ -35,6 +35,8 @@ Pod::Spec.new do |s|
 
     s.subspec "EZI" do |a| 
         a.source_files = "EZBasicKit/Classes/EZI/*.swift"
+        a.dependency "EZBasicKit/Utilities"
+        
     end
 
     s.subspec "ObjectsController" do |a|
@@ -52,6 +54,8 @@ Pod::Spec.new do |s|
     s.subspec "Extension" do |a|
         a.subspec "UIKitExtension" do |b|
             b.source_files = "EZBasicKit/Classes/Extension/UIKit/*.swift"
+            b.dependency "EZBasicKit/Extension/FoundationExtension"
+            
         end
 
         a.subspec "FoundationExtension" do |b|
@@ -61,6 +65,8 @@ Pod::Spec.new do |s|
 
     s.subspec "CustomUIKit" do |a|
         a.source_files = "EZBasicKit/Classes/CustomUIKit/*.swift"
+        a.dependency "EZBasicKit/Extension/FoundationExtension"
+        
     end
 
     s.subspec "Utilities" do |a|
@@ -74,5 +80,7 @@ Pod::Spec.new do |s|
 
     s.subspec "EZMenu" do |a|
         a.source_files = "EZBasicKit/Classes/EZMenu/*.swift"
+        a.dependency "EZBasicKit/Extension/FoundationExtension"
+        
     end
 end

@@ -207,18 +207,12 @@ extension EZSafePWDView: UITextFieldDelegate {
         let start = text.index(text.startIndex, offsetBy: range.lowerBound)
         let end = text.index(text.startIndex, offsetBy: range.upperBound)
 
-        debugPrint(range.lowerBound, range.upperBound)
-
         let currentText = text.replacingCharacters(in: start..<end, with: string)
-
-        debugPrint(string, currentText)
 
         guard currentText.count <= self.pwdCount else {
 
             return false
         }
-
-        debugPrint(currentText)
 
         for (index, v) in self.dotViews.enumerated() {
             v.isDotHidden = index >= currentText.count
