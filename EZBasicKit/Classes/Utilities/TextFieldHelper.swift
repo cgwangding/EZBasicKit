@@ -50,7 +50,7 @@ open class TextFieldHelper: NSObject, UITextFieldDelegate {
     }
 }
 
-let NonDigitCharacterSet: CharacterSet = {
+public let NonDigitCharacterSet: CharacterSet = {
     let aSet = NSMutableCharacterSet.decimalDigit()
     aSet.invert()
     return aSet as CharacterSet
@@ -237,7 +237,7 @@ extension NSString {
 
 extension String {
 
-    func stringByRemovingCharactersInCharacterSet(_ aSet: CharacterSet) -> String {
+    public func stringByRemovingCharactersInCharacterSet(_ aSet: CharacterSet) -> String {
 
         return (self as NSString).stringByRemovingCharactersInCharacterSet(aSet) as String
     }
@@ -245,7 +245,7 @@ extension String {
 
 extension NSMutableString {
 
-    func removeCharactersInCharacterSet(_ aSet: CharacterSet) {
+    public func removeCharactersInCharacterSet(_ aSet: CharacterSet) {
 
         var searchRange = NSRange(location: 0, length: self.length)
 
@@ -263,7 +263,7 @@ extension NSMutableString {
 }
 extension NSString {
 
-    func stringByRemovingCharactersInCharacterSet(_ aSet: CharacterSet) -> NSString {
+    public func stringByRemovingCharactersInCharacterSet(_ aSet: CharacterSet) -> NSString {
 
         let mutableString = NSMutableString(string: self)
         mutableString.removeCharactersInCharacterSet(aSet)
@@ -273,7 +273,7 @@ extension NSString {
 
 extension NSRange {
 
-    func toCountableRange() -> CountableRange<Int>? {
+    public func toCountableRange() -> CountableRange<Int>? {
         if self.location != NSNotFound {
             return self.location..<(NSMaxRange(self))
         } else {

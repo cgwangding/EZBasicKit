@@ -23,7 +23,7 @@ public struct SelectionItem<S: ObjectsSelection> {
         }
     }
 
-    init(object: S.Object, selection: S) {
+    public init(object: S.Object, selection: S) {
         self.object = object
         self.selection = selection
     }

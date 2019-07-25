@@ -48,7 +48,7 @@ class UIViewExtensionController: UIViewController {
     }
     
     fileprivate func setupBlurEffectView() {
-        let blurEffect = UIView(frame: CGRect(x: 35, y: self.displayView.origin.y + 40, width: 45, height: 45), blurEffectStyle: .dark)
+        let blurEffect = UIView(frame: CGRect(x: 35, y: self.displayView.frame.origin.y + 40, width: 45, height: 45), blurEffectStyle: .dark)
         
         self.view.addSubview(blurEffect)
     }
@@ -56,7 +56,7 @@ class UIViewExtensionController: UIViewController {
     fileprivate func setupImageView() {
         self.tappedImageView.ez_addTarget(self, action: #selector(touchMe))
         
-        if let circleImageView = UIImageView(circle: CGRect(x: 240, y: self.tappedImageView.origin.y + 40, width: 60, height: 60)) {
+        if let circleImageView = UIImageView(circle: CGRect(x: 240, y: self.tappedImageView.frame.origin.y + 40, width: 60, height: 60)) {
             circleImageView.image = UIImage(named: "original")
             self.view.addSubview(circleImageView)
         }
