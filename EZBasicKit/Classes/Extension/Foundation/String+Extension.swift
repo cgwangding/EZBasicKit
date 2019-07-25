@@ -11,11 +11,11 @@ import UIKit
 // MARK: - to attribte string
 extension String {
 
-    public var attributeString: NSAttributedString {
+    public var attributedString: NSAttributedString {
         return NSAttributedString(string: self)
     }
 
-    public var mutableAttributeString: NSMutableAttributedString {
+    public var mutableAttributedString: NSMutableAttributedString {
         return NSMutableAttributedString(string: self)
     }
 }

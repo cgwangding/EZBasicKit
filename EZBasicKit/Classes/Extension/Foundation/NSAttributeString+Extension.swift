@@ -54,11 +54,28 @@ extension NSAttributedString {
         return muAttr
     }
 
-    public func asALink(_ linkColor: UIColor) -> NSAttributedString {
+    public func setUnderLineColor(_ lineColor: UIColor) -> NSAttributedString {
 
         let muAttr = self.mutableAttributedString
         muAttr.addAttributes([NSAttributedString.Key.underlineStyle: NSUnderlineStyle.single.rawValue], range: NSRange(location: 0, length: self.length))
-        muAttr.addAttributes([NSAttributedString.Key.underlineColor: linkColor], range: NSRange(location: 0, length: self.length))
+        muAttr.addAttributes([NSAttributedString.Key.underlineColor: lineColor], range: NSRange(location: 0, length: self.length))
+
+        return muAttr
+    }
+
+    public func asALink(_ link: String) -> NSAttributedString {
+
+        let muAttr = self.mutableAttributedString
+        muAttr.addAttributes([NSAttributedString.Key.link: link], range: NSRange(location: 0, length: self.length))
+
+        return muAttr
+    }
+
+    public func asALink(_ link: URL) -> NSAttributedString {
+
+        let muAttr = self.mutableAttributedString
+        muAttr.addAttributes([NSAttributedString.Key.link: link], range: NSRange(location: 0, length: self.length))
+
         return muAttr
     }
 

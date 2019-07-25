@@ -13,8 +13,13 @@ public typealias FrameHandler = (CGSize, CGSize) -> CGRect
 public class InnerPresentationController: UIPresentationController {
     
     let dimmingView = UIView()
+
+    public var dismissWhenTappedDimmingView: Bool = true
     
     @objc func dimmingViewTapped(_ recognizer: UITapGestureRecognizer) {
+
+        guard self.dismissWhenTappedDimmingView else { return }
+        
         self.presentingViewController.dismiss(animated: true, completion: nil)
     }
 

@@ -61,7 +61,7 @@ extension UIView {
 // MARK: - frame related
 extension UIView {
 
-    public var x: CGFloat {
+    public var ezX: CGFloat {
         get {
             return self.frame.minX
         }
@@ -70,7 +70,7 @@ extension UIView {
         }
     }
 
-    public var y: CGFloat {
+    public var ezY: CGFloat {
         get {
             return self.frame.minY
         }
@@ -79,7 +79,7 @@ extension UIView {
         }
     }
 
-    public var width: CGFloat {
+    public var ezWidth: CGFloat {
         get {
             return self.frame.width
         }
@@ -89,7 +89,7 @@ extension UIView {
         }
     }
 
-    public var height: CGFloat {
+    public var ezHeight: CGFloat {
         get {
             return self.frame.height
         }
@@ -98,7 +98,7 @@ extension UIView {
         }
     }
 
-    public var origin: CGPoint {
+    public var ezOrigin: CGPoint {
         get {
             return self.frame.origin
         }
@@ -107,7 +107,7 @@ extension UIView {
         }
     }
 
-    public var size: CGSize {
+    public var ezSize: CGSize {
         get {
             return self.frame.size
         }
@@ -115,6 +115,4 @@ extension UIView {
             self.frame.size = newValue
         }
     }
-
-
 }
