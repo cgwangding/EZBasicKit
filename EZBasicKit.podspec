@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "EZBasicKit"
-    s.version          = "1.0.0"
+    s.version          = "1.0.1"
     s.summary          = "EZBasicKit is framework from ezbuy"
 
     s.description      = <<-DESC
