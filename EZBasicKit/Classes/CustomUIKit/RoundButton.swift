@@ -20,16 +20,24 @@ public class RoundButton: UIButton {
     }
 
     @IBInspectable
-    public var borderColor: UIColor? {
+    public var borderColor: UIColor? = UIColor.clear  {
         didSet {
              self.layer.borderColor = self.borderColor?.cgColor
         }
     }
 
     @IBInspectable
-    public var borderWidth: CGFloat = 0.0 {
+    public var borderWidth: CGFloat = 1.0 {
         didSet {
             self.layer.borderWidth = self.borderWidth
         }
+    }
+    
+    public override func awakeFromNib() {
+        super.awakeFromNib()
+        self.layer.cornerRadius = self.cornerRadius
+        self.layer.masksToBounds = true
+        self.layer.borderColor = self.borderColor?.cgColor
+        self.layer.borderWidth = self.borderWidth
     }
 }
