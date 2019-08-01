@@ -89,4 +89,62 @@ extension UIView {
     private var textBadgeLabel: UILabel? {
         return self.viewWithTag(self.textBadgeTag) as? UILabel
     }
+    
+    var cartQTYbadgeText: String {
+        
+        get {
+            return self.cartQTYbadgeLabel?.text ?? ""
+        }
+        
+        set {
+            
+            if let label = self.cartQTYbadgeLabel {
+                label.text = newValue
+            } else {
+                let label = EZBadgeLabel()
+                label.text = newValue
+                label.tag = self.cartQTYbadgeTag
+                self.addSubview(label)
+            }
+            let size = self.cartQTYbadgeLabel?.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0)) ?? CGSize.zero
+            let horizontalMargin = (self.cartQTYbadgeLabel?.leftPadding ?? 0.0) + (self.cartQTYbadgeLabel?.rightPadding ?? 0.0)
+            let verticalMargin = (self.cartQTYbadgeLabel?.topPadding ?? 0.0) + (self.cartQTYbadgeLabel?.bottomPadding ?? 0.0)
+            let labelWidth = size.width + horizontalMargin
+            let labelHeight = size.height + verticalMargin
+            self.cartQTYbadgeLabel?.frame = CGRect(origin: CGPoint(x: self.bounds.width - 10, y: 8 - labelHeight), size: CGSize(width: labelWidth > labelHeight ? labelWidth :  labelHeight, height: labelHeight))
+            self.cartQTYbadgeLabel?.isHidden = newValue.isEmpty
+        }
+    }
+    
+    private var cartQTYbadgeTag: Int { return 999 }
+    
+    private var cartQTYbadgeLabel: EZBadgeLabel? {
+        return self.viewWithTag(self.cartQTYbadgeTag) as? EZBadgeLabel
+    }
+}
+
+class EZBadgeLabel: RoundedBorderLabel {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        configure()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        configure()
+    }
+    
+    func configure() {
+        self.topPadding = 2
+        self.bottomPadding = 2
+        self.leftPadding = 3
+        self.rightPadding = 3
+        self.layer.borderColor = UIColor.white.cgColor
+        
+        self.textAlignment = .center
+        self.textColor = .white
+        self.font = UIFont.systemFont(ofSize: 9.0)
+        self.backgroundColor = UIColor(red: 255.0 / 255.0, green: 90.0 / 255.0, blue: 0.0 / 255.0, alpha: 1.0)
+    }
 }
