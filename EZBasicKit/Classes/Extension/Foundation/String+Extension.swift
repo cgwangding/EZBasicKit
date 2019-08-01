@@ -177,3 +177,23 @@ extension String {
         }
     }
 }
+
+extension String {
+    func caculateLabelWidthWithFontSize(_ fontSize: Int) -> CGRect {
+        let stringOC: NSString = self as NSString
+        if !stringOC.isEqual(to: "") {
+            return stringOC.boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: 40), options: [], attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: CGFloat(fontSize))], context: nil)
+        } else {
+            return CGRect.zero
+        }
+    }
+    
+    func caculateLabelHeight(withFontSize fontSize: Int, width: CGFloat) -> CGRect {
+        let stringOC: NSString = self as NSString
+        if !stringOC.isEqual(to: "") {
+            return stringOC.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: CGFloat(fontSize))], context: nil)
+        } else {
+            return CGRect.zero
+        }
+    }
+}
