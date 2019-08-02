@@ -246,7 +246,7 @@
 		ECA13E8BB0EF60C0A9243E0E8039A4C5 /* QuickSpecBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 82B729522802F2EF906C26AFEB6854D7 /* QuickSpecBase.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		EF009525439B1258447F941003C073EC /* SetSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF417075C23716D2618AD2106BDC0FAF /* SetSelection.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		EF192417CFA75FEF09F7727085FE6C81 /* CwlMachBadInstructionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 71369DA488121B9AE3C73BC4D577D07A /* CwlMachBadInstructionHandler.m */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		EF82E5E5944BFD52F7DC12A555244D15 /* RoundLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D187946D05C00D365ABDA16A424354 /* RoundLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		EF82E5E5944BFD52F7DC12A555244D15 /* RoundedBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D187946D05C00D365ABDA16A424354 /* RoundedBorderLabel.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F10A1B92C1E050E153738C5C4BAC664F /* QuickConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = A0DE713821930E324518E1CE344667F8 /* QuickConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F10E4A584856F4610B6D9ED17FB65744 /* CurrentTestCaseTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5CD4F72F0C040B549B54F3A538284 /* CurrentTestCaseTracker.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		F2E27BC2057E489C1978BB994B368281 /* Predicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51E5E1B1B5BCFA7E36793437E62F031 /* Predicate.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -345,7 +345,7 @@
 		0639B48FB469F53257A9FC023A9DD389 /* ErrorUtility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ErrorUtility.swift; path = Sources/Quick/ErrorUtility.swift; sourceTree = "<group>"; };
 		06B143D2F93430EB7E54BBEC7AA36589 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E2669EB44128FD96FC8C0CC70CAF82 /* BeLessThan.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeLessThan.swift; path = Sources/Nimble/Matchers/BeLessThan.swift; sourceTree = "<group>"; };
-		08D187946D05C00D365ABDA16A424354 /* RoundLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundLabel.swift; path = EZBasicKit/Classes/CustomUIKit/RoundLabel.swift; sourceTree = "<group>"; };
+		08D187946D05C00D365ABDA16A424354 /* RoundedBorderLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedBorderLabel.swift; path = EZBasicKit/Classes/CustomUIKit/RoundedBorderLabel.swift; sourceTree = "<group>"; };
 		09B65ECF086565EA6EA44EC2A6B17D9B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		0BF76C9E6486AD2F17A352B1A842C426 /* XCTestObservationCenter+Register.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestObservationCenter+Register.m"; path = "Sources/NimbleObjectiveC/XCTestObservationCenter+Register.m"; sourceTree = "<group>"; };
 		0CE20622A52C49BC1C964E4CBA246C3A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -812,7 +812,7 @@
 				E44CAB3628E265024D1261264710D66A /* OptionsPickerLabel.swift */,
 				3116A8CA96532C3D21408821BBAA69E6 /* ReusableView.swift */,
 				90612E09122979C34E45D734FDDD44CD /* RoundButton.swift */,
-				08D187946D05C00D365ABDA16A424354 /* RoundLabel.swift */,
+				08D187946D05C00D365ABDA16A424354 /* RoundedBorderLabel.swift */,
 				2F0FEFD45638FACB48C69D6B8A0D2901 /* StrokeBorderView.swift */,
 			);
 			name = CustomUIKit;
@@ -1803,7 +1803,7 @@
 				D3D496B2E60E2120734E4DF2583D2B05 /* PushAnimator.swift in Sources */,
 				78B528C875C6B23141694E0E3854F100 /* ReusableView.swift in Sources */,
 				4CF9BC751B98B9FF7227937631063C7C /* RoundButton.swift in Sources */,
-				EF82E5E5944BFD52F7DC12A555244D15 /* RoundLabel.swift in Sources */,
+				EF82E5E5944BFD52F7DC12A555244D15 /* RoundedBorderLabel.swift in Sources */,
 				F4C9F9F764466300F849A8B4AFC5BF01 /* ScaleAnimator.swift in Sources */,
 				A634AE34DE06584371E2B266D491ED92 /* SelectionItem.swift in Sources */,
 				8CBBD16DDE0CB86E82A95C7CE0ACC67B /* SequenceType+Identifiable.swift in Sources */,
