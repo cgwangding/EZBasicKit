@@ -17,6 +17,9 @@
 		5C7DA03E22BCC817001D01F4 /* UITableViewExtensionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7DA03D22BCC817001D01F4 /* UITableViewExtensionController.swift */; };
 		5C7DA04222BCD6E5001D01F4 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7DA04122BCD6E5001D01F4 /* TestViewController.swift */; };
 		5CA242FF22B0DA50003ACB81 /* UIKitExtension.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CA242FE22B0DA50003ACB81 /* UIKitExtension.storyboard */; };
+		5CCABD3222F12F9D0020E5DD /* PresentationDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCABD2F22F12F9C0020E5DD /* PresentationDemoViewController.swift */; };
+		5CCABD3322F12F9D0020E5DD /* Presentation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCABD3022F12F9C0020E5DD /* Presentation.storyboard */; };
+		5CCABD3422F12F9D0020E5DD /* PresentationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCABD3122F12F9C0020E5DD /* PresentationViewController.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -86,6 +89,9 @@
 		5C7DA03D22BCC817001D01F4 /* UITableViewExtensionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtensionController.swift; sourceTree = "<group>"; };
 		5C7DA04122BCD6E5001D01F4 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		5CA242FE22B0DA50003ACB81 /* UIKitExtension.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UIKitExtension.storyboard; sourceTree = "<group>"; };
+		5CCABD2F22F12F9C0020E5DD /* PresentationDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationDemoViewController.swift; sourceTree = "<group>"; };
+		5CCABD3022F12F9C0020E5DD /* Presentation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Presentation.storyboard; sourceTree = "<group>"; };
+		5CCABD3122F12F9C0020E5DD /* PresentationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationViewController.swift; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* EZBasicKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EZBasicKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -186,6 +192,16 @@
 			path = UIKitExtensionDemo;
 			sourceTree = "<group>";
 		};
+		5CCABD2E22F12F9C0020E5DD /* PresentationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				5CCABD2F22F12F9C0020E5DD /* PresentationDemoViewController.swift */,
+				5CCABD3022F12F9C0020E5DD /* Presentation.storyboard */,
+				5CCABD3122F12F9C0020E5DD /* PresentationViewController.swift */,
+			);
+			path = PresentationDemo;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +234,7 @@
 				727378D822A769C400A5C3CF /* AnimatorDemo */,
 				72F816DA229E736B00B4E0A0 /* EZIDemo */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
+				5CCABD2E22F12F9C0020E5DD /* PresentationDemo */,
 				A8FE9DB022AE471B007259DC /* UtilitiesDemo */,
 				727378DF22A7A6B100A5C3CF /* CustomUIKitDemo */,
 				5CA242FD22B0DA04003ACB81 /* UIKitExtensionDemo */,
@@ -457,6 +474,7 @@
 				A8C0B8B222B8EA0E0056F1D8 /* Utilities.storyboard in Resources */,
 				5C2E60CE22B7615C00527490 /* joy.gif in Resources */,
 				5CA242FF22B0DA50003ACB81 /* UIKitExtension.storyboard in Resources */,
+				5CCABD3322F12F9D0020E5DD /* Presentation.storyboard in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				7268351A22E1A4C200F95DC4 /* EZMenuDemo.storyboard in Resources */,
 			);
@@ -570,6 +588,7 @@
 				A8FE9DBC22AE5DC6007259DC /* TextFieldHelperDemo.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				5C7DA03422BCBBF3001D01F4 /* UIScrollViewExtensionController.swift in Sources */,
+				5CCABD3422F12F9D0020E5DD /* PresentationViewController.swift in Sources */,
 				5C7DA03822BCBC44001D01F4 /* UIViewExtensionController.swift in Sources */,
 				72F816F0229FB7E300B4E0A0 /* AppDelegate+EZI.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
@@ -595,6 +614,7 @@
 				5C7DA03622BCBC27001D01F4 /* UIControlExtensionController.swift in Sources */,
 				727378E322A7C90700A5C3CF /* CustomUIKitDemoViewController.swift in Sources */,
 				A818138422E1C3AF00AC764D /* EZSafePWDViewDemo.swift in Sources */,
+				5CCABD3222F12F9D0020E5DD /* PresentationDemoViewController.swift in Sources */,
 				A818BD7C22BCB7830034E710 /* ObjectsControllerBaseDemo.swift in Sources */,
 				727378DE22A7954500A5C3CF /* AnimatorTestViewController.swift in Sources */,
 				A8FE9DBA22AE59A8007259DC /* TimerControllerDemo.swift in Sources */,
