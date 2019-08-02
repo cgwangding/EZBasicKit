@@ -55,7 +55,7 @@ Pod::Spec.new do |s|
         a.subspec "UIKitExtension" do |b|
             b.source_files = "EZBasicKit/Classes/Extension/UIKit/*.swift"
             b.dependency "EZBasicKit/Extension/FoundationExtension"
-            
+            b.dependency "EZBasicKit/CustomUIKit"
         end
 
         a.subspec "FoundationExtension" do |b|
