@@ -23,7 +23,7 @@ class RoundedBorderLabel: UILabel {
     
     override var font: UIFont!{
         didSet {
-            let height = "aa".caculateLabelWidthWithFontSize(Int(self.font?.pointSize ?? 0.0)).size.height
+            let height = "aa".caculateHeight(withFontSize: Int(self.font?.pointSize ?? 0.0))
             self.layer.cornerRadius = (height + topPadding + bottomPadding) * 0.5
             self.layoutIfNeeded()
         }
