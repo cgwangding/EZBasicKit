@@ -15,9 +15,9 @@ public class TimerController {
         case suspend
         case cancel
     }
-    
+
     private var state: State = .suspend
-    
+
     private let internalTimer: DispatchSourceTimer
 
     public typealias TimerControllerHandler = (TimerController) -> Void
@@ -41,7 +41,7 @@ public class TimerController {
     }
 
     deinit {
-        
+
         if state == .suspend {
             self.internalTimer.resume()
         }
@@ -55,7 +55,7 @@ public class TimerController {
         state = .resumed
         internalTimer.resume()
     }
-    
+
     public func suspend() {
         if state == .suspend {
             return
@@ -106,11 +106,11 @@ public class CountDownTimerController {
         })
         self.internalTimer.rescheduleHandler { [weak self]  (_) in
             if let strongSelf = self {
-                if strongSelf.leftTimes > 0 {
-                    strongSelf.leftTimes = strongSelf.leftTimes - 1
-                    strongSelf.handler(strongSelf, strongSelf.leftTimes)
-                } else {
+                strongSelf.leftTimes = strongSelf.leftTimes - 1
+                if strongSelf.leftTimes < 0 {
                     strongSelf.internalTimer.cancel()
+                } else {
+                    strongSelf.handler(strongSelf, strongSelf.leftTimes)
                 }
             }
         }
@@ -129,24 +129,30 @@ public class CountDownTimerController {
     }
 }
 
+var startTime: CFAbsoluteTime = 0.0
+
 public class BackgroundCountDownTimerController: CountDownTimerController {
-    
-    private var startTime: CFAbsoluteTime = 0.0
-    
+
     public override init(interval: DispatchTimeInterval, times: Int, queue: DispatchQueue = .main, handler: @escaping (CountDownTimerController, _ leftTimes: Int) -> Void) {
         super.init(interval: interval, times: times, queue: queue, handler: handler)
-        
-        NotificationCenter.default.addObserver(forName: UIApplication.willResignActiveNotification, object: nil, queue: nil) { [weak self] _ in
+
+        NotificationCenter.default.addObserver(forName: .timerWillResignActiveNotification, object: nil, queue: nil) { _ in
+
+            startTime = CFAbsoluteTimeGetCurrent()
+        }
+
+        NotificationCenter.default.addObserver(forName: .timerDidBecomeActiveNotification, object: nil, queue: nil) { [weak self] _ in
             guard let strongSelf = self else { return }
 
-            strongSelf.startTime = CFAbsoluteTimeGetCurrent()
+            strongSelf.leftTimes -= Int(ceil(CFAbsoluteTimeGetCurrent() - startTime))
+            startTime = 0.0
         }
-        
-        NotificationCenter.default.addObserver(forName: UIApplication.willEnterForegroundNotification, object: nil, queue: nil) { [weak self] _ in
-            guard let strongSelf = self else { return }
-            
-            strongSelf.leftTimes -= Int(ceil(CFAbsoluteTimeGetCurrent() - strongSelf.startTime))
-            strongSelf.startTime = 0.0
-        }
+
+
     }
+}
+
+public extension Notification.Name {
+    static let timerWillResignActiveNotification: Notification.Name = Notification.Name("timerWillResignActiveNotification")
+    static let timerDidBecomeActiveNotification: Notification.Name = Notification.Name("timerDidBecomeActiveNotification")
 }
