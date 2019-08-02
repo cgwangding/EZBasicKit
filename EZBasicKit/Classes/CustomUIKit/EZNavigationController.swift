@@ -299,7 +299,7 @@ extension EZNavigationController {
 
 internal extension String {
 
-    func caculateHeight(withFontSize fontSize: Int, width: CGFloat) -> CGFloat {
+    func caculateHeight(withFontSize fontSize: Int, width: CGFloat = CGFloat(MAXFLOAT)) -> CGFloat {
         let stringOC: NSString = self as NSString
         if !stringOC.isEqual(to: "") {
             return stringOC.boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: CGFloat(fontSize))], context: nil).height
