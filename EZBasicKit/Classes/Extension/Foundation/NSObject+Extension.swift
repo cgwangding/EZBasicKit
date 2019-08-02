@@ -27,7 +27,7 @@ extension NSObject {
         return ret
     }
 
-    public var properties: [String] {
+    public var classProperties: [String] {
 
         var ret = [String]()
 

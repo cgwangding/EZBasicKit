@@ -56,7 +56,7 @@ public struct EZInstruction {
         return self.components.isEmpty ? "" : ([""] + self.components).joined(separator: "/")
     }
 
-    internal(set) public var info: [String: String]
+    public var info: [String: String]
 
     public let source: Any?
 

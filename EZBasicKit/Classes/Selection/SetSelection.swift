@@ -12,7 +12,7 @@ open class SetSelection<Source: ObjectsContainer>: ObjectsSelection where Source
 
     open weak var source: Source?
 
-    var selection: Set<Source.Object> = []
+    public var selection: Set<Source.Object> = []
 
     open var selectedObjects: [Source.Object] {
         return selection.map { $0 }

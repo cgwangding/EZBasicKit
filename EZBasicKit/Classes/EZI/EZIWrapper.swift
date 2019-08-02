@@ -57,7 +57,7 @@ open class EZIWrapper: NSObject {
         }
     }
 
-    func doubleValue(forKey key: String) -> Double? {
+    public func doubleValue(forKey key: String) -> Double? {
         if let str = self[key] {
             return Double(str)
         } else {
@@ -65,7 +65,7 @@ open class EZIWrapper: NSObject {
         }
     }
 
-    func setDoubleValue(_ value: Double?, forKey key: String) {
+    public func setDoubleValue(_ value: Double?, forKey key: String) {
         if let v = value {
             self[key] = String(v)
         } else {
