@@ -18,7 +18,7 @@ class UITableViewExtensionController: UIViewController {
     }
     
     @IBAction func topButtonTapped(_ sender: UIButton) {
-        self.tableView.scrollToTop(true)
+        self.tableView.scrollToTop()
     }
 }
 
