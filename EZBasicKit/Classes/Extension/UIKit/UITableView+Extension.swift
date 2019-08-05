@@ -26,10 +26,7 @@ extension UITableView {
 
         guard self.topIndexPath != nil else { return }
 
-        self.beginUpdates()
         self.setContentOffset(.zero, animated: animated)
-        self.endUpdates()
-
     }
 
     public func indexPath(for cellContainersView: UIView) -> IndexPath? {
