@@ -156,3 +156,87 @@ public extension Notification.Name {
     static let timerWillResignActiveNotification: Notification.Name = Notification.Name("timerWillResignActiveNotification")
     static let timerDidBecomeActiveNotification: Notification.Name = Notification.Name("timerDidBecomeActiveNotification")
 }
+
+public class EZCountDownTimer {
+    
+    private let internalTimer: TimerController
+    
+    private var leftTimes: Int
+    
+    private let originalTimes: Int
+    
+    private let handler: (EZCountDownTimer, _ leftTimes: Int) -> Void
+    
+    private var needBackgroundMode: Bool
+    
+    private var enterBackgroundInterval: TimeInterval = 0
+    
+    private var willRunWhenBecomeActive: Bool = false
+    
+    public init(interval: DispatchTimeInterval, times: Int, queue: DispatchQueue = .main, needBackgroundMode: Bool = true, handler:  @escaping (EZCountDownTimer, _ leftTimes: Int) -> Void) {
+        
+        self.leftTimes = times
+        self.originalTimes = times
+        self.handler = handler
+        self.needBackgroundMode = needBackgroundMode
+        self.internalTimer = TimerController.repeaticTimer(interval: interval, queue: queue, handler: { _ in
+        })
+        self.internalTimer.rescheduleHandler { [weak self]  swiftTimer in
+            if let strongSelf = self {
+                if strongSelf.leftTimes > 0 {
+                    strongSelf.leftTimes = strongSelf.leftTimes - 1
+                    strongSelf.handler(strongSelf, strongSelf.leftTimes)
+                } else {
+                    strongSelf.internalTimer.suspend()
+                }
+            }
+        }
+        
+        if needBackgroundMode {
+            self.addObserver()
+        }
+    }
+    
+    public func start() {
+        self.internalTimer.start()
+    }
+    
+    public func cancel() {
+        self.internalTimer.cancel()
+    }
+    public func suspend() {
+        self.internalTimer.suspend()
+    }
+    
+    public func reCountDown() {
+        self.leftTimes = self.originalTimes
+    }
+    
+    deinit {
+        if self.needBackgroundMode {
+            NotificationCenter.default.removeObserver(self)
+        }
+    }
+    
+    fileprivate func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: #selector(willResignActive), name: UIApplication.willResignActiveNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(didBecomeActive), name: UIApplication.didBecomeActiveNotification, object: nil)
+    }
+    
+    @objc private func didBecomeActive() {
+        guard self.willRunWhenBecomeActive else { return }
+        self.willRunWhenBecomeActive = false
+        let diffTime = max(0.0, Date().timeIntervalSince1970 - self.enterBackgroundInterval)
+        self.leftTimes -= Int(ceil(diffTime))
+        self.enterBackgroundInterval = 0.0
+        self.start()
+        //        debugPrint("进入前台 \(diffTime)")
+    }
+    
+    @objc private func willResignActive() {
+        self.willRunWhenBecomeActive = true
+        self.enterBackgroundInterval = Date().timeIntervalSince1970
+        self.suspend()
+        //        debugPrint("进入后台")
+    }
+}
