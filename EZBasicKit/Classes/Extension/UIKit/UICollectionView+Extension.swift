@@ -11,7 +11,7 @@ import Foundation
 
 extension UICollectionView {
 
-    func indexPath(for cellContainersView: UIView) -> IndexPath? {
+    public func indexPath(for cellContainersView: UIView) -> IndexPath? {
 
         guard let cell = cellContainersView.ancestor(ofType: UICollectionViewCell.self) as? UICollectionViewCell else {
             return nil

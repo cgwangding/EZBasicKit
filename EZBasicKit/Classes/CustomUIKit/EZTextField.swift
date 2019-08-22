@@ -11,18 +11,6 @@ import UIKit
 @IBDesignable
 public class EZTextField : UITextField {
 
-    @IBInspectable public var borderColor : UIColor? {
-        didSet {
-            layer.borderColor = borderColor?.cgColor
-        }
-    }
-
-    @IBInspectable public var borderWidth : CGFloat = 0 {
-        didSet {
-            layer.borderWidth = borderWidth
-        }
-    }
-
     @IBInspectable public var left : CGFloat = 0
 
     override public func textRect(forBounds bounds: CGRect) -> CGRect {

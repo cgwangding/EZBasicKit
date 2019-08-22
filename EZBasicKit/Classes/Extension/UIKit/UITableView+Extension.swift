@@ -22,14 +22,11 @@ extension UITableView {
         return nil
     }
 
-    public func scrollToTop(_ animated: Bool = false) {
+    public func scrollToTop(_ animated: Bool = true) {
 
         guard self.topIndexPath != nil else { return }
 
-        self.beginUpdates()
-        self.setContentOffset(.zero, animated: false)
-        self.endUpdates()
-
+        self.setContentOffset(.zero, animated: animated)
     }
 
     public func indexPath(for cellContainersView: UIView) -> IndexPath? {

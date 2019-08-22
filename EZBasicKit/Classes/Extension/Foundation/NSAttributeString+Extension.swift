@@ -40,7 +40,7 @@ extension NSAttributedString {
         return NSMutableAttributedString(attributedString: self)
     }
 
-    public func setFont(_ font: UIFont) -> NSAttributedString {
+    @objc public func setFont(_ font: UIFont) -> NSAttributedString {
 
         let muAttr = self.mutableAttributedString
         muAttr.addAttributes([NSAttributedString.Key.font: font], range: NSRange(location: 0, length: self.length))
