@@ -18,7 +18,7 @@ public class TimerController {
 
     private var state: State = .suspend
 
-    private let internalTimer: DispatchSourceTimer
+    private var internalTimer: DispatchSourceTimer?
 
     public typealias TimerControllerHandler = (TimerController) -> Void
 
@@ -28,12 +28,12 @@ public class TimerController {
 
         self.handler = handler
         internalTimer = DispatchSource.makeTimerSource(queue: queue)
-        internalTimer.setEventHandler { [weak self] in
+        internalTimer?.setEventHandler { [weak self] in
             if let strongSelf = self {
                 handler(strongSelf)
             }
         }
-        internalTimer.schedule(deadline: .now() + interval, repeating: interval)
+        internalTimer?.schedule(deadline: .now() + interval, repeating: interval)
     }
 
     public static func repeaticTimer(interval: DispatchTimeInterval, queue: DispatchQueue = .main , handler: @escaping TimerControllerHandler ) -> TimerController {
@@ -43,9 +43,9 @@ public class TimerController {
     deinit {
 
         if state == .suspend {
-            self.internalTimer.resume()
+            self.internalTimer?.resume()
         }
-        self.internalTimer.cancel()
+        self.internalTimer?.cancel()
     }
 
     public func start() {
@@ -53,7 +53,7 @@ public class TimerController {
             return
         }
         state = .resumed
-        internalTimer.resume()
+        internalTimer?.resume()
     }
 
     public func suspend() {
@@ -61,7 +61,7 @@ public class TimerController {
             return
         }
         state = .suspend
-        internalTimer.suspend()
+        internalTimer?.suspend()
     }
 
     public func cancel() {
@@ -69,16 +69,17 @@ public class TimerController {
             return
         }
         state = .cancel
-        internalTimer.cancel()
+        internalTimer?.cancel()
+        internalTimer = nil
     }
 
     public func rescheduleRepeating(interval: DispatchTimeInterval) {
-        internalTimer.schedule(deadline: .now() + interval, repeating: interval)
+        internalTimer?.schedule(deadline: .now() + interval, repeating: interval)
     }
 
     public func rescheduleHandler(handler: @escaping TimerControllerHandler) {
         self.handler = handler
-        internalTimer.setEventHandler { [weak self] in
+        internalTimer?.setEventHandler { [weak self] in
             if let strongSelf = self {
                 handler(strongSelf)
             }
