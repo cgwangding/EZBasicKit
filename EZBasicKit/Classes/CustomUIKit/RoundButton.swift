@@ -11,28 +11,6 @@ import UIKit
 @IBDesignable
 public class RoundButton: UIButton {
     
-    @IBInspectable
-    public var cornerRadius: CGFloat = 2 {
-        didSet {
-            self.layer.cornerRadius = self.cornerRadius
-            self.layer.masksToBounds = true
-        }
-    }
-
-    @IBInspectable
-    public var borderColor: UIColor? = UIColor.clear  {
-        didSet {
-             self.layer.borderColor = self.borderColor?.cgColor
-        }
-    }
-
-    @IBInspectable
-    public var borderWidth: CGFloat = 1.0 {
-        didSet {
-            self.layer.borderWidth = self.borderWidth
-        }
-    }
-    
     public override func awakeFromNib() {
         super.awakeFromNib()
         self.layer.cornerRadius = self.cornerRadius

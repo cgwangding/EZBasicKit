@@ -93,13 +93,6 @@ public class EZSafePWDView: UIView {
     public var pwdCount: Int = 6
 
     @IBInspectable
-    public var borderColor: UIColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1) {
-        didSet {
-            self.layer.borderColor = self.borderColor.cgColor
-        }
-    }
-
-    @IBInspectable
     public var isSecureText: Bool = true {
         didSet {
             self.dotViews.forEach({ $0.isSecureText = self.isSecureText })
@@ -162,7 +155,8 @@ public class EZSafePWDView: UIView {
 
     private func setupUI() {
 
-        self.layer.borderColor = self.borderColor.cgColor
+        self.borderColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1)
+        self.layer.borderColor = self.borderColor?.cgColor
         self.layer.borderWidth = 1
 
         self.subviews.filter({ !$0.isMember(of: NoneActionTextField.self) }).forEach({ $0.removeFromSuperview() })
