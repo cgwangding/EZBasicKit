@@ -76,7 +76,6 @@
 		45BC601FADAD02057F4B0E387E5F6F9A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58F3B7D6ADCC9647A4F423CEFF7544 /* XCTest.framework */; };
 		47E0DCED04D81B2C8716AA15B1236FE0 /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = EA0EEE1D2B78221B958546EC1674B776 /* UIImage+Diff.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4C9D04BE689F1766C324E6D6DB2A076A /* Stringers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F4750890144484DB248038F5A68339 /* Stringers.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble -w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		4CF9BC751B98B9FF7227937631063C7C /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90612E09122979C34E45D734FDDD44CD /* RoundButton.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4D4F30BE1BFB68C8FD25B32993C546BF /* UIImage+Diff.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BED6DB37E7CB69027C26BB68BB7DAB2 /* UIImage+Diff.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		4D5031D74665D0FE5ED17205CC8C2673 /* CwlPreconditionTesting.h in Headers */ = {isa = PBXBuildFile; fileRef = 805F0F285A48A01B2A4490FE760AC66C /* CwlPreconditionTesting.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D76DDFDA3CF929EBC235F7BBEDEDDAB /* NSAttributeString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C9D930E30EB60682CD594F4416C20C /* NSAttributeString+Extension.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -498,7 +497,6 @@
 		8F9696391D28295CAB6D6D4F6DFAD672 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
 		8F9CD68D2F776CE1F279B6522E80D3F8 /* Dictionary+Identifiable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Identifiable.swift"; path = "EZBasicKit/Classes/Identifiable/Dictionary+Identifiable.swift"; sourceTree = "<group>"; };
 		9010CD74486B7C14D21066D07EA87960 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScrollView+Extension.swift"; path = "EZBasicKit/Classes/Extension/UIKit/UIScrollView+Extension.swift"; sourceTree = "<group>"; };
-		90612E09122979C34E45D734FDDD44CD /* RoundButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = EZBasicKit/Classes/CustomUIKit/RoundButton.swift; sourceTree = "<group>"; };
 		90EB3C1E4D10D0AEC35C812539F0BD20 /* ObjectsContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ObjectsContainer.swift; path = EZBasicKit/Classes/Selection/ObjectsContainer.swift; sourceTree = "<group>"; };
 		90FABE6AFFAA48006F24D72C07660940 /* EZBasicKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "EZBasicKit-Info.plist"; sourceTree = "<group>"; };
 		94A39C428F0BA18B6D8893A3EF36617A /* SwipeTransitionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeTransitionDelegate.swift; path = EZBasicKit/Classes/Animator/SwipeTransitionDelegate.swift; sourceTree = "<group>"; };
@@ -811,7 +809,6 @@
 				C68EB549A08D5B4459763E5E981648FE /* EZTextField.swift */,
 				E44CAB3628E265024D1261264710D66A /* OptionsPickerLabel.swift */,
 				3116A8CA96532C3D21408821BBAA69E6 /* ReusableView.swift */,
-				90612E09122979C34E45D734FDDD44CD /* RoundButton.swift */,
 				08D187946D05C00D365ABDA16A424354 /* RoundedBorderLabel.swift */,
 				2F0FEFD45638FACB48C69D6B8A0D2901 /* StrokeBorderView.swift */,
 			);
@@ -1802,7 +1799,6 @@
 				E0BA1759FC10E8507FA210DE30DD8BCA /* PanAnimator.swift in Sources */,
 				D3D496B2E60E2120734E4DF2583D2B05 /* PushAnimator.swift in Sources */,
 				78B528C875C6B23141694E0E3854F100 /* ReusableView.swift in Sources */,
-				4CF9BC751B98B9FF7227937631063C7C /* RoundButton.swift in Sources */,
 				EF82E5E5944BFD52F7DC12A555244D15 /* RoundedBorderLabel.swift in Sources */,
 				F4C9F9F764466300F849A8B4AFC5BF01 /* ScaleAnimator.swift in Sources */,
 				A634AE34DE06584371E2B266D491ED92 /* SelectionItem.swift in Sources */,
