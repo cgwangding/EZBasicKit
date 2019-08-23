@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "EZBasicKit"
-    s.version          = "1.0.3"
+    s.version          = "1.0.4"
     s.summary          = "EZBasicKit is framework from ezbuy"
 
     s.description      = <<-DESC
@@ -28,6 +28,9 @@ Pod::Spec.new do |s|
     }
 
     s.frameworks = "UIKit", "Foundation"
+
+    s.source_files = 'EZBasicKit/Classes/*.swift'
+    
 
     s.subspec "Identifiable" do |a|
         a.source_files = "EZBasicKit/Classes/Identifiable/*.swift"

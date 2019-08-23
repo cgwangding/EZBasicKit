@@ -35,29 +35,56 @@ extension String {
 // MARK: - 计算文字宽高
 extension String {
 
+    //constraintWidth参数如果不传, 得到的就是在指定font下该文字一行的高度
+    public func height(_ constraintWidth: CGFloat, fontSize: CGFloat = 14.0) -> CGFloat {
+
+        return self.size(CGSize(width: constraintWidth, height: CGFloat.infinity), fontSize: fontSize).height
+    }
+
     public func height(_ constraintWidth: CGFloat, font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGFloat {
 
         return self.size(CGSize(width: constraintWidth, height: CGFloat.infinity), font: font).height
     }
 
-    public func width(_ constraintHeight: CGFloat, font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGFloat {
+    //在宽度是CGFloat.infinity的情况下, 高度不管传多少都是没有用的, 返回的都是在指定font下该文字一行的高度, 所以这里就不需要增加高度参数
+    public func width(fontSize: CGFloat = 14.0) -> CGFloat {
 
-        return self.size(CGSize(width: CGFloat.infinity, height: constraintHeight), font: font).width
+        return self.size(CGSize(width: CGFloat.infinity, height: CGFloat.zero), fontSize: fontSize).width
     }
 
-    public func size(_ constraintSize: CGSize, font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGSize {
-
-        return self.size(constraintSize, attributes: [NSAttributedString.Key.font: font])
+    public func width(font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGFloat {
+        return self.size(CGSize(width: CGFloat.infinity, height: CGFloat.infinity), font: font).width
     }
 
-    public func size(_ constraintSize: CGSize, attributes: [NSAttributedString.Key : Any]) -> CGSize {
+    //constraintSize参数如果不传, 得到的就是在指定font下该文字一行的size
+    public func size(_ constraintSize: CGSize = CGSize.zero, fontSize: CGFloat = 14.0) -> CGSize {
 
-        let attr = NSAttributedString(string: self, attributes: attributes)
+        return self.rect(constraintSize, fontSize: fontSize).size
+    }
+
+    public func size(_ constraintSize: CGSize = CGSize(width: CGFloat.infinity, height: CGFloat.infinity), font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGSize {
+
+        return self.size(constraintSize, attribute: [NSAttributedString.Key.font : font])
+    }
+
+    public func size(_ constraintSize: CGSize = CGSize(width: CGFloat.infinity, height: CGFloat.infinity), attribute: [NSAttributedString.Key : Any]) -> CGSize {
+
+        let attr = NSAttributedString(string: self, attributes: attribute)
 
         let rect = attr.boundingRect(with: constraintSize, options: [.usesFontLeading, .usesLineFragmentOrigin], context: nil)
-
         return rect.size
     }
+    
+    //constraintSize参数如果不传, 得到的就是在指定font下该文字一行的rect
+    public func rect(_ constraintSize: CGSize = CGSize.zero, fontSize: CGFloat = 14.0) -> CGRect {
+
+        let attr = NSAttributedString(string: self, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: fontSize)])
+        
+        let rect = attr.boundingRect(with: constraintSize, options: [.usesFontLeading, .usesLineFragmentOrigin], context: nil)
+        
+        return rect
+    }
+
 }
 
 // MARK: - substring
