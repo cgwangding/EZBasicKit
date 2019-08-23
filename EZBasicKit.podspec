@@ -29,6 +29,9 @@ Pod::Spec.new do |s|
 
     s.frameworks = "UIKit", "Foundation"
 
+    s.source_files = 'EZBasicKit/Classes/*.swift'
+    
+
     s.subspec "Identifiable" do |a|
         a.source_files = "EZBasicKit/Classes/Identifiable/*.swift"
     end
