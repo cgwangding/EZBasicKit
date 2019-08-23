@@ -76,7 +76,7 @@ extension UIView {
             self.textBadgeLabel?.font = UIFont.systemFont(ofSize: 16.0)
             let size = self.textBadgeLabel?.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: 0)) ?? CGSize.zero
             self.textBadgeLabel?.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: size.width > 14 ? size.width + 8 : 14, height: 14))
-            self.textBadgeLabel?.center = CGPoint(x: self.bounds.width, y: 0)
+            self.textBadgeLabel?.center = CGPoint(x: self.bounds.width + 8, y: 0)
             self.textBadgeLabel?.isHidden = newValue.isEmpty
             self.textBadgeLabel?.font = UIFont.systemFont(ofSize: 13.0)
             self.textBadgeLabel?.layer.cornerRadius = 7
@@ -90,7 +90,7 @@ extension UIView {
         return self.viewWithTag(self.textBadgeTag) as? UILabel
     }
     
-    var cartQTYbadgeText: String {
+    public var cartQTYbadgeText: String {
         
         get {
             return self.cartQTYbadgeLabel?.text ?? ""
@@ -123,7 +123,7 @@ extension UIView {
     }
 }
 
-class EZBadgeLabel: RoundedBorderLabel {
+public class EZBadgeLabel: RoundedBorderLabel {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

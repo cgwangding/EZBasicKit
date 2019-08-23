@@ -8,28 +8,28 @@
 import UIKit
 
 @IBDesignable
-class RoundedBorderLabel: UILabel {
+public class RoundedBorderLabel: UILabel {
     
-    @IBInspectable var topPadding: CGFloat = 0
-    @IBInspectable var bottomPadding: CGFloat = 0
-    @IBInspectable var leftPadding: CGFloat = 6
-    @IBInspectable var rightPadding: CGFloat = 6
+    @IBInspectable public var topPadding: CGFloat = 0
+    @IBInspectable public var bottomPadding: CGFloat = 0
+    @IBInspectable public var leftPadding: CGFloat = 6
+    @IBInspectable public var rightPadding: CGFloat = 6
     
-    override var textColor: UIColor! {
+    override public var textColor: UIColor! {
         didSet{
             self.layer.borderColor = self.textColor.cgColor
         }
     }
     
-    override var font: UIFont!{
+    override public var font: UIFont!{
         didSet {
-            let height = "aa".height(CGFloat.greatestFiniteMagnitude, font: UIFont.systemFont(ofSize: self.font?.pointSize ?? 0.0))
+            let height = "aa".height(fontSize: self.font.pointSize)
             self.layer.cornerRadius = (height + topPadding + bottomPadding) * 0.5
             self.layoutIfNeeded()
         }
     }
     
-    override func awakeFromNib() {
+    override public func awakeFromNib() {
         super.awakeFromNib()
         configure()
     }
@@ -51,13 +51,13 @@ class RoundedBorderLabel: UILabel {
         self.layer.cornerRadius = self.bounds.height * 0.5
     }
     
-    override func drawText(in rect: CGRect) {
+    override public func drawText(in rect: CGRect) {
         let insets = UIEdgeInsets(top: topPadding, left: leftPadding, bottom: bottomPadding, right: rightPadding)
         
         super.drawText(in: rect.inset(by: insets))
     }
     
-    override var intrinsicContentSize: CGSize {
+    override public var intrinsicContentSize: CGSize {
         
         let size = super.intrinsicContentSize
         let newH = size.height + topPadding + bottomPadding
