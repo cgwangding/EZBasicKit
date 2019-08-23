@@ -16,7 +16,7 @@ extension UIView {
         set {
 
             if let badgeView = self.badgeView {
-                badgeView.isShown = newValue
+                badgeView.isHidden = !newValue
             } else {
                 if newValue == true {
                     let v = BadgeView(frame: CGRect(x: 0, y: 0, width: 10, height: 10))
