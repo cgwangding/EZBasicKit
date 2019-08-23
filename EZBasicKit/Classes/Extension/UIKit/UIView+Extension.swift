@@ -118,42 +118,13 @@ extension UIView {
 }
 
 extension UIView {
-
-    @IBInspectable
-    public var cornerRadius: CGFloat {
-
+    
+    public var isShown: Bool {
         get {
-            return self.layer.cornerRadius
+            return !self.isHidden
         }
         set {
-            self.layer.cornerRadius = newValue
-            self.layer.masksToBounds = true
-        }
-    }
-
-    @IBInspectable
-    public var borderColor: UIColor? {
-        get {
-            if let cgColor = self.layer.borderColor {
-                return UIColor(cgColor: cgColor)
-            } else {
-                return nil
-            }
-        }
-        set {
-            self.layer.borderColor = newValue?.cgColor
-        }
-    }
-
-    @IBInspectable
-    public var borderWidth: CGFloat {
-        get {
-            return self.layer.borderWidth
-        }
-
-        set {
-            self.layer.borderWidth = newValue
+            self.isHidden = !newValue
         }
     }
 }
-
