@@ -116,6 +116,7 @@
 		6FB55EB8AB0E9B76B04E66D021168078 /* InnerPopoverPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8FF4ED640C8B48D75A4B69D44609A8 /* InnerPopoverPresentationController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7020AB463CEEF45508FCF889A6CF03A8 /* iOSSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEFB43A6A730BCDBC40E5D4FF5FBADE1 /* iOSSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		724D79E38A9AF700AFCE9854C77A2C7B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE58F3B7D6ADCC9647A4F423CEFF7544 /* XCTest.framework */; };
+		72B9C2BF230F9AD2005D1758 /* EZSafePWDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A818137A22E1AE0A00AC764D /* EZSafePWDView.swift */; };
 		75506AE7F9FAC94E888E2133B76FC9D1 /* EZMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82388EFC8504962F8EFAE5442358BEDA /* EZMenuController.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		77C4D5F16A6066628B0B7D6AD87183E0 /* ExampleMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8978BE1FE3A255F17131A229556DDBF7 /* ExampleMetadata.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		7835F6B9867023749CCD639138AFBDAB /* EZInstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4D91E6C7A89DA56EB7D500E4021704 /* EZInstruction.swift */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
@@ -1738,6 +1739,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B9C2BF230F9AD2005D1758 /* EZSafePWDView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

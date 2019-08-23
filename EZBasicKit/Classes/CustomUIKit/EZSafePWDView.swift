@@ -155,9 +155,7 @@ public class EZSafePWDView: UIView {
 
     private func setupUI() {
 
-        self.borderColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1)
-        self.layer.borderColor = self.borderColor?.cgColor
-        self.layer.borderWidth = 1
+        self.layer.borderColor = UIColor(red: 206/255, green: 206/255, blue: 206/255, alpha: 1).cgColor
 
         self.subviews.filter({ !$0.isMember(of: NoneActionTextField.self) }).forEach({ $0.removeFromSuperview() })
         self.dotViews.removeAll()
