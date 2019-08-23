@@ -41,7 +41,7 @@ extension String {
         return self.size(CGSize(width: constraintWidth, height: CGFloat.infinity), fontSize: fontSize).height
     }
 
-    public func height(_ constraintWidth: CGFloat, font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGFloat {
+    public func height(_ constraintWidth: CGFloat, font: UIFont) -> CGFloat {
 
         return self.size(CGSize(width: constraintWidth, height: CGFloat.infinity), font: font).height
     }
@@ -52,7 +52,7 @@ extension String {
         return self.size(CGSize(width: CGFloat.infinity, height: CGFloat.zero), fontSize: fontSize).width
     }
 
-    public func width(font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGFloat {
+    public func width(font: UIFont) -> CGFloat {
         return self.size(CGSize(width: CGFloat.infinity, height: CGFloat.infinity), font: font).width
     }
 
@@ -62,7 +62,7 @@ extension String {
         return self.rect(constraintSize, fontSize: fontSize).size
     }
 
-    public func size(_ constraintSize: CGSize = CGSize(width: CGFloat.infinity, height: CGFloat.infinity), font: UIFont = UIFont.systemFont(ofSize: 14)) -> CGSize {
+    public func size(_ constraintSize: CGSize = CGSize(width: CGFloat.infinity, height: CGFloat.infinity), font: UIFont) -> CGSize {
 
         return self.size(constraintSize, attribute: [NSAttributedString.Key.font : font])
     }
