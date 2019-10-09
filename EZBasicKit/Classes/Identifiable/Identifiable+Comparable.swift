@@ -8,6 +8,6 @@
 
 import Foundation
 
-public func <<I: Identifiable>(lhs: I, rhs: I) -> Bool where I.Identifier: Comparable {
+public func <<I: EZIdentifiable>(lhs: I, rhs: I) -> Bool where I.Identifier: Comparable {
     return lhs.identifier < rhs.identifier
 }

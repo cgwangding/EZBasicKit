@@ -1,35 +1,35 @@
 PODS:
-  - EZBasicKit (1.0.5):
-    - EZBasicKit/Animator (= 1.0.5)
-    - EZBasicKit/CustomUIKit (= 1.0.5)
-    - EZBasicKit/Extension (= 1.0.5)
-    - EZBasicKit/EZI (= 1.0.5)
-    - EZBasicKit/EZMenu (= 1.0.5)
-    - EZBasicKit/EZPresentation (= 1.0.5)
-    - EZBasicKit/Identifiable (= 1.0.5)
-    - EZBasicKit/ObjectsController (= 1.0.5)
-    - EZBasicKit/Selection (= 1.0.5)
-    - EZBasicKit/Utilities (= 1.0.5)
-  - EZBasicKit/Animator (1.0.5)
-  - EZBasicKit/CustomUIKit (1.0.5):
+  - EZBasicKit (1.0.6):
+    - EZBasicKit/Animator (= 1.0.6)
+    - EZBasicKit/CustomUIKit (= 1.0.6)
+    - EZBasicKit/Extension (= 1.0.6)
+    - EZBasicKit/EZI (= 1.0.6)
+    - EZBasicKit/EZMenu (= 1.0.6)
+    - EZBasicKit/EZPresentation (= 1.0.6)
+    - EZBasicKit/Identifiable (= 1.0.6)
+    - EZBasicKit/ObjectsController (= 1.0.6)
+    - EZBasicKit/Selection (= 1.0.6)
+    - EZBasicKit/Utilities (= 1.0.6)
+  - EZBasicKit/Animator (1.0.6)
+  - EZBasicKit/CustomUIKit (1.0.6):
     - EZBasicKit/Extension/FoundationExtension
-  - EZBasicKit/Extension (1.0.5):
-    - EZBasicKit/Extension/FoundationExtension (= 1.0.5)
-    - EZBasicKit/Extension/UIKitExtension (= 1.0.5)
-  - EZBasicKit/Extension/FoundationExtension (1.0.5)
-  - EZBasicKit/Extension/UIKitExtension (1.0.5):
+  - EZBasicKit/Extension (1.0.6):
+    - EZBasicKit/Extension/FoundationExtension (= 1.0.6)
+    - EZBasicKit/Extension/UIKitExtension (= 1.0.6)
+  - EZBasicKit/Extension/FoundationExtension (1.0.6)
+  - EZBasicKit/Extension/UIKitExtension (1.0.6):
     - EZBasicKit/CustomUIKit
     - EZBasicKit/Extension/FoundationExtension
-  - EZBasicKit/EZI (1.0.5):
+  - EZBasicKit/EZI (1.0.6):
     - EZBasicKit/Utilities
-  - EZBasicKit/EZMenu (1.0.5):
+  - EZBasicKit/EZMenu (1.0.6):
     - EZBasicKit/Extension/FoundationExtension
-  - EZBasicKit/EZPresentation (1.0.5):
+  - EZBasicKit/EZPresentation (1.0.6):
     - EZBasicKit/Animator
-  - EZBasicKit/Identifiable (1.0.5)
-  - EZBasicKit/ObjectsController (1.0.5)
-  - EZBasicKit/Selection (1.0.5)
-  - EZBasicKit/Utilities (1.0.5)
+  - EZBasicKit/Identifiable (1.0.6)
+  - EZBasicKit/ObjectsController (1.0.6)
+  - EZBasicKit/Selection (1.0.6)
+  - EZBasicKit/Utilities (1.0.6)
   - FBSnapshotTestCase (2.1.4):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
   - FBSnapshotTestCase/Core (2.1.4)
@@ -56,7 +56,7 @@ DEPENDENCIES:
   - Quick
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - FBSnapshotTestCase
     - iOSSnapshotTestCase
     - Nimble
@@ -68,7 +68,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  EZBasicKit: 33b935bca04426c9b4eca1c62f6164d6273f5a2a
+  EZBasicKit: a9627ae5b2b59badda7acc8d209b9c14b7673d15
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
   iOSSnapshotTestCase: 2d51aa06775e95cecb0a1fb9c5c159ccd1dd4596
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
@@ -77,4 +77,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c8fe1ce0059239baa587993bbed65d7294ab1bbd
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.0

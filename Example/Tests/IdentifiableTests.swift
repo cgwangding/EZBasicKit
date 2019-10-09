@@ -71,7 +71,7 @@ class IdentifiableTests: QuickSpec {
     }
 }
 
-class IdentifierObject: NSObject, Identifiable {
+class IdentifierObject: NSObject, EZIdentifiable {
     
     let identifier: Int
     
@@ -89,7 +89,7 @@ class IdentifierObject: NSObject, Identifiable {
     }
 }
 
-class IDCard: NSObject, Identifiable {
+class IDCard: NSObject, EZIdentifiable {
     
     let identifier: Int
     

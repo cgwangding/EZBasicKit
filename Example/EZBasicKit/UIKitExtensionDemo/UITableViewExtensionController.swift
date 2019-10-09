@@ -46,7 +46,7 @@ extension UITableViewExtensionController: UITableViewDelegate, UITableViewDataSo
 
         if let indexPath = self.tableView.indexPath(for: sender), let topindexPath = self.tableView.topIndexPath {
             let message = "topIndexPath - \(topindexPath)" + "\n" + "currentIndexPath - \(indexPath)"
-            self.presentAutoDismissAlert(message: message, delay: 0.5, finished: nil)
+//            self.presentAutoDismissAlert(message: message, delay: 0.5, finished: nil)
         }
     }
     

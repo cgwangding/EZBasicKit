@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Identifiable where Self: NSObject, Identifier: Hashable {
+extension EZIdentifiable where Self: NSObject, Identifier: Hashable {
 
     public var nsHashValue: Int { return self.identifier.hashValue }
     

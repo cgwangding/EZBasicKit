@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import EZBasicKit
 
 enum alertStyle: Int {
     case defalut = 2001
@@ -27,27 +28,27 @@ class UIViewControllerExtension: UIViewController {
     /// UIViewController + Extension
     @IBAction func alertStyleButtonTapped(_ sender: UIButton) {
         
-        let title = "topMostViewController" + "\(self.topMostViewController)"
-        
-        switch sender.tag {
-            
-        case alertStyle.defalut.rawValue:
-            self.presentAlert(title: title, message: "default") { (alert) in
-                let ignoreAction = UIAlertAction(title: "Ignore", style: .default, handler: nil)
-                alert.addAction(ignoreAction)
-                
-                let viewAction = UIAlertAction(title: "View", style: .default, handler: nil)
-                alert.addAction(viewAction)
-            }
-            
-        case alertStyle.alert.rawValue:
-            self.presentAlert(title: title, message: "alert", buttontitle: "OK")
-            
-        case alertStyle.autoDismiss.rawValue:
-            self.presentAutoDismissAlert(message: "autoDissmiss", delay: 2, finished: nil)
-            
-        default: break
-        }
+//        let title = "topMostViewController" + "\(self.topMostViewController)"
+//        
+//        switch sender.tag {
+//            
+//        case alertStyle.defalut.rawValue:
+//            self.presentAlert(title: title, message: "default") { (alert) in
+//                let ignoreAction = UIAlertAction(title: "Ignore", style: .default, handler: nil)
+//                alert.addAction(ignoreAction)
+//                
+//                let viewAction = UIAlertAction(title: "View", style: .default, handler: nil)
+//                alert.addAction(viewAction)
+//            }
+//            
+//        case alertStyle.alert.rawValue:
+//            self.presentAlert(title: title, message: "alert", buttontitle: "OK")
+//            
+//        case alertStyle.autoDismiss.rawValue:
+//            self.presentAutoDismissAlert(message: "autoDissmiss", delay: 2, finished: nil)
+//            
+//        default: break
+//        }
     }
     
 

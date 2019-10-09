@@ -18,7 +18,7 @@ public class CardsDataController: NSObject {
     }
 }
 
-public class CreditCard: NSObject, Identifiable {
+public class CreditCard: NSObject, EZIdentifiable {
     
     public var identifier: String {
         return self.cardNum

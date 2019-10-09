@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Identifiable {
+extension EZIdentifiable {
 
     public static var idGenerator: (Self) -> Identifier { return { $0.identifier } }
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol IdentifiableWrapper: Identifiable {
+public protocol IdentifiableWrapper: EZIdentifiable {
     
     associatedtype Base
     
