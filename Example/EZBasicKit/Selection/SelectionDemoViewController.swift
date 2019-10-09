@@ -27,7 +27,7 @@ class SelectionDemoViewController: UIViewController {
     @IBAction func nextBtnDidTapped(_ sender: UIButton) {
         let selectedObjects = controller.selection.selectedObjects
         guard !selectedObjects.isEmpty else {
-            self.presentAlert(title: "", message: "Please select one before click next", buttontitle: "OK")
+//            self.presentAlert(title: "", message: "Please select one before click next", buttontitle: "OK")
             return
         }
         selectedObjects.forEach { (obj) in

@@ -66,7 +66,7 @@ class CaseInsensitiveStringViewController: UIViewController {
         }
         
         guard tag != -100 else {
-            self.presentAlert(title: "", message: "No such country", buttontitle: "OK")
+//            self.presentAlert(title: "", message: "No such country", buttontitle: "OK")
             return
         }
         

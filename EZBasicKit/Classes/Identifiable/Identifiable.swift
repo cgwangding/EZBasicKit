@@ -8,13 +8,13 @@
 
 import Foundation
 
-public protocol Identifiable: Equatable {
+public protocol EZIdentifiable: Equatable {
     
     associatedtype Identifier: Equatable
     
     var identifier: Identifier { get }
 }
 
-public func ==<I: Identifiable>(lhs: I, rhs: I) -> Bool {
+public func ==<I: EZIdentifiable>(lhs: I, rhs: I) -> Bool {
     return lhs.identifier == rhs.identifier
 }

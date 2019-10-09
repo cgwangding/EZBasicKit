@@ -45,7 +45,7 @@ extension ProductController: ObjectsContainer {
     }
 }
 
-class IDObject: NSObject, Identifiable {
+class IDObject: NSObject, EZIdentifiable {
     
     let identifier: Int
     

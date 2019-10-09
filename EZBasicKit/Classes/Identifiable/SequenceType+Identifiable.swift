@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Sequence where Iterator.Element: Identifiable, Iterator.Element.Identifier: Hashable {
+extension Sequence where Iterator.Element: EZIdentifiable, Iterator.Element.Identifier: Hashable {
     
     public var idMapping: [Iterator.Element.Identifier: Iterator.Element] {
         
